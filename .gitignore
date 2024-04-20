@@ -1,3 +1,6 @@
+# Development artifacts
+GNUmakefile
+
 # Rust artifacts
 Cargo.lock
 target/
