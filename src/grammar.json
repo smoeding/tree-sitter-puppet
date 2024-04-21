@@ -225,7 +225,7 @@
           "value": 5,
           "content": {
             "type": "SYMBOL",
-            "name": "_resource"
+            "name": "resource_type"
           }
         },
         {
@@ -244,7 +244,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_resource"
+                "name": "resource_type"
               }
             ]
           }
@@ -265,7 +265,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_resource"
+                "name": "resource_type"
               }
             ]
           }
@@ -286,7 +286,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_resource"
+                "name": "resource_type"
               }
             ]
           }
@@ -307,12 +307,16 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_resource"
+                "name": "resource_type"
               }
             ]
           }
         }
       ]
+    },
+    "resource_type": {
+      "type": "SYMBOL",
+      "name": "_resource"
     },
     "_resource": {
       "type": "CHOICE",
@@ -382,7 +386,7 @@
                   "name": "_resource"
                 },
                 "named": true,
-                "value": "resource_type"
+                "value": "classname"
               },
               {
                 "type": "STRING",
@@ -501,13 +505,8 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "ALIAS",
-                "content": {
-                  "type": "STRING",
-                  "value": "class"
-                },
-                "named": true,
-                "value": "resource_type"
+                "type": "STRING",
+                "value": "class"
               },
               {
                 "type": "STRING",
@@ -543,13 +542,8 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "ALIAS",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_resource"
-                },
-                "named": true,
-                "value": "resource_type"
+                "type": "SYMBOL",
+                "name": "_resource"
               },
               {
                 "type": "STRING",

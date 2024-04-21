@@ -120,44 +120,41 @@ module.exports = grammar({
     ),
 
     _relationship: $ => choice(
-      prec(PREC.LOW, $._resource),
-      prec.left(PREC.EDGE, seq($._relationship, '->', $._resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '~>', $._resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '<-', $._resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '<~', $._resource)),
+      prec(PREC.LOW, $.resource),
+      prec.left(PREC.EDGE, seq($._relationship, '->', $.resource)),
+      prec.left(PREC.EDGE, seq($._relationship, '~>', $.resource)),
+      prec.left(PREC.EDGE, seq($._relationship, '<-', $.resource)),
+      prec.left(PREC.EDGE, seq($._relationship, '<~', $.resource)),
     ),
 
     // Resource
 
-    _resource: $ => choice(
+    resource: $ => choice(
       prec(PREC.LOW, $._expression),
-      prec.right(PREC.AT, seq(alias('@', $.virtual), $._resource)),
-      prec.right(PREC.AT, seq(alias('@@', $.exported), $._resource)),
+      prec.right(PREC.AT, seq(alias('@', $.virtual), $.resource)),
+      prec.right(PREC.AT, seq(alias('@@', $.exported), $.resource)),
 
+      // foo { 'title': }
       prec(PREC.HIGH, seq(
-        alias($._resource, $.resource_type),
-        '{',
-        field('title', $._expression),
-        ':',
-        optional($._attribute_operations),
-        choice(
-          optional(','),
-          seq(optional(','), ';'),
-          seq(optional(','), ';', $._resource_bodies, optional(';')),
-        ),
-        '}',
-      )),
-
-      prec(PREC.HIGH, seq(
-        alias('class', $.resource_type),
+        alias($.resource, $.resource_type),
         '{',
         $._resource_bodies,
         optional(';'),
         '}',
       )),
 
+      // class { 'title': }
       prec(PREC.HIGH, seq(
-        alias($._resource, $.resource_type),
+        alias($.class, $.resource_type),
+        '{',
+        $._resource_bodies,
+        optional(';'),
+        '}',
+      )),
+
+      // Foo { }
+      prec(PREC.HIGH, seq(
+        alias($.resource, $.resource_reference),
         '{',
         optional($._attribute_operations),
         optional(','),
@@ -165,12 +162,12 @@ module.exports = grammar({
       )),
     ),
 
-    resource_body: $ => seq(
-      $._expression,
+    resource_body: $ => prec.right(seq(
+      field('title', $._expression),
       ':',
       optional($._attribute_operations),
       optional(','),
-    ),
+    )),
 
     _resource_bodies: $ => choice(
       $.resource_body,
@@ -646,6 +643,9 @@ module.exports = grammar({
     type:     $ => $.classref,
     name:     _ => /((::)?[a-z]\w*)(::[a-z]\w*)*/,
     word:     _ => /((?:::){0,1}(?:[a-z_](?:[\w-]*\w)?))+/,
+
+    // handle the class keyword like a name node
+    class:    $ => alias('class', $.name),
 
     number:   _ => /(?:0[xX][0-9A-Fa-f]+|0?\d+(?:\.\d+)?(?:[eE]-?\d+)?)/,
     default:  _ => 'default',
