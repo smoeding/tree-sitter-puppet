@@ -55,66 +55,10 @@ enum TokenType {
 
 
 /**
- * Helper function to check if a character is valid for a Puppet variable
- * name ('a'..'z', '0'..'9', '_').
- */
-
-static inline bool is_variable_name(int32_t c) {
-  return ((iswalpha(c) && islower(c)) || iswdigit(c) || (c == U'_'));
-}
-
-
-/**
  * Manage UTF32 strings using an array.
  */
 
-typedef struct UTF32String {
-  int      items;  // number of UTF32 code points stored in the string
-  int      alloc;  // number of UTF32 code points allocated
-  int32_t *value;  // pointer to the allocated code points
-} UTF32String;
-
-static UTF32String *string_alloc(int initial_size) {
-  UTF32String *string = malloc(sizeof(UTF32String));
-
-  if (string) {
-    string->items = 0;
-    string->alloc = initial_size;
-    string->value = malloc(initial_size * sizeof(*string->value));
-  }
-
-  return string;
-}
-
-static void string_free(UTF32String *string) {
-  if (string) {
-    if (string->value) free(string->value);
-    free(string);
-  }
-}
-
-static inline void string_clear(UTF32String *string) {
-  string->items = 0;
-}
-
-static inline int string_len(UTF32String *string) {
-  return (string->items);
-}
-
-static inline int32_t string_char(UTF32String *string, int index) {
-  return (string->items > index) ? string->value[index] : 0;
-}
-
-static void string_append(UTF32String *string, int32_t c) {
-  if (string->items == string->alloc) {
-    int new_size = 2 * string->alloc;
-    string->value = realloc(string->value, new_size * sizeof(*string->value));
-    string->alloc = new_size;
-  }
-
-  string->value[string->items] = c;
-  string->items++;
-}
+typedef Array(int32_t) UTF32String;
 
 
 /**
@@ -123,10 +67,20 @@ static void string_append(UTF32String *string, int32_t c) {
  */
 
 typedef struct ScannerState {
-  UTF32String *heredoc_tag;
-  bool         interpolation_allowed;
-  bool         check_selbrace;
+  UTF32String heredoc_tag;
+  bool        interpolation_allowed;
+  bool        check_selbrace;
 } ScannerState;
+
+
+/**
+ * Helper function to check if a character is valid for a Puppet variable
+ * name ('a'..'z', '0'..'9', '_').
+ */
+
+static inline bool is_variable_name(int32_t c) {
+  return ((iswalpha(c) && islower(c)) || iswdigit(c) || (c == U'_'));
+}
 
 
 /**
@@ -200,7 +154,7 @@ static bool skip_quoted_string(TSLexer *lexer) {
  */
 
 enum InterpolationStyle {
-  NONE,     // initially value before the style has been detected
+  NONE,     // initial value before the style has been detected
   BRACE,    // ${foo}
   VARIABLE, // $foo
 };
@@ -337,7 +291,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
 
     if (lexer->lookahead == U'\n') {
       // No match found when the end of the line is reached
-      string_clear(state->heredoc_tag);
+      array_clear(&state->heredoc_tag);
       return false;
     }
     else if (lexer->lookahead == U'"') {
@@ -347,7 +301,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
     }
     else if (iswalnum(lexer->lookahead)) {
       // We seem to have a heredoc tag, so remember it to find the end
-      string_append(state->heredoc_tag, lexer->lookahead);
+      array_push(&state->heredoc_tag, lexer->lookahead);
       lexer->advance(lexer, false);
     }
     else if (lexer->lookahead == U':') {
@@ -366,7 +320,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
     }
     else if (lexer->lookahead == U')') {
       // We seem to have found the end of the heredoc tag
-      return (string_len(state->heredoc_tag) > 0);
+      return (state->heredoc_tag.size > 0);
     }
     else if (iswspace(lexer->lookahead)) {
       // Skip whitespace
@@ -374,7 +328,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
     }
     else {
       // That doesn't look like a heredoc tag
-      string_clear(state->heredoc_tag);
+      array_clear(&state->heredoc_tag);
       return false;
     }
   }
@@ -396,8 +350,8 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
     // The final line might not have a newline at the end but we need to
     // check for the heredoc tag there as well
     if (lexer->eof(lexer)) {
-      if (string_len(state->heredoc_tag) == match_index) {
-        string_clear(state->heredoc_tag);
+      if (state->heredoc_tag.size == match_index) {
+        array_clear(&state->heredoc_tag);
         lexer->result_symbol = HEREDOC_END;
         return true;
       }
@@ -406,8 +360,8 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
     }
     else if (lexer->lookahead == U'\n') {
       // Check for the heredoc tag when the end of the line is reached
-      if (string_len(state->heredoc_tag) == match_index) {
-        string_clear(state->heredoc_tag);
+      if (state->heredoc_tag.size == match_index) {
+        array_clear(&state->heredoc_tag);
         lexer->result_symbol = HEREDOC_END;
         return true;
       }
@@ -430,7 +384,8 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
       // We start if the first alphanumeric character is found. The
       // comparison continues with the following characters.
       if (iswalnum(lexer->lookahead) && (match_index >= 0)) {
-        if (string_char(state->heredoc_tag, match_index) == lexer->lookahead) {
+        if ((state->heredoc_tag.size > match_index) &&
+            (*array_get(&state->heredoc_tag, match_index) == lexer->lookahead)) {
           // The prefix matches so advance the index to the next character
           match_index++;
         }
@@ -454,9 +409,7 @@ void *tree_sitter_puppet_external_scanner_create() {
   ScannerState *state = ts_malloc(sizeof(ScannerState));
 
   if (state) {
-    // Allocate a string for a heredoc tag with 16 slots. This can be
-    // expanded later if the real tag is longer.
-    state->heredoc_tag = string_alloc(16);
+    array_init(&state->heredoc_tag);
     state->interpolation_allowed = false;
     state->check_selbrace = false;
   }
@@ -468,19 +421,62 @@ void tree_sitter_puppet_external_scanner_destroy(void *payload) {
   ScannerState *state = (ScannerState*)payload;
 
   if (state) {
-    string_free(state->heredoc_tag);
+    array_delete(&state->heredoc_tag);
     ts_free(state);
   }
 }
 
 unsigned tree_sitter_puppet_external_scanner_serialize(void *payload, char *buffer) {
-  memcpy(buffer, payload, sizeof(ScannerState));
+  ScannerState *state = (ScannerState*)payload;
+  unsigned length = 0;  // total size of the serialized data in bytes
+  unsigned objsiz;      // size of the current object to serialize
 
-  return sizeof(ScannerState);
+  // Serialize the scanner state. To prevent serialization of each struct
+  // item we also include the bogus pointer to the array contents. The
+  // pointer will be reset when the object is deserialized (see below).
+  objsiz = sizeof(ScannerState);
+  memcpy(buffer, payload, objsiz);
+  buffer += objsiz;
+  length += objsiz;
+
+  // Serialize the array contents.
+  objsiz = state->heredoc_tag.capacity * array_elem_size(&state->heredoc_tag);
+  if (objsiz > 0) {
+    memcpy(buffer, state->heredoc_tag.contents, objsiz);
+    buffer += objsiz;
+    length += objsiz;
+  }
+
+  return length;
 }
 
 void tree_sitter_puppet_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
-  memcpy(payload, buffer, length);
+  ScannerState *state = (ScannerState*)payload;
+  unsigned objsiz;      // size of the current object to deserialize
+
+  // Initialize the structure since the deserialization function will
+  // sometimes also be called with length set to zero.
+  array_init(&state->heredoc_tag);
+  state->interpolation_allowed = false;
+  state->check_selbrace = false;
+
+  // Deserialize the scanner state.
+  if (length >= sizeof(ScannerState)) {
+    objsiz = sizeof(ScannerState);
+    memcpy(payload, buffer, objsiz);
+    buffer += objsiz;
+    length -= objsiz;
+
+    // Check if the array content needs to be deserialized. In this case the
+    // contents pointer is invalid as is now contains the address of the
+    // contents when serialization has happened. So we need to allocate a new
+    // memory chunk and deserialize it there. The size and capacity elements
+    // are already defined correctly.
+    if (length > 0) {
+      state->heredoc_tag.contents = ts_malloc(length);
+      memcpy(state->heredoc_tag.contents, buffer, length);
+    }
+  }
 }
 
 bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
@@ -507,7 +503,7 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
   }
 
   if (valid_symbols[HEREDOC_BODY] || valid_symbols[HEREDOC_END]) {
-    if (string_len(state->heredoc_tag) > 0) {
+    if (state->heredoc_tag.size > 0) {
       return scan_heredoc_body(lexer, state);
     }
   }
