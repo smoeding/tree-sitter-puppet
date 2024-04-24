@@ -45,12 +45,10 @@ expression boolean in
       (string)
     (operator)
     (array
-      (collection_entry
-        (argument
-          (string)))
-      (collection_entry
-        (argument
-          (string)))))))
+      (array_element
+        (string))
+      (array_element
+        (string))))))
 
 ================================================================================
 expression boolean numeric
@@ -89,15 +87,12 @@ $y = ((true and 1) and false)
       (number)
       (operator)
       (array
-        (collection_entry
-          (argument
-            (number)))
-        (collection_entry
-          (argument
-            (number)))
-        (collection_entry
-          (argument
-            (number))))))
+        (array_element
+          (number))
+        (array_element
+          (number))
+        (array_element
+          (number)))))
   (statement
     (variable
       (name))

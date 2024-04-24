@@ -615,11 +615,14 @@ module.exports = grammar({
     ),
 
     _collection_entries: $ => choice(
-      $.collection_entry,
-      seq($._collection_entries, ',', $.collection_entry),
+      $._collection_entry,
+      seq($._collection_entries, ',', $._collection_entry),
     ),
 
-    collection_entry: $ => choice($.argument, $.collection_entry_keyword),
+    _collection_entry: $ => choice(
+      alias($.argument, $.array_element),
+      alias($.collection_entry_keyword, $.array_element),
+    ),
 
     hash: $ => choice(
       seq('{', $._hashpairs, '}'),

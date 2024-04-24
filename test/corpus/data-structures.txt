@@ -1,0 +1,117 @@
+================================================================================
+data structures hash
+================================================================================
+$hash = { 1 => 'asdf', 2 => 'foo', 'b' => 123 }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (hash
+      (hashpair
+        (number)
+        (string))
+      (hashpair
+        (number)
+        (string))
+      (hashpair
+        (string)
+        (number)))))
+
+================================================================================
+data structures array
+================================================================================
+['base::linux', 'apache']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (array
+      (array_element
+        (string))
+      (array_element
+        (string)))))
+
+================================================================================
+data structures hash of array
+================================================================================
+$hash_of_arrays = {
+  1      => [1, 2, 3, 4 ],
+  'asdf' => { 'a' =>1 },
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (hash
+      (hashpair
+        (number)
+        (array
+          (array_element
+            (number))
+          (array_element
+            (number))
+          (array_element
+            (number))
+          (array_element
+            (number))))
+      (hashpair
+        (string)
+        (hash
+          (hashpair
+            (string)
+            (number)))))))
+
+================================================================================
+data structures mixed structure
+================================================================================
+$struct = [
+        { 1 => [
+                'a',
+                'b',
+                'c'
+               ]
+        },
+        {
+                'asdf' => {
+                        'foo' => 'bar'
+                }
+        },
+]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (array
+      (array_element
+        (hash
+          (hashpair
+            (number)
+            (array
+              (array_element
+                (string))
+              (array_element
+                (string))
+              (array_element
+                (string))))))
+      (array_element
+        (hash
+          (hashpair
+            (string)
+            (hash
+              (hashpair
+                (string)
+                (string)))))))))
+
+================================================================================
+data structures empty array
+================================================================================
+[]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (array)))
