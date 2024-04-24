@@ -175,7 +175,7 @@ module.exports = grammar({
 
     _expression: $ => choice(
       $._primary_expression,
-      $.call_function,
+      $.function_call,
       $._bracketed_expression,
       prec.left( PREC.IN,       seq(field('left', $._expression), 'in',    field('right',    $._expression))),
       prec.left( PREC.MATCH,    seq(field('left', $._expression), '=~',    field('right',    $._expression))),
@@ -257,7 +257,7 @@ module.exports = grammar({
 
     // Call Function
 
-    call_function: $ => prec.right(PREC.HIGH, seq(
+    function_call: $ => prec.right(PREC.HIGH, seq(
       choice($._expression, $.type),
       '(',
       optional(seq($.arguments, optional(','))),

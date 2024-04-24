@@ -128,10 +128,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -153,6 +149,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -390,10 +390,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -415,6 +411,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -652,10 +652,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -677,6 +673,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -815,10 +815,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -840,6 +836,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -1085,10 +1085,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -1110,6 +1106,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -1347,10 +1347,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -1372,6 +1368,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -1609,10 +1609,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -1634,6 +1630,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -1772,10 +1772,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -1797,6 +1793,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -2057,10 +2057,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -2082,6 +2078,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -2319,10 +2319,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -2344,6 +2340,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -2599,10 +2599,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -2624,6 +2620,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -2861,10 +2861,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -2886,6 +2882,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -3038,948 +3038,6 @@
     "type": "boolean",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "call_function",
-    "named": true,
-    "fields": {
-      "argument": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_operations",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "operator",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource_reference",
-            "named": true
-          },
-          {
-            "type": "resource_type",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_operations",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "operator",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource_reference",
-            "named": true
-          },
-          {
-            "type": "resource_type",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_operations",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "operator",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource_reference",
-            "named": true
-          },
-          {
-            "type": "resource_type",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "access_arg",
-          "named": true
-        },
-        {
-          "type": "apply_expression",
-          "named": true
-        },
-        {
-          "type": "arguments",
-          "named": true
-        },
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_operations",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "call_function",
-          "named": true
-        },
-        {
-          "type": "call_method_with_lambda",
-          "named": true
-        },
-        {
-          "type": "case_expression",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "collection_expression",
-          "named": true
-        },
-        {
-          "type": "default",
-          "named": true
-        },
-        {
-          "type": "define_definition",
-          "named": true
-        },
-        {
-          "type": "function_definition",
-          "named": true
-        },
-        {
-          "type": "hash",
-          "named": true
-        },
-        {
-          "type": "heredoc",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "lambda",
-          "named": true
-        },
-        {
-          "type": "name",
-          "named": true
-        },
-        {
-          "type": "node_definition",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "plan_definition",
-          "named": true
-        },
-        {
-          "type": "qmark",
-          "named": true
-        },
-        {
-          "type": "regex",
-          "named": true
-        },
-        {
-          "type": "reserved_word",
-          "named": true
-        },
-        {
-          "type": "resource_reference",
-          "named": true
-        },
-        {
-          "type": "resource_type",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "type_alias",
-          "named": true
-        },
-        {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "undef",
-          "named": true
-        },
-        {
-          "type": "unless_expression",
-          "named": true
-        },
-        {
-          "type": "variable",
-          "named": true
-        }
-      ]
-    }
   },
   {
     "type": "call_method",
@@ -4148,10 +3206,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -4173,6 +3227,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -4410,10 +3468,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -4435,6 +3489,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -4672,10 +3730,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -4697,6 +3751,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -4835,10 +3893,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -4864,6 +3918,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -5086,10 +4144,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -5111,6 +4165,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -5348,10 +4406,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -5373,6 +4427,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -5610,10 +4668,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -5635,6 +4689,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -5777,10 +4835,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -5802,6 +4856,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -6074,10 +5132,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -6099,6 +5153,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -6336,10 +5394,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -6361,6 +5415,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -6598,10 +5656,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -6623,6 +5677,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -6761,10 +5819,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -6786,6 +5840,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -7032,10 +6090,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -7057,6 +6111,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -7294,10 +6352,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -7319,6 +6373,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -7556,10 +6614,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -7581,6 +6635,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -7719,10 +6777,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -7748,6 +6802,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -8037,10 +7095,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -8062,6 +7116,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -8299,10 +7357,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -8324,6 +7378,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -8561,10 +7619,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -8586,6 +7640,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -8728,7 +7786,941 @@
           "named": true
         },
         {
-          "type": "call_function",
+          "type": "call_method_with_lambda",
+          "named": true
+        },
+        {
+          "type": "case_expression",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "collection_expression",
+          "named": true
+        },
+        {
+          "type": "default",
+          "named": true
+        },
+        {
+          "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "hash",
+          "named": true
+        },
+        {
+          "type": "heredoc",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "node_definition",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "plan_definition",
+          "named": true
+        },
+        {
+          "type": "qmark",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "reserved_word",
+          "named": true
+        },
+        {
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "type_alias",
+          "named": true
+        },
+        {
+          "type": "type_definition",
+          "named": true
+        },
+        {
+          "type": "undef",
+          "named": true
+        },
+        {
+          "type": "unless_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_call",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "operator",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "left": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "operator",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "operator",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "access_arg",
+          "named": true
+        },
+        {
+          "type": "apply_expression",
+          "named": true
+        },
+        {
+          "type": "arguments",
+          "named": true
+        },
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
+          "named": true
+        },
+        {
+          "type": "boolean",
           "named": true
         },
         {
@@ -8756,6 +8748,10 @@
           "named": true
         },
         {
+          "type": "function_call",
+          "named": true
+        },
+        {
           "type": "function_definition",
           "named": true
         },
@@ -8769,6 +8765,10 @@
         },
         {
           "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "lambda",
           "named": true
         },
         {
@@ -9017,10 +9017,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -9042,6 +9038,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -9283,10 +9283,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -9312,6 +9308,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -9549,10 +9549,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -9574,6 +9570,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -9811,10 +9811,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -9836,6 +9832,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -10077,10 +10077,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -10106,6 +10102,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -10407,10 +10407,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -10432,6 +10428,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -10669,10 +10669,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -10694,6 +10690,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -10931,10 +10931,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -10956,6 +10952,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -11098,10 +11098,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -11131,6 +11127,10 @@
         },
         {
           "type": "elsif_clause",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -11430,10 +11430,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -11455,6 +11451,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -11692,10 +11692,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -11717,6 +11713,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -11954,10 +11954,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -11979,6 +11975,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -12117,10 +12117,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -12142,6 +12138,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -12460,10 +12460,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -12485,6 +12481,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -12722,10 +12722,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -12747,6 +12743,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -12984,10 +12984,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -13009,6 +13005,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -13147,10 +13147,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -13172,6 +13168,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -13418,10 +13418,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -13443,6 +13439,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -13680,10 +13680,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -13705,6 +13701,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -13942,10 +13942,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -13967,6 +13963,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -14105,10 +14105,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -14130,6 +14126,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -14352,10 +14352,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -14377,6 +14373,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -14614,10 +14614,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -14639,6 +14635,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -14876,10 +14876,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -14901,6 +14897,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -15039,10 +15039,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -15064,6 +15060,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -15286,10 +15286,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -15311,6 +15307,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -15548,10 +15548,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -15573,6 +15569,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -15810,10 +15810,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -15835,6 +15831,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -15973,10 +15973,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -16002,6 +15998,10 @@
         },
         {
           "type": "exported",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -16270,10 +16270,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -16295,6 +16291,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -16532,10 +16532,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -16557,6 +16553,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -16794,10 +16794,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -16819,6 +16815,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -17056,10 +17056,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -17081,6 +17077,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -17318,10 +17318,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -17343,6 +17339,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -17601,10 +17601,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -17626,6 +17622,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -17863,10 +17863,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -17888,6 +17884,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -18125,10 +18125,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -18150,6 +18146,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -18288,10 +18288,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -18313,6 +18309,10 @@
         },
         {
           "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -18647,10 +18647,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -18672,6 +18668,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -18909,10 +18909,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -18934,6 +18930,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -19171,10 +19171,6 @@
             "named": true
           },
           {
-            "type": "call_function",
-            "named": true
-          },
-          {
             "type": "call_method_with_lambda",
             "named": true
           },
@@ -19196,6 +19192,10 @@
           },
           {
             "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_call",
             "named": true
           },
           {
@@ -19338,10 +19338,6 @@
           "named": true
         },
         {
-          "type": "call_function",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -19367,6 +19363,10 @@
         },
         {
           "type": "else_clause",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
