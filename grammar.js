@@ -189,7 +189,7 @@ module.exports = grammar({
       $.function_call,
       $.unary,
       $.binary,
-      prec.left(PREC.QMARK, seq(field('left', $._expression), $.qmark, $.selector)),
+      prec.left(PREC.QMARK, seq(field('left', $._expression), $.selector)),
     ),
 
     unary: $ => choice(
@@ -365,6 +365,7 @@ module.exports = grammar({
     // by the lexer with a lookback
 
     selector: $ => seq(
+      $.qmark,
       $.selbrace,
       $._selector_option_list,
       optional(','),

@@ -1,0 +1,79 @@
+================================================================================
+selector
+================================================================================
+$rootgroup = $facts ? {
+  'Redhat'                    => 'wheel',
+  /(Debian|Ubuntu)/           => 'wheel',
+  default                     => 'root',
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (variable
+      (name))
+    (selector
+      (qmark)
+      (selbrace)
+      (selector_option
+        (string)
+        (string))
+      (selector_option
+        (regex)
+        (string))
+      (selector_option
+        (default)
+        (string)))))
+
+================================================================================
+selector with data types
+================================================================================
+$enable_real = $enable ? {
+  Boolean => $enable,
+  String  => str2bool($enable),
+  Numeric => num2bool($enable),
+  default => fail('Illegal value for $enable parameter'),
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (variable
+      (name))
+    (selector
+      (qmark)
+      (selbrace)
+      (selector_option
+        (type
+          (classref))
+        (variable
+          (name)))
+      (selector_option
+        (type
+          (classref))
+        (function_call
+          (name)
+          (argument_list
+            (argument
+              (variable
+                (name))))))
+      (selector_option
+        (type
+          (classref))
+        (function_call
+          (name)
+          (argument_list
+            (argument
+              (variable
+                (name))))))
+      (selector_option
+        (default)
+        (function_call
+          (name)
+          (argument_list
+            (argument
+              (string))))))))
