@@ -66,7 +66,7 @@ run_task('_catch_errors' => true)
       (argument
         (hashpair
           (string)
-          (boolean)))))))
+          (true)))))))
 
 ================================================================================
 function call method

@@ -1,0 +1,26 @@
+================================================================================
+unary expressions
+================================================================================
+$foo = *$asdf
+$bar = -$asdf
+!$asdf
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (unary
+      (variable
+        (name))))
+  (statement
+    (variable
+      (name))
+    (operator)
+    (unary
+      (variable
+        (name))))
+  (statement
+    (unary
+      (variable
+        (name)))))

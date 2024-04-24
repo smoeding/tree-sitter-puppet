@@ -34,7 +34,9 @@ if $size =~ /^([0-9]+(\.[0-9]+)?)([KMGTPEkmgtpe])/ {
 (manifest
   (statement
     (if_expression
-      (variable
-        (name))
-      (regex)
+      (binary
+        (variable
+          (name))
+        (operator)
+        (regex))
       (body))))
