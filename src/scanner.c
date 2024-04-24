@@ -31,6 +31,7 @@
 
 #include <stdlib.h>
 #include <wchar.h>
+#include <wctype.h>
 
 #include "tree_sitter/parser.h"
 #include "tree_sitter/alloc.h"
