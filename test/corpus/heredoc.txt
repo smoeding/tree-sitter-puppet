@@ -11,9 +11,7 @@ END
     (variable
       (name))
     (operator)
-    (heredoc
-      (heredoc_start)
-      (heredoc_end))))
+    (heredoc)))
 
 ================================================================================
 heredoc with interpolation and escape
@@ -41,12 +39,8 @@ $gitconfig = @("GITCONFIG"/L)
       (name))
     (operator)
     (heredoc
-      (heredoc_start)
-      (heredoc_body)
       (interpolation)
-      (heredoc_body)
-      (interpolation)
-      (heredoc_end))))
+      (interpolation))))
 
 ================================================================================
 heredoc with short interpolation
@@ -61,10 +55,7 @@ $gitconfig = @("GITCONFIG"/L)
       (name))
     (operator)
     (heredoc
-      (heredoc_start)
-      (heredoc_body)
-      (interpolation)
-      (heredoc_end))))
+      (interpolation))))
 
 ================================================================================
 heredoc short
@@ -79,9 +70,7 @@ Foo
     (variable
       (name))
     (operator)
-    (heredoc
-      (heredoc_start)
-      (heredoc_end))))
+    (heredoc)))
 
 ================================================================================
 heredoc empty
@@ -94,6 +83,4 @@ empty
     (variable
       (name))
     (operator)
-    (heredoc
-      (heredoc_start)
-      (heredoc_end))))
+    (heredoc)))

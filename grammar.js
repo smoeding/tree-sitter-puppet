@@ -71,9 +71,9 @@ module.exports = grammar({
     $.selbrace,
     $._fixed_string,
     $._expandable_string,
-    $.heredoc_start,
-    $.heredoc_body,
-    $.heredoc_end,
+    $._heredoc_start,
+    $._heredoc_body,
+    $._heredoc_end,
     $.interpolation,
   ],
 
@@ -570,16 +570,16 @@ module.exports = grammar({
 
     heredoc: $ => seq(
       '@(',
-      $.heredoc_start,
+      $._heredoc_start,
       ')',
       choice(
-        $.heredoc_end,
+        $._heredoc_end,
         seq(
           repeat(choice(
-            $.heredoc_body,     // TODO: can this be invisible?
+            $._heredoc_body,
             $.interpolation,
           )),
-          $.heredoc_end,
+          $._heredoc_end,
         ),
       ),
     ),

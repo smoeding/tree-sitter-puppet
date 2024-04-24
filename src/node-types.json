@@ -10237,20 +10237,8 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
-        {
-          "type": "heredoc_body",
-          "named": true
-        },
-        {
-          "type": "heredoc_end",
-          "named": true
-        },
-        {
-          "type": "heredoc_start",
-          "named": true
-        },
         {
           "type": "interpolation",
           "named": true
@@ -19689,18 +19677,6 @@
   {
     "type": "function",
     "named": false
-  },
-  {
-    "type": "heredoc_body",
-    "named": true
-  },
-  {
-    "type": "heredoc_end",
-    "named": true
-  },
-  {
-    "type": "heredoc_start",
-    "named": true
   },
   {
     "type": "if",
