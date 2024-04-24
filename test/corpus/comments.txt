@@ -1,0 +1,28 @@
+================================================================================
+comments
+================================================================================
+# anything else here should be ignored
+
+$foo = $bar # comment
+
+$foo = '#'
+
+# https:/foo.bar/
+--------------------------------------------------------------------------------
+(manifest
+  (comment)
+  (statement
+    (resource
+      (variable
+        (name)))
+    (resource
+      (variable
+        (name))))
+  (comment)
+  (statement
+    (resource
+      (variable
+        (name)))
+    (resource
+      (string)))
+  (comment))
