@@ -105,9 +105,11 @@ module.exports = grammar({
     // Assignment (is right recursive since _assignment is right associative)
     _assignment: $ => prec.right(choice(
       prec(PREC.LOW, $._relationship),
-      prec.right(PREC.EQUALS, seq($._relationship, '=', $._assignment)),
-      prec.right(PREC.EQUALS, seq($._relationship, '+=', $._assignment)),
-      prec.right(PREC.EQUALS, seq($._relationship, '-=', $._assignment)),
+      prec.right(PREC.EQUALS, seq(
+        $._relationship,
+        alias(choice('=', '+=', '-='), $.operator),
+        $._assignment,
+      )),
     )),
 
     argument: $ => choice(
