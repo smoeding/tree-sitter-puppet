@@ -7901,6 +7901,21 @@
     }
   },
   {
+    "type": "function_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "function_call",
     "named": true,
     "fields": {
@@ -8855,15 +8870,15 @@
           "named": true
         },
         {
+          "type": "function_body",
+          "named": true
+        },
+        {
           "type": "parameter_list",
           "named": true
         },
         {
           "type": "return_type",
-          "named": true
-        },
-        {
-          "type": "statement",
           "named": true
         }
       ]

@@ -484,7 +484,7 @@ module.exports = grammar({
       $.classname,
       optional($.parameter_list),
       optional($.return_type),
-      $._statement_body,
+      alias($._statement_body, $.function_body),
     ),
 
     return_type: $ => choice(

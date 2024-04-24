@@ -1,4 +1,29 @@
 ================================================================================
+function definition
+================================================================================
+function foo::bar(String $foo) >> Boolean {
+
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_definition
+      (classname
+        (name))
+    (parameter_list
+      (parameter
+        (typed_parameter
+          (type
+            (classref))
+          (regular_parameter
+            (variable
+              (name))))))
+    (return_type
+      (type
+        (classref)))
+    (function_body))))
+
+================================================================================
 function call
 ================================================================================
 stdlib::ensure($ensure, 'file')
