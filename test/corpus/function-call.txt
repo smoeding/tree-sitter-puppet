@@ -1,0 +1,143 @@
+================================================================================
+function call
+================================================================================
+stdlib::ensure($ensure, 'file')
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+      (argument_list
+        (argument
+          (variable
+            (name)))
+        (argument
+          (string))))))
+
+================================================================================
+function call with trailing comma in argument list
+================================================================================
+stdlib::ensure($ensure,)
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+      (argument_list
+        (argument
+          (variable
+            (name)))))))
+
+================================================================================
+function call with single hash element
+================================================================================
+run_task('_catch_errors' => true)
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+    (argument_list
+      (argument
+        (hashpair
+          (string)
+          (boolean)))))))
+
+================================================================================
+function call method
+================================================================================
+$foo.join('_')
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name))
+        (argument_list
+          (argument
+            (string)))))))
+
+================================================================================
+function call with lambda
+================================================================================
+each($binaries) |$binary| { }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+      (argument_list
+        (argument
+          (variable
+             (name))))
+    (lambda
+      (parameter_list
+        (parameter
+          (regular_parameter
+            (variable
+              (name)))))
+      (lambda_body)))))
+
+================================================================================
+function call with interpolation
+================================================================================
+warning("Module foo not tested against ${operatingsystem}")
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+      (argument_list
+        (argument
+          (string
+            (interpolation)))))))
+
+================================================================================
+function call with Type
+================================================================================
+lookup('val', String, undef, [])
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+      (argument_list
+        (argument
+          (string))
+        (argument
+          (type
+            (classref)))
+        (argument
+          (undef))
+        (argument
+          (array))))))
+
+================================================================================
+function call function method chain
+================================================================================
+lookup('classes').join('_').include
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (call_method_with_lambda
+            (call_method
+              (named_access
+                (function_call
+                  (name)
+                  (argument_list
+                    (argument
+                      (string))))
+                (operator)
+                (name))
+              (argument_list
+                (argument
+                  (string)))))
+          (operator)
+          (name))))))

@@ -289,7 +289,7 @@ module.exports = grammar({
 
     named_access: $ => seq(
       $._expression,
-      token.immediate('.'),
+      alias(token.immediate('.'), $.operator),
       choice($.name, $.type),
     ),
 
