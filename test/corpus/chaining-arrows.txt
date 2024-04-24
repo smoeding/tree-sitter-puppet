@@ -1,0 +1,75 @@
+================================================================================
+chaining arrows resources
+================================================================================
+class{'before':} -> class{'after':}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (resource_type
+      (name)
+      (resource_body
+        (resource_title
+          (string))))
+    (chaining_arrow)
+    (resource_type
+      (name)
+      (resource_body
+        (resource_title
+          (string))))))
+
+================================================================================
+chaining arrows resource and reference
+================================================================================
+class{'before':} -> Class['after']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (resource_type
+      (name)
+      (resource_body
+        (resource_title
+          (string))))
+    (chaining_arrow)
+    (type
+      (classref))
+    (access_arg
+      (string))))
+
+================================================================================
+chaining arrows three resources
+================================================================================
+Package['ntp'] -> File['/etc/ntp.conf'] ~> Service['ntpd']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type
+      (classref))
+    (access_arg
+      (string))
+    (chaining_arrow)
+    (type
+      (classref))
+    (access_arg
+      (string))
+    (chaining_arrow)
+    (type
+      (classref))
+    (access_arg
+      (string))))
+
+================================================================================
+chaining arrows with collector
+================================================================================
+Package['ntp'] -> Ntp::Node <||>
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type
+      (classref))
+    (access_arg
+      (string))
+    (chaining_arrow)
+    (collection_expression
+      (type
+        (classref))
+      (collect_query))))

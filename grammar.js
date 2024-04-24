@@ -133,11 +133,10 @@ module.exports = grammar({
 
     _relationship: $ => choice(
       prec(PREC.LOW, $._resource),
-      prec.left(PREC.EDGE, seq($._relationship, '->', $._resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '~>', $._resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '<-', $._resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '<~', $._resource)),
+      prec.left(PREC.EDGE, seq($._relationship, $.chaining_arrow, $._resource)),
     ),
+
+    chaining_arrow: $ => choice('->', '~>', '<-', '<~'),
 
     // Resource
 
