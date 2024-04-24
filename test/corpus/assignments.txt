@@ -22,7 +22,7 @@ $foo = match(123)
     (operator)
     (function_call
       (name)
-      (arguments
+      (argument_list
         (argument
           (number))))))
 

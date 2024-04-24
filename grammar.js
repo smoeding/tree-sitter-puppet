@@ -117,9 +117,18 @@ module.exports = grammar({
       $.hashpair,
     ),
 
-    arguments: $ => choice(
+    _arguments: $ => choice(
       $.argument,
-      seq($.arguments, ',', $.argument),
+      seq($._arguments, ',', $.argument),
+    ),
+
+    argument_list: $ => seq(
+      $._arguments,
+    ),
+
+    argument_list_comma: $ => seq(
+      $._arguments,
+      optional(','),
     ),
 
     _relationship: $ => choice(
@@ -260,7 +269,7 @@ module.exports = grammar({
     function_call: $ => prec.right(PREC.HIGH, seq(
       choice($._expression, $.type),
       '(',
-      optional(seq($.arguments, optional(','))),
+      optional(alias($.argument_list_comma, $.argument_list)),
       ')',
       optional($.lambda),
     )),
@@ -273,7 +282,7 @@ module.exports = grammar({
     )),
 
     call_method: $ => prec.right(choice(
-      seq($.named_access, '(', $.arguments, ')'),
+      seq($.named_access, '(', $.argument_list, ')'),
       seq($.named_access, '(', ')'),
       $.named_access,
     )),
@@ -418,8 +427,7 @@ module.exports = grammar({
     apply_expression: $ => seq(
       'apply',
       '(',
-      $.arguments,
-      optional(','),
+      alias($.argument_list_comma, $.argument_list),
       ')',
       $._statement_body
     ),
