@@ -1,0 +1,99 @@
+================================================================================
+heredoc static
+================================================================================
+$a = @(END)
+This is the text that gets assigned to $a.
+And this too.
+END
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (heredoc
+      (heredoc_start)
+      (heredoc_end))))
+
+================================================================================
+heredoc with interpolation and escape
+================================================================================
+$gitconfig = @("GITCONFIG"/L)
+    [user]
+        name = ${displayname}
+        email = ${email}
+    [color]
+        ui = true
+    [alias]
+        lg = "log --pretty=format:'%C(yellow)%h%C(reset) %s \
+    %C(cyan)%cr%C(reset) %C(blue)%an%C(reset) %C(green)%d%C(reset)' --graph"
+        wdiff = diff --word-diff=color --ignore-space-at-eol \
+    --word-diff-regex='[[:alnum:]]+|[^[:space:][:alnum:]]+'
+    [merge]
+        defaultToUpstream = true
+    [push]
+        default = upstream
+    | GITCONFIG
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (heredoc
+      (heredoc_start)
+      (heredoc_body)
+      (interpolation)
+      (heredoc_body)
+      (interpolation)
+      (heredoc_end))))
+
+================================================================================
+heredoc with short interpolation
+================================================================================
+$gitconfig = @("GITCONFIG"/L)
+    name = ${displayname}
+    | GITCONFIG
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (heredoc
+      (heredoc_start)
+      (heredoc_body)
+      (interpolation)
+      (heredoc_end))))
+
+================================================================================
+heredoc short
+================================================================================
+$g = @(Foo)
+foobar
+next
+Foo
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (heredoc
+      (heredoc_start)
+      (heredoc_end))))
+
+================================================================================
+heredoc empty
+================================================================================
+$g = @(empty)
+empty
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (heredoc
+      (heredoc_start)
+      (heredoc_end))))
