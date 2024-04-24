@@ -6,11 +6,9 @@ string with single quotes
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string)))
+    (string))
   (statement
-    (resource
-      (string))))
+    (string)))
 
 ================================================================================
 string with double quotes
@@ -19,8 +17,7 @@ string with double quotes
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string))))
+    (string)))
 
 ================================================================================
 string with escape sequence
@@ -29,8 +26,7 @@ string with escape sequence
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string))))
+    (string)))
 
 ================================================================================
 string with escape sequence single quote
@@ -39,8 +35,7 @@ string with escape sequence single quote
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string))))
+    (string)))
 
 ================================================================================
 string with single underscore
@@ -49,8 +44,7 @@ string with single underscore
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string))))
+    (string)))
 
 ================================================================================
 string with literal backslash single quote
@@ -59,8 +53,7 @@ string with literal backslash single quote
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string))))
+    (string)))
 
 ================================================================================
 string with escaped newline
@@ -70,5 +63,4 @@ bar"
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string))))
+    (string)))

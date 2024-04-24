@@ -132,6 +132,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -216,7 +220,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -250,6 +258,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -386,6 +402,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -470,7 +490,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -504,6 +528,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -640,6 +672,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -724,7 +760,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -760,6 +800,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -780,6 +828,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -863,7 +915,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -923,17 +979,956 @@
   {
     "type": "argument",
     "named": true,
-    "fields": {},
+    "fields": {
+      "argument": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "left": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
+          "type": "access_arg",
+          "named": true
+        },
+        {
+          "type": "apply_expression",
+          "named": true
+        },
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "call_function",
+          "named": true
+        },
+        {
+          "type": "call_method_with_lambda",
+          "named": true
+        },
+        {
+          "type": "case_expression",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "collection_expression",
+          "named": true
+        },
+        {
+          "type": "default",
+          "named": true
+        },
+        {
+          "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "hash",
+          "named": true
+        },
+        {
           "type": "hashpair",
           "named": true
         },
         {
-          "type": "resource",
+          "type": "heredoc",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "node_definition",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "plan_definition",
+          "named": true
+        },
+        {
+          "type": "qmark",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "reserved_word",
+          "named": true
+        },
+        {
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "type_alias",
+          "named": true
+        },
+        {
+          "type": "type_definition",
+          "named": true
+        },
+        {
+          "type": "undef",
+          "named": true
+        },
+        {
+          "type": "unless_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -1106,6 +2101,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -1190,7 +2189,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -1224,6 +2227,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -1360,6 +2371,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -1444,7 +2459,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -1478,6 +2497,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -1632,6 +2659,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -1716,7 +2747,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -1750,6 +2785,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -1886,6 +2929,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -1970,7 +3017,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -2006,11 +3057,38 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
         ]
       }
+    }
+  },
+  {
+    "type": "attribute_operations",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2166,6 +3244,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -2250,7 +3332,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -2284,6 +3370,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -2420,6 +3514,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -2504,7 +3602,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -2538,6 +3640,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -2674,6 +3784,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -2758,7 +3872,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -2794,6 +3912,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -2818,6 +3944,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -2901,7 +4031,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -3110,6 +4244,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -3194,7 +4332,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -3228,6 +4370,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -3364,6 +4514,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -3448,7 +4602,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -3482,6 +4640,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -3618,6 +4784,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -3702,7 +4872,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -3738,6 +4912,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -3758,6 +4940,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -3841,7 +5027,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -4012,6 +5202,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -4096,7 +5290,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -4130,6 +5328,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -4266,6 +5472,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -4350,7 +5560,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -4384,6 +5598,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -4520,6 +5742,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -4604,7 +5830,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -4640,6 +5870,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -4660,6 +5898,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -4743,7 +5985,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -4964,6 +6210,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -5048,7 +6298,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -5082,6 +6336,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -5218,6 +6480,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -5302,7 +6568,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -5336,6 +6606,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -5472,6 +6750,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -5556,7 +6838,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -5592,6 +6878,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -5612,6 +6906,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -5691,7 +6989,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -5886,6 +7188,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -5970,7 +7276,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -6004,6 +7314,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -6140,6 +7458,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -6224,7 +7546,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -6258,6 +7584,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -6394,6 +7728,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -6478,7 +7816,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -6514,6 +7856,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -6537,7 +7887,7 @@
           "named": true
         },
         {
-          "type": "attribute",
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -6621,7 +7971,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -6859,6 +8213,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -6943,7 +8301,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -6977,6 +8339,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -7113,6 +8483,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -7197,7 +8571,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -7231,6 +8609,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -7367,6 +8753,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -7451,7 +8841,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -7487,6 +8881,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -7507,6 +8909,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -7590,7 +8996,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -7674,12 +9084,52 @@
     "type": "hashpair",
     "named": true,
     "fields": {
-      "key": {
+      "argument": {
         "multiple": true,
-        "required": true,
+        "required": false,
         "types": [
           {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
             "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
             "named": false
           },
           {
@@ -7691,7 +9141,23 @@
             "named": false
           },
           {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
             "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
             "named": false
           },
           {
@@ -7703,16 +9169,1002 @@
             "named": false
           },
           {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "key": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
             "type": "_",
             "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
           },
           {
             "type": "collection_entry_keyword",
             "named": true
           },
           {
-            "type": "resource",
+            "type": "collection_expression",
             "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "left": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -7725,7 +10177,47 @@
         "required": true,
         "types": [
           {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
             "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
             "named": false
           },
           {
@@ -7737,7 +10229,23 @@
             "named": false
           },
           {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
             "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
             "named": false
           },
           {
@@ -7749,16 +10257,192 @@
             "named": false
           },
           {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
             "type": "_",
             "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
           },
           {
             "type": "collection_entry_keyword",
             "named": true
           },
           {
-            "type": "resource",
+            "type": "collection_expression",
             "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -7959,6 +10643,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -8043,7 +10731,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -8077,6 +10769,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -8213,6 +10913,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -8297,7 +11001,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -8331,6 +11039,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -8467,6 +11183,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -8551,7 +11271,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -8587,6 +11311,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -8607,6 +11339,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -8698,7 +11434,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -8946,6 +11686,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -9030,7 +11774,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -9064,6 +11812,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -9200,6 +11956,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -9284,7 +12044,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -9318,6 +12082,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -9454,6 +12226,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -9538,7 +12314,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -9574,6 +12354,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -9594,6 +12382,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -9673,7 +12465,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -9940,6 +12736,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -10024,7 +12824,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -10058,6 +12862,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -10194,6 +13006,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -10278,7 +13094,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -10312,6 +13132,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -10448,6 +13276,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -10532,7 +13364,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -10568,6 +13404,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -10588,6 +13432,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -10667,7 +13515,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {
@@ -10711,1954 +13563,19 @@
     "fields": {}
   },
   {
-    "type": "resource",
-    "named": true,
-    "fields": {
-      "argument": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "access_arg",
-          "named": true
-        },
-        {
-          "type": "apply_expression",
-          "named": true
-        },
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute",
-          "named": true
-        },
-        {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "call_function",
-          "named": true
-        },
-        {
-          "type": "call_method_with_lambda",
-          "named": true
-        },
-        {
-          "type": "case_expression",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "collection_expression",
-          "named": true
-        },
-        {
-          "type": "default",
-          "named": true
-        },
-        {
-          "type": "define_definition",
-          "named": true
-        },
-        {
-          "type": "exported",
-          "named": true
-        },
-        {
-          "type": "function_definition",
-          "named": true
-        },
-        {
-          "type": "hash",
-          "named": true
-        },
-        {
-          "type": "heredoc",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "name",
-          "named": true
-        },
-        {
-          "type": "node_definition",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "plan_definition",
-          "named": true
-        },
-        {
-          "type": "qmark",
-          "named": true
-        },
-        {
-          "type": "regex",
-          "named": true
-        },
-        {
-          "type": "reserved_word",
-          "named": true
-        },
-        {
-          "type": "resource",
-          "named": true
-        },
-        {
-          "type": "resource_body",
-          "named": true
-        },
-        {
-          "type": "resource_reference",
-          "named": true
-        },
-        {
-          "type": "resource_type",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "type_alias",
-          "named": true
-        },
-        {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "undef",
-          "named": true
-        },
-        {
-          "type": "unless_expression",
-          "named": true
-        },
-        {
-          "type": "variable",
-          "named": true
-        },
-        {
-          "type": "virtual",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "resource_body",
     "named": true,
-    "fields": {
-      "argument": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "left": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "right": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      },
-      "title": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "!",
-            "named": false
-          },
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "!~",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "+=",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "-=",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<-",
-            "named": false
-          },
-          {
-            "type": "<<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "<~",
-            "named": false
-          },
-          {
-            "type": "=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": "=~",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": ">>",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access_arg",
-            "named": true
-          },
-          {
-            "type": "and",
-            "named": false
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "boolean",
-            "named": true
-          },
-          {
-            "type": "call_function",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case_expression",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "collection_expression",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "in",
-            "named": false
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "or",
-            "named": false
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "qmark",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless_expression",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "~>",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "attribute",
+          "type": "attribute_operations",
+          "named": true
+        },
+        {
+          "type": "resource_title",
           "named": true
         }
       ]
@@ -12797,6 +13714,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -12881,7 +13802,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -12915,6 +13840,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -13051,6 +13984,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -13135,7 +14072,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -13169,6 +14110,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -13305,6 +14254,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -13389,7 +14342,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -13425,6 +14382,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -13448,7 +14413,7 @@
           "named": true
         },
         {
-          "type": "attribute",
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -13481,10 +14446,6 @@
         },
         {
           "type": "define_definition",
-          "named": true
-        },
-        {
-          "type": "exported",
           "named": true
         },
         {
@@ -13532,11 +14493,957 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
           "named": true
         },
         {
-          "type": "resource_body",
+          "type": "resource_type",
+          "named": true
+        },
+        {
+          "type": "selector",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "type_alias",
+          "named": true
+        },
+        {
+          "type": "type_definition",
+          "named": true
+        },
+        {
+          "type": "undef",
+          "named": true
+        },
+        {
+          "type": "unless_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "resource_title",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "left": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "access_arg",
+          "named": true
+        },
+        {
+          "type": "apply_expression",
+          "named": true
+        },
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "call_function",
+          "named": true
+        },
+        {
+          "type": "call_method_with_lambda",
+          "named": true
+        },
+        {
+          "type": "case_expression",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "collection_expression",
+          "named": true
+        },
+        {
+          "type": "default",
+          "named": true
+        },
+        {
+          "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "hash",
+          "named": true
+        },
+        {
+          "type": "heredoc",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "node_definition",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "plan_definition",
+          "named": true
+        },
+        {
+          "type": "qmark",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "reserved_word",
           "named": true
         },
         {
@@ -13577,10 +15484,6 @@
         },
         {
           "type": "variable",
-          "named": true
-        },
-        {
-          "type": "virtual",
           "named": true
         }
       ]
@@ -13719,6 +15622,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -13803,7 +15710,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -13837,6 +15748,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -13973,6 +15892,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -14057,7 +15980,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -14091,6 +16018,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -14227,6 +16162,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -14311,7 +16250,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -14347,6 +16290,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -14355,7 +16306,7 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "access_arg",
@@ -14370,7 +16321,7 @@
           "named": true
         },
         {
-          "type": "attribute",
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -14451,10 +16402,6 @@
         },
         {
           "type": "reserved_word",
-          "named": true
-        },
-        {
-          "type": "resource",
           "named": true
         },
         {
@@ -14679,6 +16626,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -14763,7 +16714,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -14797,6 +16752,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -14933,6 +16896,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -15017,7 +16984,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -15051,6 +17022,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -15187,6 +17166,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -15271,7 +17254,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -15305,6 +17292,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -15441,6 +17436,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -15525,7 +17524,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -15559,6 +17562,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -15695,6 +17706,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -15779,7 +17794,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -15815,6 +17834,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -15840,17 +17867,956 @@
   {
     "type": "statement",
     "named": true,
-    "fields": {},
+    "fields": {
+      "argument": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "left": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "->",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<-",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<~",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "access_arg",
+            "named": true
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "apply_expression",
+            "named": true
+          },
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "call_function",
+            "named": true
+          },
+          {
+            "type": "call_method_with_lambda",
+            "named": true
+          },
+          {
+            "type": "case_expression",
+            "named": true
+          },
+          {
+            "type": "class_definition",
+            "named": true
+          },
+          {
+            "type": "collection_expression",
+            "named": true
+          },
+          {
+            "type": "default",
+            "named": true
+          },
+          {
+            "type": "define_definition",
+            "named": true
+          },
+          {
+            "type": "function_definition",
+            "named": true
+          },
+          {
+            "type": "hash",
+            "named": true
+          },
+          {
+            "type": "heredoc",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "name",
+            "named": true
+          },
+          {
+            "type": "node_definition",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "plan_definition",
+            "named": true
+          },
+          {
+            "type": "qmark",
+            "named": true
+          },
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "reserved_word",
+            "named": true
+          },
+          {
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
+            "named": true
+          },
+          {
+            "type": "selector",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "type_definition",
+            "named": true
+          },
+          {
+            "type": "undef",
+            "named": true
+          },
+          {
+            "type": "unless_expression",
+            "named": true
+          },
+          {
+            "type": "variable",
+            "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
+            "type": "~>",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "resource",
+          "type": "access_arg",
+          "named": true
+        },
+        {
+          "type": "apply_expression",
+          "named": true
+        },
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
+          "named": true
+        },
+        {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "call_function",
+          "named": true
+        },
+        {
+          "type": "call_method_with_lambda",
+          "named": true
+        },
+        {
+          "type": "case_expression",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "collection_expression",
+          "named": true
+        },
+        {
+          "type": "default",
+          "named": true
+        },
+        {
+          "type": "define_definition",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "hash",
+          "named": true
+        },
+        {
+          "type": "heredoc",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "node_definition",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "plan_definition",
+          "named": true
+        },
+        {
+          "type": "qmark",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "reserved_word",
+          "named": true
+        },
+        {
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
+          "named": true
+        },
+        {
+          "type": "selector",
           "named": true
         },
         {
           "type": "statement",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "type_alias",
+          "named": true
+        },
+        {
+          "type": "type_definition",
+          "named": true
+        },
+        {
+          "type": "undef",
+          "named": true
+        },
+        {
+          "type": "unless_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -16097,6 +19063,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -16181,7 +19151,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -16215,6 +19189,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -16351,6 +19333,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -16435,7 +19421,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -16469,6 +19459,14 @@
           {
             "type": "variable",
             "named": true
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
           },
           {
             "type": "~>",
@@ -16605,6 +19603,10 @@
             "named": true
           },
           {
+            "type": "attribute_operations",
+            "named": true
+          },
+          {
             "type": "boolean",
             "named": true
           },
@@ -16689,7 +19691,11 @@
             "named": true
           },
           {
-            "type": "resource",
+            "type": "resource_reference",
+            "named": true
+          },
+          {
+            "type": "resource_type",
             "named": true
           },
           {
@@ -16725,6 +19731,14 @@
             "named": true
           },
           {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          },
+          {
             "type": "~>",
             "named": false
           }
@@ -16745,6 +19759,10 @@
         },
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "attribute_operations",
           "named": true
         },
         {
@@ -16832,7 +19850,11 @@
           "named": true
         },
         {
-          "type": "resource",
+          "type": "resource_reference",
+          "named": true
+        },
+        {
+          "type": "resource_type",
           "named": true
         },
         {

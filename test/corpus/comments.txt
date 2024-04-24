@@ -12,17 +12,13 @@ $foo = '#'
 (manifest
   (comment)
   (statement
-    (resource
-      (variable
-        (name)))
-    (resource
-      (variable
-        (name))))
+    (variable
+      (name))
+    (variable
+      (name)))
   (comment)
   (statement
-    (resource
-      (variable
-        (name)))
-    (resource
-      (string)))
+    (variable
+      (name))
+    (string))
   (comment))

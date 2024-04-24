@@ -5,9 +5,8 @@ string with interpolation
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string
-        (interpolation)))))
+    (string
+      (interpolation))))
 
 ================================================================================
 string with multiple interpolations
@@ -16,10 +15,9 @@ string with multiple interpolations
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string
-        (interpolation)
-        (interpolation)))))
+    (string
+      (interpolation)
+      (interpolation))))
 
 ================================================================================
 string with interpolation without braces
@@ -28,9 +26,8 @@ string with interpolation without braces
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string
-        (interpolation)))))
+    (string
+      (interpolation))))
 
 ================================================================================
 string with interpolation explicit sigil
@@ -39,9 +36,8 @@ string with interpolation explicit sigil
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string
-        (interpolation)))))
+    (string
+      (interpolation))))
 
 ================================================================================
 string with interpolation hash
@@ -50,9 +46,8 @@ string with interpolation hash
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string
-        (interpolation)))))
+    (string
+      (interpolation))))
 
 ================================================================================
 string with interpolation with absolute variable without sigil
@@ -61,6 +56,5 @@ string with interpolation with absolute variable without sigil
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (resource
-      (string
-        (interpolation)))))
+    (string
+      (interpolation))))

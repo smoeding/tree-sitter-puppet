@@ -61,6 +61,7 @@ module.exports = grammar({
   ],
 
   conflicts: $ => [
+    [$.resource_type],
   ],
 
   // The tokens that the external scanner will detect. The order must be the
@@ -120,54 +121,48 @@ module.exports = grammar({
     ),
 
     _relationship: $ => choice(
-      prec(PREC.LOW, $.resource),
-      prec.left(PREC.EDGE, seq($._relationship, '->', $.resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '~>', $.resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '<-', $.resource)),
-      prec.left(PREC.EDGE, seq($._relationship, '<~', $.resource)),
+      prec(PREC.LOW, $._resource),
+      prec.left(PREC.EDGE, seq($._relationship, '->', $._resource)),
+      prec.left(PREC.EDGE, seq($._relationship, '~>', $._resource)),
+      prec.left(PREC.EDGE, seq($._relationship, '<-', $._resource)),
+      prec.left(PREC.EDGE, seq($._relationship, '<~', $._resource)),
     ),
 
     // Resource
 
-    resource: $ => choice(
+    _resource: $ => choice(
       prec(PREC.LOW, $._expression),
-      prec.right(PREC.AT, seq(alias('@', $.virtual), $.resource)),
-      prec.right(PREC.AT, seq(alias('@@', $.exported), $.resource)),
 
       // foo { 'title': }
-      prec(PREC.HIGH, seq(
-        alias($.resource, $.resource_type),
-        '{',
-        $._resource_bodies,
-        optional(';'),
-        '}',
-      )),
-
-      // class { 'title': }
-      prec(PREC.HIGH, seq(
-        alias($.class, $.resource_type),
-        '{',
-        $._resource_bodies,
-        optional(';'),
-        '}',
-      )),
+      $.resource_type,
 
       // Foo { }
       prec(PREC.HIGH, seq(
-        alias($.resource, $.resource_reference),
+        alias($._resource, $.resource_reference),
         '{',
-        optional($._attribute_operations),
+        optional($.attribute_operations),
         optional(','),
         '}',
       )),
     ),
 
+    resource_type: $ => prec(PREC.HIGH, seq(
+      optional(choice(alias('@', $.virtual), alias('@@', $.exported))),
+      choice($._resource, $._class),
+      '{',
+      $._resource_bodies,
+      optional(';'),
+      '}',
+    )),
+
     resource_body: $ => prec.right(seq(
-      field('title', $._expression),
+      $.resource_title,
       ':',
-      optional($._attribute_operations),
+      optional($.attribute_operations),
       optional(','),
     )),
+
+    resource_title: $ => $._expression,
 
     _resource_bodies: $ => choice(
       $.resource_body,
@@ -374,7 +369,7 @@ module.exports = grammar({
       seq($._expression, $.collect_query),
       optional(seq(
         '{',
-        optional($._attribute_operations),
+        optional($.attribute_operations),
         optional(','),
         '}',
       )),
@@ -387,9 +382,9 @@ module.exports = grammar({
 
     // Attribute Operations (Not an _expression)
 
-    _attribute_operations: $ => choice(
+    attribute_operations: $ => choice(
       $.attribute,
-      seq($._attribute_operations, ',', $.attribute),
+      seq($.attribute_operations, ',', $.attribute),
     ),
 
     attribute: $ => choice(
@@ -645,7 +640,7 @@ module.exports = grammar({
     word:     _ => /((?:::){0,1}(?:[a-z_](?:[\w-]*\w)?))+/,
 
     // handle the class keyword like a name node
-    class:    $ => alias('class', $.name),
+    _class:    $ => alias('class', $.name),
 
     number:   _ => /(?:0[xX][0-9A-Fa-f]+|0?\d+(?:\.\d+)?(?:[eE]-?\d+)?)/,
     default:  _ => 'default',
