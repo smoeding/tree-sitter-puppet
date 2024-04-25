@@ -1,0 +1,75 @@
+================================================================================
+types with unprotected string values
+================================================================================
+type Foo = Enum[true,default]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+      (operator)
+      (type
+        (classref))
+      (access
+        (access_element
+          (true))
+        (access_element
+          (default))))))
+
+================================================================================
+typecast
+================================================================================
+$foo = String(5)
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (function_call
+      (type
+        (classref))
+        (argument_list
+          (argument
+            (number))))))
+
+================================================================================
+struct data type
+================================================================================
+type Foo = Struct[{mode => Enum['read', 'write'],
+                   path => Optional[String[1]]}]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+      (operator)
+      (type
+        (classref))
+      (access
+        (access_element
+          (hash
+            (hashpair
+              (name)
+              (arrow)
+              (type
+                (classref))
+              (access
+                (access_element
+                  (string))
+                (access_element
+                  (string))))
+            (hashpair
+              (name)
+              (arrow)
+              (type
+                (classref))
+              (access
+                (access_element
+                  (type
+                    (classref))
+                  (access
+                    (access_element
+                      (number))))))))))))
