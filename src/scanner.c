@@ -80,7 +80,7 @@ typedef struct ScannerState {
  */
 
 static inline bool is_variable_name(int32_t c) {
-  return ((iswalpha(c) && islower(c)) || iswdigit(c) || (c == U'_'));
+  return ((iswalpha(c) && iswlower(c)) || iswdigit(c) || (c == U'_'));
 }
 
 
@@ -345,7 +345,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
  */
 
 static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
-  int match_index = 0;
+  uint32_t match_index = 0;
 
   for (;;) {
     // The final line might not have a newline at the end but we need to
