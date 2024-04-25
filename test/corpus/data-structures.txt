@@ -11,12 +11,15 @@ $hash = { 1 => 'asdf', 2 => 'foo', 'b' => 123 }
     (hash
       (hashpair
         (number)
+        (arrow)
         (string))
       (hashpair
         (number)
+        (arrow)
         (string))
       (hashpair
         (string)
+        (arrow)
         (number)))))
 
 ================================================================================
@@ -48,6 +51,7 @@ $hash_of_arrays = {
     (hash
       (hashpair
         (number)
+        (arrow)
         (array
           (array_element
             (number))
@@ -59,9 +63,11 @@ $hash_of_arrays = {
             (number))))
       (hashpair
         (string)
+        (arrow)
         (hash
           (hashpair
             (string)
+            (arrow)
             (number)))))))
 
 ================================================================================
@@ -91,6 +97,7 @@ $struct = [
         (hash
           (hashpair
             (number)
+            (arrow)
             (array
               (array_element
                 (string))
@@ -102,9 +109,11 @@ $struct = [
         (hash
           (hashpair
             (string)
+            (arrow)
             (hash
               (hashpair
                 (string)
+                (arrow)
                 (string)))))))))
 
 ================================================================================

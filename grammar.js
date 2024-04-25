@@ -660,7 +660,7 @@ module.exports = grammar({
 
     hashpair: $ => seq(
       field('key', $._hash_entry),
-      '=>',
+      alias('=>', $.arrow),
       field('value', $._hash_entry)
     ),
 

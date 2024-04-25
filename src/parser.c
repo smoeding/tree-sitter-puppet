@@ -1472,6 +1472,9 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   [14] = {
     [1] = anon_sym_EQ,
   },
+  [15] = {
+    [1] = anon_sym_PLUS_GT,
+  },
   [16] = {
     [3] = alias_sym_function_body,
   },

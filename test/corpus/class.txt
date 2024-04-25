@@ -1,0 +1,90 @@
+================================================================================
+example class
+================================================================================
+class foo::config {
+
+  #Setting File defaults:
+  File {
+    mode  => '0644',
+    owner => $foo::user,
+    group => $foo::group,
+  }
+
+  file { $foo::config_filepath:
+    ensure  => file,
+    content => template('foo/foo.conf.erb'),
+  }
+
+  file { $foo::root_dir:
+    ensure  => directory,
+    mode    => '0644',
+    recurse => false,
+  }
+
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (class_definition
+      (classname
+        (name))
+      (comment)
+      (statement
+        (resource_reference
+          (type
+            (classref)))
+        (attribute_list
+          (attribute
+            (name)
+            (arrow)
+            (string))
+          (attribute
+            (name)
+            (arrow)
+            (variable
+              (name)))
+          (attribute
+            (name)
+            (arrow)
+            (variable
+              (name)))))
+      (statement
+         (resource_type
+           (name)
+           (resource_body
+             (resource_title
+               (variable
+                 (name)))
+             (attribute_list
+               (attribute
+                 (name)
+                 (arrow)
+                 (name))
+               (attribute
+                 (name)
+                 (arrow)
+                 (function_call
+                   (name)
+                   (argument_list
+                     (argument
+                       (string)))))))))
+       (statement
+         (resource_type
+           (name)
+           (resource_body
+             (resource_title
+               (variable
+                 (name)))
+             (attribute_list
+               (attribute
+                 (name)
+                 (arrow)
+                 (name))
+               (attribute
+                 (name)
+                 (arrow)
+                 (string))
+               (attribute
+                 (name)
+                 (arrow)
+                 (false)))))))))

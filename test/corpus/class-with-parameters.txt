@@ -1,0 +1,58 @@
+================================================================================
+class with parameters
+================================================================================
+class myclass (
+  $bar,
+  $asdf = undef,
+  Hash $foo = {},
+  Hash $foo = {1 => 123},
+  #Enum['present, 'absent'] $ensure = 'present',
+  My::Type $foo
+){}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (class_definition
+      (classname
+        (name))
+      (parameter_list
+        (parameter
+          (regular_parameter
+            (variable
+              (name))))
+        (parameter
+          (regular_parameter
+            (variable
+              (name))
+            (operator)
+            (undef)))
+        (parameter
+          (typed_parameter
+            (type
+              (classref))
+            (regular_parameter
+              (variable
+                (name))
+              (operator)
+              (hash))))
+        (parameter
+          (typed_parameter
+            (type
+              (classref))
+            (regular_parameter
+              (variable
+                (name))
+              (operator)
+              (hash
+                (hashpair
+                  (number)
+                  (arrow)
+                  (number))))))
+        (comment)
+        (parameter
+          (typed_parameter
+            (type
+              (classref))
+            (regular_parameter
+              (variable
+                (name)))))))))

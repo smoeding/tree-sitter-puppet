@@ -66,6 +66,7 @@ run_task('_catch_errors' => true)
       (argument
         (hashpair
           (string)
+          (arrow)
           (true)))))))
 
 ================================================================================

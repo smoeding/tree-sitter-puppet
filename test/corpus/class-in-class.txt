@@ -1,0 +1,26 @@
+================================================================================
+class in class
+================================================================================
+class bar {
+  class { 'foo': } # class call
+
+  class baz {} # nested class
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (class_definition
+      (classname
+        (name))
+      (statement
+        (resource_type
+          (name)
+          (resource_body
+            (resource_title
+              (string)))))
+      (comment)
+      (statement
+        (class_definition
+          (classname
+            (name))))
+      (comment))))
