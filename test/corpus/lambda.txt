@@ -1,0 +1,121 @@
+================================================================================
+lambda with single variable
+================================================================================
+$var.each |$x| { }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name)))
+        (lambda
+          (parameter_list
+            (parameter
+              (regular_parameter
+                (variable
+                  (name)))))
+          (lambda_body)))))
+
+================================================================================
+lambda with data type
+================================================================================
+$var.each |Hash $x| { }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name)))
+        (lambda
+          (parameter_list
+            (parameter
+              (typed_parameter
+                (type
+                  (classref))
+                (regular_parameter
+                  (variable
+                    (name))))))
+          (lambda_body)))))
+
+================================================================================
+lambda with two variables
+================================================================================
+$var.map |$x,$y| { }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name)))
+        (lambda
+          (parameter_list
+            (parameter
+              (regular_parameter
+                (variable
+                  (name))))
+            (parameter
+              (regular_parameter
+                (variable
+                  (name)))))
+          (lambda_body)))))
+
+================================================================================
+lambda with two variables and start
+================================================================================
+$var.reduce(1) |$memo,$value| { }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name))
+        (argument_list
+          (argument
+            (number))))
+        (lambda
+          (parameter_list
+            (parameter
+              (regular_parameter
+                (variable
+                  (name))))
+            (parameter
+              (regular_parameter
+                (variable
+                  (name)))))
+          (lambda_body)))))
+
+================================================================================
+lambda with empty variables
+================================================================================
+$var.lest || { true }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name)))
+        (lambda
+          (parameter_list)
+          (lambda_body
+            (statement
+              (true)))))))
