@@ -246,7 +246,7 @@ module.exports = grammar({
     _primary_expression: $ => prec.left(choice(
       $.variable,
       $.call_method_with_lambda,
-      $.collection_expression,
+      $.resource_collector,
       $.case_expression,
       $.if_expression,
       $.unless_expression,
@@ -384,7 +384,7 @@ module.exports = grammar({
 
     // Collection
 
-    collection_expression: $ => prec.right(seq(
+    resource_collector: $ => prec.right(seq(
       seq($._expression, $.collect_query),
       optional(seq(
         '{',

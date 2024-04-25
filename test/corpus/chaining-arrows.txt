@@ -74,7 +74,7 @@ Package['ntp'] -> Ntp::Node <||>
       (access_element
         (string)))
     (chaining_arrow)
-    (collection_expression
+    (resource_collector
       (type
         (classref))
       (collect_query))))
