@@ -1,0 +1,22 @@
+================================================================================
+node
+================================================================================
+node 'foo.bar' { }
+
+node default  { }
+
+node /asdf.*/{}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (node_definition
+      (hostname
+        (string))))
+  (statement
+    (node_definition
+      (hostname
+        (default))))
+  (statement
+    (node_definition
+      (hostname
+        (regex)))))
