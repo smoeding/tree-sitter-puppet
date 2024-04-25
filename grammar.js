@@ -528,7 +528,7 @@ module.exports = grammar({
     _untyped_parameter: $ => choice($.regular_parameter, $.splat_parameter),
 
     regular_parameter: $ => choice(
-      seq($.variable, '=', $._expression),
+      seq($.variable, alias('=', $.operator), $._expression),
       $.variable,
     ),
 
