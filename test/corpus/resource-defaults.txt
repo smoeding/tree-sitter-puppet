@@ -1,0 +1,50 @@
+================================================================================
+resource defaults
+================================================================================
+  File {
+    mode  => '0644',
+    owner => $user,
+    group => $group,
+  }
+
+  Foo::File {
+    mode  => '0644',
+    requires => File['test']
+  }
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (resource_reference
+      (type
+        (classref)))
+    (attribute_list
+      (attribute
+        (name)
+        (arrow)
+        (string))
+      (attribute
+        (name)
+        (arrow)
+        (variable
+          (name)))
+      (attribute
+        (name)
+        (arrow)
+        (variable
+          (name)))))
+  (statement
+    (resource_reference
+      (type
+        (classref)))
+    (attribute_list
+      (attribute
+        (name)
+        (arrow)
+        (string))
+      (attribute
+        (name)
+        (arrow)
+        (type
+          (classref))
+        (access_arg
+          (string))))))

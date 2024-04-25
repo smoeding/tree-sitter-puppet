@@ -40,7 +40,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -203,7 +203,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -405,7 +405,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -568,7 +568,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -781,7 +781,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -944,7 +944,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -1127,7 +1127,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -1327,7 +1327,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -1472,10 +1472,20 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "arrow",
+          "named": true
+        }
+      ]
     }
   },
   {
-    "type": "attribute_operations",
+    "type": "attribute_list",
     "named": true,
     "fields": {},
     "children": {
@@ -1484,10 +1494,6 @@
       "types": [
         {
           "type": "attribute",
-          "named": true
-        },
-        {
-          "type": "attribute_operations",
           "named": true
         }
       ]
@@ -1534,7 +1540,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -1716,7 +1722,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -1967,7 +1973,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -2130,7 +2136,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -2313,7 +2319,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -2476,7 +2482,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -2714,7 +2720,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -2877,7 +2883,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -3061,7 +3067,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -3224,7 +3230,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -3474,7 +3480,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -3637,7 +3643,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -3835,7 +3841,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -4002,7 +4008,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -4231,7 +4237,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -4417,7 +4423,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -4603,7 +4609,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -4841,7 +4847,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -5004,7 +5010,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -5272,7 +5278,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -5435,7 +5441,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -5710,7 +5716,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -5873,7 +5879,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -6025,7 +6031,7 @@
       "required": true,
       "types": [
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -6076,7 +6082,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -6239,7 +6245,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -6418,7 +6424,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -6581,7 +6587,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -6760,7 +6766,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -6923,7 +6929,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -7156,7 +7162,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -7338,7 +7344,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -7520,7 +7526,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -7723,7 +7729,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -7886,7 +7892,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -8176,7 +8182,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -8358,7 +8364,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -8551,7 +8557,7 @@
             "named": true
           },
           {
-            "type": "attribute_operations",
+            "type": "attribute_list",
             "named": true
           },
           {
@@ -8714,7 +8720,7 @@
           "named": true
         },
         {
-          "type": "attribute_operations",
+          "type": "attribute_list",
           "named": true
         },
         {
@@ -8908,10 +8914,6 @@
     "named": false
   },
   {
-    "type": "+>",
-    "named": false
-  },
-  {
     "type": ",",
     "named": false
   },
@@ -8990,6 +8992,10 @@
   {
     "type": "apply",
     "named": false
+  },
+  {
+    "type": "arrow",
+    "named": true
   },
   {
     "type": "attr",

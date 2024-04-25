@@ -150,7 +150,7 @@ module.exports = grammar({
       prec(PREC.HIGH, seq(
         alias($._resource, $.resource_reference),
         '{',
-        optional($.attribute_operations),
+        optional(alias($._attribute_operations, $.attribute_list)),
         optional(','),
         '}',
       )),
@@ -168,7 +168,7 @@ module.exports = grammar({
     resource_body: $ => prec.right(seq(
       $.resource_title,
       ':',
-      optional($.attribute_operations),
+      optional(alias($._attribute_operations, $.attribute_list)),
       optional(','),
     )),
 
@@ -388,7 +388,7 @@ module.exports = grammar({
       seq($._expression, $.collect_query),
       optional(seq(
         '{',
-        optional($.attribute_operations),
+        optional(alias($._attribute_operations, $.attribute_list)),
         optional(','),
         '}',
       )),
@@ -401,15 +401,15 @@ module.exports = grammar({
 
     // Attribute Operations (Not an _expression)
 
-    attribute_operations: $ => choice(
+    _attribute_operations: $ => choice(
       $.attribute,
-      seq($.attribute_operations, ',', $.attribute),
+      seq($._attribute_operations, ',', $.attribute),
     ),
 
     attribute: $ => choice(
-      seq(field('name', $._attribute_name), '=>', field('value',$._expression)),
-      seq(field('name', $._attribute_name), '+>', field('value',$._expression)),
-      seq(field('name', '*'), '=>', field('value',$._expression)),
+      seq(field('name', $._attribute_name), alias('=>', $.arrow), field('value',$._expression)),
+      seq(field('name', $._attribute_name), alias('+>', $.arrow), field('value',$._expression)),
+      seq(field('name', '*'), alias('=>', $.arrow), field('value',$._expression)),
     ),
 
     _attribute_name: $ => choice($.name, $.keyword),
