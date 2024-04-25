@@ -247,9 +247,9 @@ module.exports = grammar({
       $.variable,
       $.call_method_with_lambda,
       $.resource_collector,
-      $.case_expression,
-      $.if_expression,
-      $.unless_expression,
+      $.case,
+      $.if,
+      $.unless,
       $.define_definition,
       $.class_definition,
       $.plan_definition,
@@ -321,29 +321,29 @@ module.exports = grammar({
     // If
 
     //if_expression: $ => seq('if', $._if_part),
-    if_expression: $ => seq(
+    if: $ => seq(
       'if',
       $._expression,
       alias($._statement_body, $.body),
-      repeat($.elsif_clause),
-      optional($.else_clause),
+      repeat($.elsif),
+      optional($.else),
     ),
 
-    elsif_clause: $ => seq('elsif', $._expression, alias($._statement_body, $.body)),
-    else_clause: $ => seq('else', alias($._statement_body, $.body)),
+    elsif: $ => seq('elsif', $._expression, alias($._statement_body, $.body)),
+    else: $ => seq('else', alias($._statement_body, $.body)),
 
     // Unless
 
-    unless_expression: $ => seq(
+    unless: $ => seq(
       'unless',
       $._expression,
       alias($._statement_body, $.body),
-      optional($.else_clause),
+      optional($.else),
     ),
 
     // Case Expression
 
-    case_expression: $ => seq('case', $._expression, '{', $._case_options, '}'),
+    case: $ => seq('case', $._expression, '{', $._case_options, '}'),
 
     _case_options: $ => choice(
       $.case_option,

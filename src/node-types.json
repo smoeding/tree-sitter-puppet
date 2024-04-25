@@ -67,7 +67,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -107,7 +107,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -183,7 +183,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -230,7 +230,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -274,7 +274,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -350,7 +350,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -432,7 +432,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -472,7 +472,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -548,7 +548,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -595,7 +595,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -639,7 +639,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -715,7 +715,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -808,7 +808,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -848,7 +848,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -924,7 +924,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -971,7 +971,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -1015,7 +1015,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -1091,7 +1091,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -1154,7 +1154,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -1194,7 +1194,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -1270,7 +1270,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -1354,7 +1354,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -1394,7 +1394,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -1470,7 +1470,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -1567,7 +1567,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -1607,7 +1607,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -1683,7 +1683,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -1749,7 +1749,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -1789,7 +1789,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -1865,7 +1865,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -1948,7 +1948,7 @@
     }
   },
   {
-    "type": "case_expression",
+    "type": "case",
     "named": true,
     "fields": {
       "left": {
@@ -2000,7 +2000,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -2040,7 +2040,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -2116,7 +2116,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -2163,7 +2163,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -2207,7 +2207,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -2283,7 +2283,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -2346,7 +2346,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -2386,7 +2386,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -2462,7 +2462,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -2513,7 +2513,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -2553,7 +2553,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -2629,7 +2629,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -2747,7 +2747,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -2787,7 +2787,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -2863,7 +2863,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -2910,7 +2910,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -2950,7 +2950,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -3026,7 +3026,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -3094,7 +3094,7 @@
     }
   },
   {
-    "type": "else_clause",
+    "type": "else",
     "named": true,
     "fields": {},
     "children": {
@@ -3109,7 +3109,7 @@
     }
   },
   {
-    "type": "elsif_clause",
+    "type": "elsif",
     "named": true,
     "fields": {
       "left": {
@@ -3161,7 +3161,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -3201,7 +3201,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -3277,7 +3277,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -3328,7 +3328,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -3368,7 +3368,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -3444,7 +3444,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -3522,7 +3522,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -3562,7 +3562,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -3638,7 +3638,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -3689,7 +3689,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -3729,7 +3729,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -3809,7 +3809,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -3918,7 +3918,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -3962,7 +3962,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -4038,7 +4038,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -4104,7 +4104,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -4144,7 +4144,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -4220,7 +4220,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -4290,7 +4290,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -4334,7 +4334,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -4410,7 +4410,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -4486,7 +4486,7 @@
     }
   },
   {
-    "type": "if_expression",
+    "type": "if",
     "named": true,
     "fields": {
       "left": {
@@ -4538,7 +4538,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -4578,7 +4578,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -4654,7 +4654,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -4705,7 +4705,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -4725,11 +4725,11 @@
           "named": true
         },
         {
-          "type": "else_clause",
+          "type": "else",
           "named": true
         },
         {
-          "type": "elsif_clause",
+          "type": "elsif",
           "named": true
         },
         {
@@ -4753,7 +4753,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -4829,7 +4829,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -4969,7 +4969,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -5009,7 +5009,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -5085,7 +5085,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -5132,7 +5132,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -5172,7 +5172,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -5248,7 +5248,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -5407,7 +5407,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -5447,7 +5447,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -5523,7 +5523,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -5570,7 +5570,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -5610,7 +5610,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -5686,7 +5686,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -5773,7 +5773,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -5813,7 +5813,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -5889,7 +5889,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -5936,7 +5936,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -5980,7 +5980,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -6056,7 +6056,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -6119,7 +6119,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -6159,7 +6159,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -6235,7 +6235,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -6282,7 +6282,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -6322,7 +6322,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -6398,7 +6398,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -6461,7 +6461,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -6501,7 +6501,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -6577,7 +6577,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -6624,7 +6624,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -6664,7 +6664,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -6740,7 +6740,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -6803,7 +6803,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -6843,7 +6843,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -6919,7 +6919,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -6966,7 +6966,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -7010,7 +7010,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -7090,7 +7090,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -7199,7 +7199,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -7239,7 +7239,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -7315,7 +7315,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -7381,7 +7381,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -7421,7 +7421,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -7497,7 +7497,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -7563,7 +7563,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -7603,7 +7603,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -7679,7 +7679,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -7766,7 +7766,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -7806,7 +7806,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -7882,7 +7882,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -7929,7 +7929,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -7969,7 +7969,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -8049,7 +8049,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
@@ -8219,7 +8219,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -8259,7 +8259,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -8335,7 +8335,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -8401,7 +8401,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -8441,7 +8441,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -8517,7 +8517,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -8542,7 +8542,7 @@
     "fields": {}
   },
   {
-    "type": "unless_expression",
+    "type": "unless",
     "named": true,
     "fields": {
       "left": {
@@ -8594,7 +8594,7 @@
             "named": true
           },
           {
-            "type": "case_expression",
+            "type": "case",
             "named": true
           },
           {
@@ -8634,7 +8634,7 @@
             "named": true
           },
           {
-            "type": "if_expression",
+            "type": "if",
             "named": true
           },
           {
@@ -8710,7 +8710,7 @@
             "named": true
           },
           {
-            "type": "unless_expression",
+            "type": "unless",
             "named": true
           },
           {
@@ -8761,7 +8761,7 @@
           "named": true
         },
         {
-          "type": "case_expression",
+          "type": "case",
           "named": true
         },
         {
@@ -8781,7 +8781,7 @@
           "named": true
         },
         {
-          "type": "else_clause",
+          "type": "else",
           "named": true
         },
         {
@@ -8805,7 +8805,7 @@
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "if",
           "named": true
         },
         {
@@ -8881,7 +8881,7 @@
           "named": true
         },
         {
-          "type": "unless_expression",
+          "type": "unless",
           "named": true
         },
         {
