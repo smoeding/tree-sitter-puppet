@@ -1,0 +1,100 @@
+================================================================================
+type declaration enumeration
+================================================================================
+type Ensure = Enum['present', 'absent']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+      (operator)
+      (type
+        (classref))
+      (access
+        (access_element
+          (string))
+        (access_element
+          (string))))))
+
+================================================================================
+type declaration enumeration with trailing comma
+================================================================================
+type Ensure = Enum['present', 'absent',]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+      (operator)
+      (type
+        (classref))
+      (access
+        (access_element
+          (string))
+        (access_element
+          (string))))))
+
+================================================================================
+type declaration variant
+================================================================================
+type Compose = Variant[String,Integer]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+      (operator)
+      (type
+        (classref))
+      (access
+        (access_element
+          (type
+            (classref)))
+        (access_element
+          (type
+            (classref)))))))
+
+================================================================================
+type declaration nested
+================================================================================
+type Nested = Optional[Enum['default', 'foo', 'bar']]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+    (operator)
+    (type
+      (classref))
+    (access
+      (access_element
+        (type
+          (classref))
+        (access
+          (access_element
+            (string))
+          (access_element
+            (string))
+          (access_element
+            (string))))))))
+
+================================================================================
+type declaration regex pattern
+================================================================================
+type Foo = Pattern[/\/slash/]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (type_alias
+      (type
+        (classref))
+    (operator)
+    (type
+      (classref))
+    (access
+      (access_element
+        (regex))))))
