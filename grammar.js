@@ -539,11 +539,11 @@ module.exports = grammar({
     // Type Alias
 
     type_alias: $ => prec.right(choice(
-      seq($._type_alias_lhs, '=', $.type, $.hash),
-      seq($._type_alias_lhs, '=', $.type, token.immediate('['), $._access_args, optional(','), ']'),
-      seq($._type_alias_lhs, '=', $.type),
-      seq($._type_alias_lhs, '=', $.hash),
-      seq($._type_alias_lhs, '=', $.array),
+      seq($._type_alias_lhs, alias('=', $.operator), $.type, $.hash),
+      seq($._type_alias_lhs, alias('=', $.operator), $.type, token.immediate('['), $._access_args, optional(','), ']'),
+      seq($._type_alias_lhs, alias('=', $.operator), $.type),
+      seq($._type_alias_lhs, alias('=', $.operator), $.hash),
+      seq($._type_alias_lhs, alias('=', $.operator), $.array),
     )),
 
     _type_alias_lhs: $ => seq('type', $._parameter_type),
