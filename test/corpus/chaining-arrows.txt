@@ -32,8 +32,9 @@ class{'before':} -> Class['after']
     (chaining_arrow)
     (type
       (classref))
-    (access_arg
-      (string))))
+    (access
+      (access_element
+        (string)))))
 
 ================================================================================
 chaining arrows three resources
@@ -44,18 +45,21 @@ Package['ntp'] -> File['/etc/ntp.conf'] ~> Service['ntpd']
   (statement
     (type
       (classref))
-    (access_arg
-      (string))
+    (access
+      (access_element
+        (string)))
     (chaining_arrow)
     (type
       (classref))
-    (access_arg
-      (string))
+    (access
+      (access_element
+        (string)))
     (chaining_arrow)
     (type
       (classref))
-    (access_arg
-      (string))))
+    (access
+      (access_element
+        (string)))))
 
 ================================================================================
 chaining arrows with collector
@@ -66,8 +70,9 @@ Package['ntp'] -> Ntp::Node <||>
   (statement
     (type
       (classref))
-    (access_arg
-      (string))
+    (access
+      (access_element
+        (string)))
     (chaining_arrow)
     (collection_expression
       (type

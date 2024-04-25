@@ -221,17 +221,17 @@ module.exports = grammar({
     _bracketed_expression: $ => seq(
       $._expression,
       token.immediate('['),
-      $._access_args,
+      alias($._access_elements, $.access),
       optional(','),
       ']',
     ),
 
-    _access_args: $ => choice(
-      $.access_arg,
-      seq($._access_args, ',', $.access_arg),
+    _access_elements: $ => choice(
+      $.access_element,
+      seq($._access_elements, ',', $.access_element),
     ),
 
-    access_arg: $ => choice(
+    access_element: $ => choice(
       $._expression,
       $.hashpair,
     ),
@@ -495,9 +495,14 @@ module.exports = grammar({
       alias($._statement_body, $.function_body),
     ),
 
-    return_type: $ => choice(
-      seq('>>', $.type),
-      seq('>>', $.type, token.immediate('['), $._access_args, ']'),
+    return_type: $ => seq(
+      '>>',
+      $.type,
+      optional(seq(
+        token.immediate('['),
+        alias($._access_elements, $.access),
+        ']',
+      ))
     ),
 
     // Names and parameters common to several rules
@@ -533,17 +538,35 @@ module.exports = grammar({
 
     _parameter_type: $ => choice(
       $.type,
-      seq($.type, token.immediate('['), $._access_args, ']'),
+      seq(
+        $.type,
+        token.immediate('['),
+        alias($._access_elements, $.access),
+        ']',
+      ),
     ),
 
     // Type Alias
 
-    type_alias: $ => prec.right(choice(
-      seq($._type_alias_lhs, alias('=', $.operator), $.type, $.hash),
-      seq($._type_alias_lhs, alias('=', $.operator), $.type, token.immediate('['), $._access_args, optional(','), ']'),
-      seq($._type_alias_lhs, alias('=', $.operator), $.type),
-      seq($._type_alias_lhs, alias('=', $.operator), $.hash),
-      seq($._type_alias_lhs, alias('=', $.operator), $.array),
+    type_alias: $ => prec.right(seq(
+      $._type_alias_lhs,
+      alias('=', $.operator),
+      choice(
+        seq(
+          $.type,
+          $.hash
+        ),
+        seq(
+          $.type,
+          token.immediate('['),
+          alias($._access_elements, $.access),
+          optional(','),
+          ']'
+        ),
+        $.type,
+        $.hash,
+        $.array,
+      ),
     )),
 
     _type_alias_lhs: $ => seq('type', $._parameter_type),

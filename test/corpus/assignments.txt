@@ -74,8 +74,9 @@ $foo = Test['asdf']
     (operator)
     (type
       (classref))
-    (access_arg
-      (string))))
+    (access
+      (access_element
+        (string)))))
 
 ================================================================================
 assignment absolute scope

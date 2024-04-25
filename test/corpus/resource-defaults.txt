@@ -46,5 +46,6 @@ resource defaults
         (arrow)
         (type
           (classref))
-        (access_arg
-          (string))))))
+        (access
+          (access_element
+            (string)))))))

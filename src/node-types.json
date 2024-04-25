@@ -1,6 +1,21 @@
 [
   {
-    "type": "access_arg",
+    "type": "access",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "access_element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "access_element",
     "named": true,
     "fields": {
       "left": {
@@ -28,7 +43,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -191,7 +206,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -393,7 +408,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -556,7 +571,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -769,7 +784,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -932,7 +947,7 @@
       "required": false,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -1115,7 +1130,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -1315,7 +1330,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -1528,7 +1543,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -1710,7 +1725,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -1961,7 +1976,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -2124,7 +2139,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -2307,7 +2322,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -2470,7 +2485,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -2708,7 +2723,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -2871,7 +2886,7 @@
       "required": false,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -3055,7 +3070,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -3218,7 +3233,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -3468,7 +3483,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -3631,7 +3646,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -3829,7 +3844,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -3992,7 +4007,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -4225,7 +4240,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -4411,7 +4426,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -4597,7 +4612,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -4835,7 +4850,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -4998,7 +5013,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -5266,7 +5281,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -5429,7 +5444,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -5704,7 +5719,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -5867,7 +5882,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -6070,7 +6085,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -6233,7 +6248,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -6412,7 +6427,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -6575,7 +6590,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -6754,7 +6769,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -6917,7 +6932,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -7088,7 +7103,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -7150,7 +7165,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -7332,7 +7347,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -7514,7 +7529,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -7717,7 +7732,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -7880,7 +7895,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -8073,7 +8088,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -8123,7 +8138,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
@@ -8170,7 +8185,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -8352,7 +8367,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -8545,7 +8560,7 @@
             "named": false
           },
           {
-            "type": "access_arg",
+            "type": "access",
             "named": true
           },
           {
@@ -8708,7 +8723,7 @@
       "required": true,
       "types": [
         {
-          "type": "access_arg",
+          "type": "access",
           "named": true
         },
         {
