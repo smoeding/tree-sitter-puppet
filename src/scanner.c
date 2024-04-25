@@ -345,13 +345,14 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
  */
 
 static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
+  bool     match_valid = true;
   uint32_t match_index = 0;
 
   for (;;) {
     // The final line might not have a newline at the end but we need to
     // check for the heredoc tag there as well
     if (lexer->eof(lexer)) {
-      if (state->heredoc_tag.size == match_index) {
+      if (match_valid && (state->heredoc_tag.size == match_index)) {
         array_clear(&state->heredoc_tag);
         lexer->result_symbol = HEREDOC_END;
         return true;
@@ -361,12 +362,13 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
     }
     else if (lexer->lookahead == U'\n') {
       // Check for the heredoc tag when the end of the line is reached
-      if (state->heredoc_tag.size == match_index) {
+      if (match_valid && (state->heredoc_tag.size == match_index)) {
         array_clear(&state->heredoc_tag);
         lexer->result_symbol = HEREDOC_END;
         return true;
       }
 
+      match_valid = true;
       match_index = 0;
       lexer->advance(lexer, false);
     }
@@ -384,15 +386,15 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
       // Check if the text in the current line matched the heredoc tag.
       // We start if the first alphanumeric character is found. The
       // comparison continues with the following characters.
-      if (iswalnum(lexer->lookahead) && (match_index >= 0)) {
+      if (match_valid && iswalnum(lexer->lookahead)) {
         if ((state->heredoc_tag.size > match_index) &&
             (*array_get(&state->heredoc_tag, match_index) == lexer->lookahead)) {
-          // The prefix matches so advance the index to the next character
+          // The prefix matches so advance the index to the next tag character
           match_index++;
         }
         else {
           // It doesn't match so skip the rest of the line
-          match_index = -1;
+          match_valid = false;
         }
       }
 
