@@ -1,0 +1,155 @@
+================================================================================
+element reference array
+================================================================================
+$array[1]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (access
+      (access_element
+        (number)))))
+
+================================================================================
+element reference hash
+================================================================================
+$hash['foo']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (access
+      (access_element
+        (string)))))
+
+================================================================================
+element reference array of arrays
+================================================================================
+$array[1][2]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (access
+      (access_element
+        (number)))
+    (access
+      (access_element
+        (number)))))
+
+================================================================================
+element reference hash of hashes
+================================================================================
+$facts['os']['release']['major']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (access
+      (access_element
+        (string)))
+    (access
+      (access_element
+        (string)))
+    (access
+      (access_element
+        (string)))))
+
+================================================================================
+element reference array slice
+================================================================================
+$array[1,2]
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (access
+      (access_element
+        (number))
+      (access_element
+        (number)))))
+
+================================================================================
+element reference method call
+================================================================================
+$target.facts['logical_volumes']['size']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (variable
+            (name))
+          (operator)
+          (name))))
+    (access
+      (access_element
+        (string)))
+    (access
+      (access_element
+        (string)))))
+
+================================================================================
+element reference unprotected string
+================================================================================
+$myhash = { key       => "some value",
+            other_key => "some other value" }
+notice( $myhash[key] )
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (variable
+      (name))
+    (operator)
+    (hash
+      (hashpair
+        key: (name)
+        (arrow)
+        value: (string))
+      (hashpair
+        key: (name)
+        (arrow)
+        value: (string))))
+  (statement
+    (function_call
+      (name)
+    (argument_list
+      (argument
+        (variable
+          (name))
+        (access
+          (access_element
+            (name))))))))
+
+================================================================================
+element reference mixed elements
+================================================================================
+notice( $myhash['foo'][bar][$baz][1] )
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (function_call
+      (name)
+      (argument_list
+        (argument
+          (variable
+            (name))
+          (access
+            (access_element
+              (string)))
+          (access
+            (access_element
+              (name)))
+          (access
+            (access_element
+              (variable
+                (name))))
+          (access
+            (access_element
+              (number))))))))
