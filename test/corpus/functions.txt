@@ -115,7 +115,7 @@ warning("Module foo not tested against ${operatingsystem}")
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (function_call
+    (statement_function
       (name)
       (argument_list
         (argument

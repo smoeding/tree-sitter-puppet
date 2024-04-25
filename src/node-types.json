@@ -4898,6 +4898,11 @@
     }
   },
   {
+    "type": "name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "name_or_number",
     "named": true,
     "fields": {},
@@ -8021,6 +8026,10 @@
           "named": true
         },
         {
+          "type": "statement_function",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -8054,6 +8063,29 @@
         },
         {
           "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "argument",
+          "named": true
+        },
+        {
+          "type": "argument_list",
+          "named": true
+        },
+        {
+          "type": "name",
           "named": true
         }
       ]
@@ -9035,6 +9067,14 @@
     "named": true
   },
   {
+    "type": "contain",
+    "named": false
+  },
+  {
+    "type": "debug",
+    "named": false
+  },
+  {
     "type": "default",
     "named": false
   },
@@ -9051,8 +9091,16 @@
     "named": false
   },
   {
+    "type": "err",
+    "named": false
+  },
+  {
     "type": "exported",
     "named": true
+  },
+  {
+    "type": "fail",
+    "named": false
   },
   {
     "type": "false",
@@ -9071,6 +9119,14 @@
     "named": false
   },
   {
+    "type": "include",
+    "named": false
+  },
+  {
+    "type": "info",
+    "named": false
+  },
+  {
     "type": "inherits",
     "named": false
   },
@@ -9079,11 +9135,11 @@
     "named": true
   },
   {
-    "type": "name",
-    "named": true
+    "type": "node",
+    "named": false
   },
   {
-    "type": "node",
+    "type": "notice",
     "named": false
   },
   {
@@ -9111,8 +9167,16 @@
     "named": true
   },
   {
+    "type": "require",
+    "named": false
+  },
+  {
     "type": "selbrace",
     "named": true
+  },
+  {
+    "type": "tag",
+    "named": false
   },
   {
     "type": "true",
@@ -9133,6 +9197,10 @@
   {
     "type": "virtual",
     "named": true
+  },
+  {
+    "type": "warning",
+    "named": false
   },
   {
     "type": "word",

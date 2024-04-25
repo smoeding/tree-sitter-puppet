@@ -99,8 +99,22 @@ module.exports = grammar({
 
     statement: $ => choice(
       $._assignment,
+      $.statement_function,
       seq($.statement, ',', $._assignment),
     ),
+
+    statement_function: $ => seq(
+      alias($.statement_function_keywords, $.name),
+      choice(
+        seq('(', optional($._statement_function_args), ')'),
+        alias($._statement_function_args, $.argument_list),
+      )
+    ),
+
+    _statement_function_args: $ => prec.right(choice(
+      alias($._expression, $.argument),
+      seq(alias($._expression, $.argument), ',', $._statement_function_args),
+    )),
 
     // Assignment (is right recursive since _assignment is right associative)
     _assignment: $ => prec.right(choice(
@@ -122,9 +136,7 @@ module.exports = grammar({
       seq($._arguments, ',', $.argument),
     ),
 
-    argument_list: $ => seq(
-      $._arguments,
-    ),
+    argument_list: $ => $._arguments,
 
     argument_list_comma: $ => seq(
       $._arguments,
@@ -676,6 +688,12 @@ module.exports = grammar({
       'and', 'case', 'class', 'default', 'define', 'else', 'elsif', 'if', 'in',
       'inherits', 'node', 'or', 'undef', 'unless', 'type', 'attr', 'function',
       'private', 'plan', 'apply',
+    ),
+
+    statement_function_keywords: _ => choice(
+      'include', 'require', 'contain', 'tag',      // Catalog statements
+      'debug', 'info', 'notice', 'warning', 'err', // Logging statements
+      'fail',                                      // Failure statements
     ),
 
     classref: _ => /((::){0,1}[A-Z]\w*)+/,

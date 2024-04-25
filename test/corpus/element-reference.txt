@@ -96,7 +96,7 @@ $target.facts['logical_volumes']['size']
         (string)))))
 
 ================================================================================
-element reference unprotected string
+element reference bare words
 ================================================================================
 $myhash = { key       => "some value",
             other_key => "some other value" }
@@ -117,7 +117,7 @@ notice( $myhash[key] )
         (arrow)
         value: (string))))
   (statement
-    (function_call
+    (statement_function
       (name)
     (argument_list
       (argument
@@ -134,7 +134,7 @@ notice( $myhash['foo'][bar][$baz][1] )
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (function_call
+    (statement_function
       (name)
       (argument_list
         (argument

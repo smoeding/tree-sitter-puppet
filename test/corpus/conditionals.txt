@@ -154,23 +154,29 @@ case $os {
       (string)
       (body
         (statement
-          (name))
-        (statement
-          (name))))
+          (statement_function
+            (name)
+            (argument_list
+              (argument
+                (name)))))))
     (case_option
       (regex)
       (body
         (statement
-          (name))
-        (statement
-          (name))))
+          (statement_function
+            (name)
+            (argument_list
+              (argument
+                (name)))))))
     (case_option
       (default)
       (body
         (statement
-          (name))
-        (statement
-          (name)))))))
+          (statement_function
+            (name)
+            (argument_list
+              (argument
+                (name))))))))))
 
 ================================================================================
 case with data type
