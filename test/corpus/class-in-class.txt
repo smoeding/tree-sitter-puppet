@@ -12,15 +12,17 @@ class bar {
     (class_definition
       (classname
         (name))
-      (statement
-        (resource_type
-          (name)
-          (resource_body
-            (resource_title
-              (string)))))
-      (comment)
-      (statement
-        (class_definition
-          (classname
-            (name))))
-      (comment))))
+      (block
+        (statement
+          (resource_type
+            (name)
+            (resource_body
+              (resource_title
+                (string)))))
+        (comment)
+        (statement
+          (class_definition
+            (classname
+              (name))
+            (block)))
+        (comment)))))

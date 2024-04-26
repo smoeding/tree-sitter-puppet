@@ -7,7 +7,7 @@ if true { }
   (statement
     (if
       (true)
-      (body))))
+      (block))))
 
 ================================================================================
 if statement with else
@@ -18,9 +18,9 @@ if true { } else { }
   (statement
     (if
       (true)
-      (body)
+      (block)
       (else
-        (body)))))
+        (block)))))
 
 ================================================================================
 if statement with elsif and else
@@ -31,12 +31,12 @@ if true { } elsif false { } else { }
   (statement
     (if
       (true)
-      (body)
+      (block)
       (elsif
         (false)
-        (body))
+        (block))
       (else
-        (body)))))
+        (block)))))
 
 ================================================================================
 unless statement
@@ -47,7 +47,7 @@ unless true { }
   (statement
     (unless
       (true)
-      (body))))
+      (block))))
 
 ================================================================================
 unless statement with else
@@ -58,9 +58,9 @@ unless true { } else { }
   (statement
     (unless
       (true)
-      (body)
+      (block)
       (else
-        (body)))))
+        (block)))))
 
 ================================================================================
 if statement with group
@@ -77,7 +77,7 @@ if (true or false) or 1 { }
           (false))
         (operator)
         (number))
-      (body))))
+      (block))))
 
 ================================================================================
 if statement with method call
@@ -97,7 +97,7 @@ if $var.is_a(Hash) { }
           (argument_list
             (argument
               (type)))))
-      (body))))
+      (block))))
 
 ================================================================================
 if as expression
@@ -120,11 +120,11 @@ $result = if $os == 'RedHat' {
           (name))
         (operator)
         (string))
-      (body
+      (block
         (statement
           (number)))
       (else
-        (body
+        (block
           (statement
             (number)))))))
 
@@ -151,7 +151,7 @@ case $os {
     (case_option
       (string)
       (string)
-      (body
+      (block
         (statement
           (statement_function
             (name)
@@ -160,7 +160,7 @@ case $os {
                 (name)))))))
     (case_option
       (regex)
-      (body
+      (block
         (statement
           (statement_function
             (name)
@@ -169,7 +169,7 @@ case $os {
                 (name)))))))
     (case_option
       (default)
-      (body
+      (block
         (statement
           (statement_function
             (name)
@@ -192,10 +192,10 @@ case $foo {
         (name))
       (case_option
         (type)
-        (body))
+        (block))
       (case_option
         (type)
-        (body)))))
+        (block)))))
 
 ================================================================================
 case as expression
@@ -217,16 +217,16 @@ $result = case $os {
       (case_option
         (string)
         (string)
-        (body
+        (block
           (statement
             (number))))
       (case_option
         (regex)
-        (body
+        (block
           (statement
             (number))))
       (case_option
         (default)
-        (body
+        (block
           (statement
             (number)))))))

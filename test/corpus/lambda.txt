@@ -18,7 +18,7 @@ $var.each |$x| { }
               (regular_parameter
                 (variable
                   (name)))))
-          (lambda_body)))))
+          (block)))))
 
 ================================================================================
 lambda with data type
@@ -42,7 +42,7 @@ $var.each |Hash $x| { }
                 (regular_parameter
                   (variable
                     (name))))))
-          (lambda_body)))))
+          (block)))))
 
 ================================================================================
 lambda with two variables
@@ -68,7 +68,7 @@ $var.map |$x,$y| { }
               (regular_parameter
                 (variable
                   (name)))))
-          (lambda_body)))))
+          (block)))))
 
 ================================================================================
 lambda with two variables and start
@@ -97,7 +97,7 @@ $var.reduce(1) |$memo,$value| { }
               (regular_parameter
                 (variable
                   (name)))))
-          (lambda_body)))))
+          (block)))))
 
 ================================================================================
 lambda with empty variables
@@ -115,6 +115,6 @@ $var.lest || { true }
           (name)))
         (lambda
           (parameter_list)
-          (lambda_body
+          (block
             (statement
               (true)))))))

@@ -19,7 +19,7 @@ function foo::bar(String $foo) >> Boolean {
               (name))))))
     (return_type
       (type))
-    (function_body))))
+    (block))))
 
 ================================================================================
 function call
@@ -104,7 +104,7 @@ each($binaries) |$binary| { }
           (regular_parameter
             (variable
               (name)))))
-      (lambda_body)))))
+      (block)))))
 
 ================================================================================
 function call with interpolation

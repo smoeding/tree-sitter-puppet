@@ -11,12 +11,15 @@ node /asdf.*/{}
   (statement
     (node_definition
       (hostname
-        (string))))
+        (string))
+      (block)))
   (statement
     (node_definition
       (hostname
-        (default))))
+        (default))
+      (block)))
   (statement
     (node_definition
       (hostname
-        (regex)))))
+        (regex))
+      (block))))

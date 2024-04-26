@@ -1,5 +1,5 @@
 ================================================================================
-resource declaration basic class
+resource definition basic class
 ================================================================================
 class myclass{}
 --------------------------------------------------------------------------------
@@ -7,10 +7,11 @@ class myclass{}
   (statement
     (class_definition
       (classname
-        (name)))))
+        (name))
+      (block))))
 
 ================================================================================
-resource declaration basic type
+resource definition basic type
 ================================================================================
 define myresource (){}
 --------------------------------------------------------------------------------
@@ -19,10 +20,11 @@ define myresource (){}
     (define_definition
       (classname
         (name))
-      (parameter_list))))
+      (parameter_list)
+      (block))))
 
 ================================================================================
-resource declaration basic plan
+resource definition basic plan
 ================================================================================
 plan foo::bar {}
 --------------------------------------------------------------------------------
@@ -30,10 +32,11 @@ plan foo::bar {}
   (statement
     (plan_definition
       (classname
-        (name)))))
+        (name))
+      (block))))
 
 ================================================================================
-resource declaration basic
+resource definition basic
 ================================================================================
 class mypackage::myclass (){}
 --------------------------------------------------------------------------------
@@ -42,10 +45,11 @@ class mypackage::myclass (){}
     (class_definition
       (classname
         (name))
-      (parameter_list))))
+      (parameter_list)
+      (block))))
 
 ================================================================================
-resource declaration with inheritance
+resource definition with inheritance
 ================================================================================
 class myclass () inherits myclass::params { }
 --------------------------------------------------------------------------------
@@ -56,10 +60,11 @@ class myclass () inherits myclass::params { }
         (name))
       (parameter_list)
       (classname
-        (name)))))
+        (name))
+      (block))))
 
 ================================================================================
-resource declaration with parameters
+resource definition with parameters
 ================================================================================
 class foo (
   String $foo,
@@ -85,4 +90,5 @@ class foo (
               (variable
                 (name))
               (operator)
-              (string))))))))
+              (string)))))
+        (block))))

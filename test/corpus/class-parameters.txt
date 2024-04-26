@@ -1,5 +1,5 @@
 ================================================================================
-types simple
+simple type
 ================================================================================
 class f (
   Boolean $bool = false,
@@ -18,10 +18,11 @@ class f (
               (variable
                 (name))
               (operator)
-              (false))))))))
+              (false)))))
+      (block))))
 
 ================================================================================
-types optional
+optional type
 ================================================================================
 class f (
   Optional[Boolean] $bool,
@@ -41,10 +42,11 @@ class f (
                 (type)))
             (regular_parameter
               (variable
-                (name)))))))))
+                (name))))))
+      (block))))
 
 ================================================================================
-types optional enum
+optional enum type
 ================================================================================
 class foo(
   Optional[Enum['default', 'foo', 'bar']] $optional_enum_string = undef,
@@ -73,10 +75,11 @@ class foo(
               (variable
                 (name))
               (operator)
-              (undef))))))))
+              (undef)))))
+      (block))))
 
 ================================================================================
-types optional variant
+optional variant type
 ================================================================================
 class foo(
   Variant[Undef,String] $fancy_optional_string = undef,
@@ -100,7 +103,8 @@ class foo(
               (variable
                 (name))
               (operator)
-              (undef))))))))
+              (undef)))))
+      (block))))
 
 ================================================================================
 types with constraints
@@ -163,4 +167,5 @@ class foo(
                 (default)))
             (regular_parameter
               (variable
-                (name)))))))))
+                (name))))))
+      (block))))

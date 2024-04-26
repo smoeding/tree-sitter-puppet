@@ -52,4 +52,5 @@ class myclass (
             (type)
             (regular_parameter
               (variable
-                (name)))))))))
+                (name))))))
+      (block))))

@@ -91,7 +91,7 @@ module.exports = grammar({
       seq($._statements, optional(';'), $.statement),
     ),
 
-    _statement_body: $ => seq('{', optional($._statements), '}'),
+    block: $ => seq('{', optional($._statements), '}'),
 
     // This exists to handle multiple arguments to non parenthesized function
     // call. If e is _expression, the a program can consists of e [e,e,e]
@@ -317,10 +317,8 @@ module.exports = grammar({
     lambda: $ => seq(
       alias($._lambda_parameter_list, $.parameter_list),
       optional($.return_type),
-      $.lambda_body,
+      $.block,
     ),
-
-    lambda_body: $ => $._statement_body,
 
     _lambda_parameter_list: $ => seq(
       '|',
@@ -336,20 +334,20 @@ module.exports = grammar({
     if: $ => seq(
       'if',
       $._expression,
-      alias($._statement_body, $.body),
+      $.block,
       repeat($.elsif),
       optional($.else),
     ),
 
-    elsif: $ => seq('elsif', $._expression, alias($._statement_body, $.body)),
-    else: $ => seq('else', alias($._statement_body, $.body)),
+    elsif: $ => seq('elsif', $._expression, $.block),
+    else: $ => seq('else', $.block),
 
     // Unless
 
     unless: $ => seq(
       'unless',
       $._expression,
-      alias($._statement_body, $.body),
+      $.block,
       optional($.else),
     ),
 
@@ -365,7 +363,7 @@ module.exports = grammar({
     case_option: $ => prec(PREC.HIGH, seq( // Higher than $._expression
       $._expressions,
       ':',
-      alias($._statement_body, $.body),
+      $.block,
     )),
 
     // This special construct is required or racc will produce the wrong
@@ -432,7 +430,7 @@ module.exports = grammar({
       'define',
       $.classname,
       optional($.parameter_list),
-      $._statement_body,
+      $.block,
     ),
 
     // Plan
@@ -441,7 +439,7 @@ module.exports = grammar({
       'plan',
       $.classname,
       optional($.parameter_list),
-      $._statement_body,
+      $.block,
     ),
 
     apply_expression: $ => seq(
@@ -449,7 +447,7 @@ module.exports = grammar({
       '(',
       alias($.argument_list_comma, $.argument_list),
       ')',
-      $._statement_body
+      $.block
     ),
 
     // Hostclass
@@ -459,7 +457,7 @@ module.exports = grammar({
       $.classname,
       optional($.parameter_list),
       optional(seq('inherits', choice($.classname, $.default))),
-      $._statement_body,
+      $.block,
     ),
 
     // Node
@@ -469,7 +467,7 @@ module.exports = grammar({
       $._hostnames,
       optional(','),
       optional(seq('inherits', $.hostname)),
-      $._statement_body,
+      $.block,
     ),
 
     // Hostnames is not a list of names, it is a list of name matchers
@@ -504,7 +502,7 @@ module.exports = grammar({
       $.classname,
       optional($.parameter_list),
       optional($.return_type),
-      alias($._statement_body, $.function_body),
+      $.block,
     ),
 
     return_type: $ => seq(
@@ -589,7 +587,7 @@ module.exports = grammar({
       'type',
       $.type,
       optional(seq('inherits', $.type)),
-      $._statement_body,
+      $.block,
     ),
 
     // Variable

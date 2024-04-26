@@ -373,7 +373,7 @@
           "named": true
         },
         {
-          "type": "statement",
+          "type": "block",
           "named": true
         }
       ]
@@ -1895,7 +1895,7 @@
     }
   },
   {
-    "type": "body",
+    "type": "block",
     "named": true,
     "fields": {},
     "children": {
@@ -2505,7 +2505,7 @@
           "named": true
         },
         {
-          "type": "body",
+          "type": "block",
           "named": true
         },
         {
@@ -2653,6 +2653,10 @@
       "required": true,
       "types": [
         {
+          "type": "block",
+          "named": true
+        },
+        {
           "type": "classname",
           "named": true
         },
@@ -2662,10 +2666,6 @@
         },
         {
           "type": "parameter_list",
-          "named": true
-        },
-        {
-          "type": "statement",
           "named": true
         }
       ]
@@ -3060,15 +3060,15 @@
       "required": true,
       "types": [
         {
+          "type": "block",
+          "named": true
+        },
+        {
           "type": "classname",
           "named": true
         },
         {
           "type": "parameter_list",
-          "named": true
-        },
-        {
-          "type": "statement",
           "named": true
         }
       ]
@@ -3102,7 +3102,7 @@
       "required": true,
       "types": [
         {
-          "type": "body",
+          "type": "block",
           "named": true
         }
       ]
@@ -3320,7 +3320,7 @@
           "named": true
         },
         {
-          "type": "body",
+          "type": "block",
           "named": true
         },
         {
@@ -3449,21 +3449,6 @@
         },
         {
           "type": "variable",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "statement",
           "named": true
         }
       ]
@@ -3828,11 +3813,11 @@
       "required": true,
       "types": [
         {
-          "type": "classname",
+          "type": "block",
           "named": true
         },
         {
-          "type": "function_body",
+          "type": "classname",
           "named": true
         },
         {
@@ -4697,7 +4682,7 @@
           "named": true
         },
         {
-          "type": "body",
+          "type": "block",
           "named": true
         },
         {
@@ -4853,7 +4838,7 @@
       "required": true,
       "types": [
         {
-          "type": "lambda_body",
+          "type": "block",
           "named": true
         },
         {
@@ -4862,21 +4847,6 @@
         },
         {
           "type": "return_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "lambda_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "statement",
           "named": true
         }
       ]
@@ -5272,11 +5242,11 @@
       "required": true,
       "types": [
         {
-          "type": "hostname",
+          "type": "block",
           "named": true
         },
         {
-          "type": "statement",
+          "type": "hostname",
           "named": true
         }
       ]
@@ -5329,15 +5299,15 @@
       "required": true,
       "types": [
         {
+          "type": "block",
+          "named": true
+        },
+        {
           "type": "classname",
           "named": true
         },
         {
           "type": "parameter_list",
-          "named": true
-        },
-        {
-          "type": "statement",
           "named": true
         }
       ]
@@ -8146,7 +8116,7 @@
       "required": true,
       "types": [
         {
-          "type": "statement",
+          "type": "block",
           "named": true
         },
         {
@@ -8770,7 +8740,7 @@
           "named": true
         },
         {
-          "type": "body",
+          "type": "block",
           "named": true
         },
         {
