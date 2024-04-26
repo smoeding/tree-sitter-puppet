@@ -6,8 +6,7 @@ Foo::Bar <||>
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query))))
 
 ================================================================================
@@ -18,8 +17,7 @@ Foo::Bar <<||>>
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query))))
 
 ================================================================================
@@ -30,8 +28,7 @@ Foo::Bar <| $i > 123 |>
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query
         (binary
           (variable
@@ -47,8 +44,7 @@ Foo::Bar <<| tag == 'foo' |>>
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query
         (binary
           (name)
@@ -65,8 +61,7 @@ Foo::Bar <| |> {
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query)
       (attribute_list
         (attribute
@@ -82,8 +77,7 @@ Foo::Bar <| |> {}
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query))))
 
 ================================================================================
@@ -96,8 +90,7 @@ Foo::Bar <<| |>> {
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query)
       (attribute_list
         (attribute
@@ -113,6 +106,5 @@ Foo::Bar <<| |>> { }
 (manifest
   (statement
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query))))

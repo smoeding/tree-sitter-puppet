@@ -74,15 +74,13 @@ class foo (
       (parameter_list
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (regular_parameter
               (variable
                 (name)))))
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (regular_parameter
               (variable
                 (name))

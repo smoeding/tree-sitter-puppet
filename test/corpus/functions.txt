@@ -13,14 +13,12 @@ function foo::bar(String $foo) >> Boolean {
     (parameter_list
       (parameter
         (typed_parameter
-          (type
-            (classref))
+          (type)
           (regular_parameter
             (variable
               (name))))))
     (return_type
-      (type
-        (classref)))
+      (type))
     (function_body))))
 
 ================================================================================
@@ -135,8 +133,7 @@ lookup('val', String, undef, [])
         (argument
           (string))
         (argument
-          (type
-            (classref)))
+          (type))
         (argument
           (undef))
         (argument

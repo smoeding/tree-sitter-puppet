@@ -72,8 +72,7 @@ $foo = Test['asdf']
     (variable
       (name))
     (operator)
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (string)))))

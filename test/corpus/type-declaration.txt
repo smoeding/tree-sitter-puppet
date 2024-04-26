@@ -6,11 +6,9 @@ type Ensure = Enum['present', 'absent']
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
       (operator)
-      (type
-        (classref))
+      (type)
       (access
         (access_element
           (string))
@@ -25,11 +23,9 @@ type Ensure = Enum['present', 'absent',]
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
       (operator)
-      (type
-        (classref))
+      (type)
       (access
         (access_element
           (string))
@@ -44,18 +40,14 @@ type Compose = Variant[String,Integer]
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
       (operator)
-      (type
-        (classref))
+      (type)
       (access
         (access_element
-          (type
-            (classref)))
+          (type))
         (access_element
-          (type
-            (classref)))))))
+          (type))))))
 
 ================================================================================
 type declaration nested
@@ -65,15 +57,12 @@ type Nested = Optional[Enum['default', 'foo', 'bar']]
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
     (operator)
-    (type
-      (classref))
+    (type)
     (access
       (access_element
-        (type
-          (classref))
+        (type)
         (access
           (access_element
             (string))
@@ -90,11 +79,9 @@ type Foo = Pattern[/\/slash/]
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
     (operator)
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (regex))))))

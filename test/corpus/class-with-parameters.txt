@@ -28,8 +28,7 @@ class myclass (
             (undef)))
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (regular_parameter
               (variable
                 (name))
@@ -37,8 +36,7 @@ class myclass (
               (hash))))
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (regular_parameter
               (variable
                 (name))
@@ -51,8 +49,7 @@ class myclass (
         (comment)
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (regular_parameter
               (variable
                 (name)))))))))

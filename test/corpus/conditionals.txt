@@ -96,8 +96,7 @@ if $var.is_a(Hash) { }
             (name))
           (argument_list
             (argument
-              (type
-                (classref))))))
+              (type)))))
       (body))))
 
 ================================================================================
@@ -192,12 +191,10 @@ case $foo {
       (variable
         (name))
       (case_option
-        (type
-          (classref))
+        (type)
         (body))
       (case_option
-        (type
-          (classref))
+        (type)
         (body)))))
 
 ================================================================================

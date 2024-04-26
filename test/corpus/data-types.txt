@@ -6,11 +6,9 @@ type Foo = Enum[true,default]
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
       (operator)
-      (type
-        (classref))
+      (type)
       (access
         (access_element
           (true))
@@ -28,8 +26,7 @@ $foo = String(5)
       (name))
     (operator)
     (function_call
-      (type
-        (classref))
+      (type)
         (argument_list
           (argument
             (number))))))
@@ -43,19 +40,16 @@ type Foo = Struct[{mode => Enum['read', 'write'],
 (manifest
   (statement
     (type_alias
-      (type
-        (classref))
+      (type)
       (operator)
-      (type
-        (classref))
+      (type)
       (access
         (access_element
           (hash
             (hashpair
               (name)
               (arrow)
-              (type
-                (classref))
+              (type)
               (access
                 (access_element
                   (string))
@@ -64,12 +58,10 @@ type Foo = Struct[{mode => Enum['read', 'write'],
             (hashpair
               (name)
               (arrow)
-              (type
-                (classref))
+              (type)
               (access
                 (access_element
-                  (type
-                    (classref))
+                  (type)
                   (access
                     (access_element
                       (number))))))))))))

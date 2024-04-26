@@ -30,8 +30,7 @@ class{'before':} -> Class['after']
         (resource_title
           (string))))
     (chaining_arrow)
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (string)))))
@@ -43,20 +42,17 @@ Package['ntp'] -> File['/etc/ntp.conf'] ~> Service['ntpd']
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (string)))
     (chaining_arrow)
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (string)))
     (chaining_arrow)
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (string)))))
@@ -68,13 +64,11 @@ Package['ntp'] -> Ntp::Node <||>
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (string)))
     (chaining_arrow)
     (resource_collector
-      (type
-        (classref))
+      (type)
       (collect_query))))

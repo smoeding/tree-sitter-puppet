@@ -2680,11 +2680,11 @@
       "required": true,
       "types": [
         {
-          "type": "classref",
+          "type": "name",
           "named": true
         },
         {
-          "type": "name",
+          "type": "type",
           "named": true
         },
         {
@@ -8107,21 +8107,6 @@
     }
   },
   {
-    "type": "type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "classref",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "type_alias",
     "named": true,
     "fields": {},
@@ -8161,11 +8146,11 @@
       "required": true,
       "types": [
         {
-          "type": "classref",
+          "type": "statement",
           "named": true
         },
         {
-          "type": "statement",
+          "type": "type",
           "named": true
         }
       ]
@@ -9063,10 +9048,6 @@
     "named": false
   },
   {
-    "type": "classref",
-    "named": true
-  },
-  {
     "type": "contain",
     "named": false
   },
@@ -9180,6 +9161,10 @@
   },
   {
     "type": "true",
+    "named": true
+  },
+  {
+    "type": "type",
     "named": true
   },
   {

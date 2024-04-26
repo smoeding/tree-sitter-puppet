@@ -31,8 +31,7 @@ class foo::config {
       (comment)
       (statement
         (resource_reference
-          (type
-            (classref)))
+          (type))
         (attribute_list
           (attribute
             (name)

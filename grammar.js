@@ -522,7 +522,7 @@ module.exports = grammar({
     classname: $ => choice(
       $.name,
       $.word,
-      $.classref,
+      $.type,
     ),
 
     parameter_list: $ => choice(
@@ -587,8 +587,8 @@ module.exports = grammar({
 
     type_definition: $ => seq(
       'type',
-      $.classref,
-      optional(seq('inherits', $.classref)),
+      $.type,
+      optional(seq('inherits', $.type)),
       $._statement_body,
     ),
 
@@ -696,13 +696,12 @@ module.exports = grammar({
       'fail',                                      // Failure statements
     ),
 
-    classref: _ => /((::){0,1}[A-Z]\w*)+/,
-    type:     $ => $.classref,
+    type:     _ => /((::){0,1}[A-Z]\w*)+/,
     name:     _ => /((::)?[a-z]\w*)(::[a-z]\w*)*/,
     word:     _ => /((?:::){0,1}(?:[a-z_](?:[\w-]*\w)?))+/,
 
     // handle the class keyword like a name node
-    _class:    $ => alias('class', $.name),
+    _class:   $ => alias('class', $.name),
 
     number:   _ => /(?:0[xX][0-9A-Fa-f]+|0?\d+(?:\.\d+)?(?:[eE]-?\d+)?)/,
     default:  _ => 'default',

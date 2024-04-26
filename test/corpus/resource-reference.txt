@@ -5,8 +5,7 @@ Group[$foo::group]
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (type
-      (classref))
+    (type)
     (access
       (access_element
         (variable

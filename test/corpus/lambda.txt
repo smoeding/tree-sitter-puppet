@@ -38,8 +38,7 @@ $var.each |Hash $x| { }
           (parameter_list
             (parameter
               (typed_parameter
-                (type
-                  (classref))
+                (type)
                 (regular_parameter
                   (variable
                     (name))))))

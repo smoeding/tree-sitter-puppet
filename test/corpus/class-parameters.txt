@@ -13,8 +13,7 @@ class f (
       (parameter_list
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (regular_parameter
               (variable
                 (name))
@@ -36,12 +35,10 @@ class f (
       (parameter_list
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
-                (type
-                  (classref))))
+                (type)))
             (regular_parameter
               (variable
                 (name)))))))))
@@ -61,12 +58,10 @@ class foo(
       (parameter_list
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
-                (type
-                  (classref))
+                (type)
                 (access
                   (access_element
                     (string))
@@ -95,15 +90,12 @@ class foo(
       (parameter_list
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
-                (type
-                  (classref)))
+                (type))
               (access_element
-                (type
-                  (classref))))
+                (type)))
             (regular_parameter
               (variable
                 (name))
@@ -128,12 +120,10 @@ class foo(
       (parameter_list
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
-                (type
-                  (classref)))
+                (type))
               (access_element
                 (number))
               (access_element
@@ -143,8 +133,7 @@ class foo(
                 (name)))))
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
                 (number))
@@ -155,8 +144,7 @@ class foo(
                 (name)))))
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
                 (default))
@@ -167,8 +155,7 @@ class foo(
                 (name)))))
         (parameter
           (typed_parameter
-            (type
-              (classref))
+            (type)
             (access
               (access_element
                 (number))

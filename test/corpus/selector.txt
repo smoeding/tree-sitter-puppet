@@ -48,13 +48,11 @@ $enable_real = $enable ? {
       (qmark)
       (selbrace)
       (selector_option
-        (type
-          (classref))
+        (type)
         (variable
           (name)))
       (selector_option
-        (type
-          (classref))
+        (type)
         (function_call
           (name)
           (argument_list
@@ -62,8 +60,7 @@ $enable_real = $enable ? {
               (variable
                 (name))))))
       (selector_option
-        (type
-          (classref))
+        (type)
         (function_call
           (name)
           (argument_list

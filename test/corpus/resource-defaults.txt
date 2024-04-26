@@ -15,8 +15,7 @@ resource defaults
 (manifest
   (statement
     (resource_reference
-      (type
-        (classref)))
+      (type))
     (attribute_list
       (attribute
         (name)
@@ -34,8 +33,7 @@ resource defaults
           (name)))))
   (statement
     (resource_reference
-      (type
-        (classref)))
+      (type))
     (attribute_list
       (attribute
         (name)
@@ -44,8 +42,7 @@ resource defaults
       (attribute
         (name)
         (arrow)
-        (type
-          (classref))
+        (type)
         (access
           (access_element
             (string)))))))
