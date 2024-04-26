@@ -30,8 +30,7 @@
 
 
 #include <stdlib.h>
-#include <wchar.h>
-#include <wctype.h>
+#include <ctype.h>
 
 #include "tree_sitter/parser.h"
 #include "tree_sitter/alloc.h"
@@ -80,7 +79,7 @@ typedef struct ScannerState {
  */
 
 static inline bool is_variable_name(int32_t c) {
-  return ((iswalpha(c) && iswlower(c)) || iswdigit(c) || (c == U'_'));
+  return ((isalpha(c) && islower(c)) || isdigit(c) || (c == U'_'));
 }
 
 
@@ -93,7 +92,7 @@ static bool scan_selbrace(TSLexer *lexer, ScannerState *state) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
-    if (iswspace(lexer->lookahead) || (lexer->lookahead == U'\n')) {
+    if (isspace(lexer->lookahead) || (lexer->lookahead == U'\n')) {
       // Skip whitespace
       lexer->advance(lexer, true);
     }
@@ -300,7 +299,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
       state->interpolation_allowed = true;
       lexer->advance(lexer, false);
     }
-    else if (iswalnum(lexer->lookahead)) {
+    else if (isalnum(lexer->lookahead)) {
       // We seem to have a heredoc tag, so remember it to find the end
       array_push(&state->heredoc_tag, lexer->lookahead);
       lexer->advance(lexer, false);
@@ -308,14 +307,14 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
     else if (lexer->lookahead == U':') {
       // Scan till the end of the syntax flags
       lexer->advance(lexer, false);
-      while (iswalnum(lexer->lookahead)) {
+      while (isalnum(lexer->lookahead)) {
         lexer->advance(lexer, false);
       }
     }
     else if (lexer->lookahead == U'/') {
       // Scan till the end of the escape flags
       lexer->advance(lexer, false);
-      while (iswalpha(lexer->lookahead)) {
+      while (isalpha(lexer->lookahead)) {
         lexer->advance(lexer, false);
       }
     }
@@ -323,7 +322,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
       // We seem to have found the end of the heredoc tag
       return (state->heredoc_tag.size > 0);
     }
-    else if (iswspace(lexer->lookahead)) {
+    else if (isspace(lexer->lookahead)) {
       // Skip whitespace
       lexer->advance(lexer, true);
     }
@@ -386,7 +385,7 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
       // Check if the text in the current line matched the heredoc tag.
       // We start if the first alphanumeric character is found. The
       // comparison continues with the following characters.
-      if (match_valid && iswalnum(lexer->lookahead)) {
+      if (match_valid && isalnum(lexer->lookahead)) {
         if ((state->heredoc_tag.size > match_index) &&
             (*array_get(&state->heredoc_tag, match_index) == lexer->lookahead)) {
           // The prefix matches so advance the index to the next tag character
