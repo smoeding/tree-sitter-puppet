@@ -203,8 +203,8 @@ static bool scan_interpolation(TSLexer *lexer) {
       }
       else if ((lexer->lookahead == U'\'') || (lexer->lookahead == U'"')) {
         if (!skip_quoted_string(lexer)) {
-          // Skipping the quoted string failed. This happens when the string
-          // is missing the ending quote.
+          // Skipping the quoted string failed. This happens if the string is
+          // missing the terminating quote.
           return false;
         }
       }
