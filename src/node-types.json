@@ -3043,69 +3043,7 @@
     "fields": {}
   },
   {
-    "type": "default",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "define_definition",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "classname",
-          "named": true
-        },
-        {
-          "type": "parameter_list",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "dotted_name",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "dotted_name",
-          "named": true
-        },
-        {
-          "type": "name_or_number",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "else",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "block",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "elsif",
+    "type": "condition",
     "named": true,
     "fields": {
       "lhs": {
@@ -3316,10 +3254,6 @@
           "named": true
         },
         {
-          "type": "block",
-          "named": true
-        },
-        {
           "type": "call_method_with_lambda",
           "named": true
         },
@@ -3445,6 +3379,87 @@
         },
         {
           "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "default",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "define_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "classname",
+          "named": true
+        },
+        {
+          "type": "parameter_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dotted_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dotted_name",
+          "named": true
+        },
+        {
+          "type": "name_or_number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "else",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "elsif",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "condition",
           "named": true
         }
       ]
@@ -4469,240 +4484,17 @@
   {
     "type": "if",
     "named": true,
-    "fields": {
-      "lhs": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
-            "named": true
-          },
-          {
-            "type": "binary",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case",
-            "named": true
-          },
-          {
-            "type": "chaining_arrow",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if",
-            "named": true
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "operator",
-            "named": true
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource_collector",
-            "named": true
-          },
-          {
-            "type": "resource_reference",
-            "named": true
-          },
-          {
-            "type": "resource_type",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "unary",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "access",
-          "named": true
-        },
-        {
-          "type": "apply_expression",
-          "named": true
-        },
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
-          "named": true
-        },
-        {
-          "type": "binary",
-          "named": true
-        },
-        {
           "type": "block",
           "named": true
         },
         {
-          "type": "call_method_with_lambda",
-          "named": true
-        },
-        {
-          "type": "case",
-          "named": true
-        },
-        {
-          "type": "chaining_arrow",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "default",
-          "named": true
-        },
-        {
-          "type": "define_definition",
+          "type": "condition",
           "named": true
         },
         {
@@ -4711,110 +4503,6 @@
         },
         {
           "type": "elsif",
-          "named": true
-        },
-        {
-          "type": "false",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "function_definition",
-          "named": true
-        },
-        {
-          "type": "hash",
-          "named": true
-        },
-        {
-          "type": "heredoc",
-          "named": true
-        },
-        {
-          "type": "if",
-          "named": true
-        },
-        {
-          "type": "name",
-          "named": true
-        },
-        {
-          "type": "node_definition",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "plan_definition",
-          "named": true
-        },
-        {
-          "type": "regex",
-          "named": true
-        },
-        {
-          "type": "reserved_word",
-          "named": true
-        },
-        {
-          "type": "resource_collector",
-          "named": true
-        },
-        {
-          "type": "resource_reference",
-          "named": true
-        },
-        {
-          "type": "resource_type",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "true",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "type_alias",
-          "named": true
-        },
-        {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "unary",
-          "named": true
-        },
-        {
-          "type": "undef",
-          "named": true
-        },
-        {
-          "type": "unless",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -8537,348 +8225,21 @@
   {
     "type": "unless",
     "named": true,
-    "fields": {
-      "lhs": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "access",
-            "named": true
-          },
-          {
-            "type": "apply_expression",
-            "named": true
-          },
-          {
-            "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
-            "named": true
-          },
-          {
-            "type": "binary",
-            "named": true
-          },
-          {
-            "type": "call_method_with_lambda",
-            "named": true
-          },
-          {
-            "type": "case",
-            "named": true
-          },
-          {
-            "type": "chaining_arrow",
-            "named": true
-          },
-          {
-            "type": "class_definition",
-            "named": true
-          },
-          {
-            "type": "default",
-            "named": true
-          },
-          {
-            "type": "define_definition",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": true
-          },
-          {
-            "type": "function_call",
-            "named": true
-          },
-          {
-            "type": "function_definition",
-            "named": true
-          },
-          {
-            "type": "hash",
-            "named": true
-          },
-          {
-            "type": "heredoc",
-            "named": true
-          },
-          {
-            "type": "if",
-            "named": true
-          },
-          {
-            "type": "name",
-            "named": true
-          },
-          {
-            "type": "node_definition",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "operator",
-            "named": true
-          },
-          {
-            "type": "plan_definition",
-            "named": true
-          },
-          {
-            "type": "regex",
-            "named": true
-          },
-          {
-            "type": "reserved_word",
-            "named": true
-          },
-          {
-            "type": "resource_collector",
-            "named": true
-          },
-          {
-            "type": "resource_reference",
-            "named": true
-          },
-          {
-            "type": "resource_type",
-            "named": true
-          },
-          {
-            "type": "selector",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": true
-          },
-          {
-            "type": "type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "type_definition",
-            "named": true
-          },
-          {
-            "type": "unary",
-            "named": true
-          },
-          {
-            "type": "undef",
-            "named": true
-          },
-          {
-            "type": "unless",
-            "named": true
-          },
-          {
-            "type": "variable",
-            "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "access",
-          "named": true
-        },
-        {
-          "type": "apply_expression",
-          "named": true
-        },
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
-          "named": true
-        },
-        {
-          "type": "binary",
-          "named": true
-        },
-        {
           "type": "block",
           "named": true
         },
         {
-          "type": "call_method_with_lambda",
-          "named": true
-        },
-        {
-          "type": "case",
-          "named": true
-        },
-        {
-          "type": "chaining_arrow",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "default",
-          "named": true
-        },
-        {
-          "type": "define_definition",
+          "type": "condition",
           "named": true
         },
         {
           "type": "else",
-          "named": true
-        },
-        {
-          "type": "false",
-          "named": true
-        },
-        {
-          "type": "function_call",
-          "named": true
-        },
-        {
-          "type": "function_definition",
-          "named": true
-        },
-        {
-          "type": "hash",
-          "named": true
-        },
-        {
-          "type": "heredoc",
-          "named": true
-        },
-        {
-          "type": "if",
-          "named": true
-        },
-        {
-          "type": "name",
-          "named": true
-        },
-        {
-          "type": "node_definition",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "plan_definition",
-          "named": true
-        },
-        {
-          "type": "regex",
-          "named": true
-        },
-        {
-          "type": "reserved_word",
-          "named": true
-        },
-        {
-          "type": "resource_collector",
-          "named": true
-        },
-        {
-          "type": "resource_reference",
-          "named": true
-        },
-        {
-          "type": "resource_type",
-          "named": true
-        },
-        {
-          "type": "selector",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "true",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "type_alias",
-          "named": true
-        },
-        {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "unary",
-          "named": true
-        },
-        {
-          "type": "undef",
-          "named": true
-        },
-        {
-          "type": "unless",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]
@@ -9133,11 +8494,11 @@
   },
   {
     "type": "type",
-    "named": true
+    "named": false
   },
   {
     "type": "type",
-    "named": false
+    "named": true
   },
   {
     "type": "undef",

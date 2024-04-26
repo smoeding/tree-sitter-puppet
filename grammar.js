@@ -330,23 +330,22 @@ module.exports = grammar({
 
     // If
 
-    //if_expression: $ => seq('if', $._if_part),
     if: $ => seq(
       'if',
-      $._expression,
+      alias($._expression, $.condition),
       $.block,
       repeat($.elsif),
       optional($.else),
     ),
 
-    elsif: $ => seq('elsif', $._expression, $.block),
+    elsif: $ => seq('elsif', alias($._expression, $.condition), $.block),
     else: $ => seq('else', $.block),
 
     // Unless
 
     unless: $ => seq(
       'unless',
-      $._expression,
+      alias($._expression, $.condition),
       $.block,
       optional($.else),
     ),

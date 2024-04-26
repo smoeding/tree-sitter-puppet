@@ -6,7 +6,8 @@ if true { }
 (manifest
   (statement
     (if
-      (true)
+      (condition
+        (true))
       (block))))
 
 ================================================================================
@@ -17,7 +18,8 @@ if true { } else { }
 (manifest
   (statement
     (if
-      (true)
+      (condition
+        (true))
       (block)
       (else
         (block)))))
@@ -30,10 +32,12 @@ if true { } elsif false { } else { }
 (manifest
   (statement
     (if
-      (true)
+      (condition
+        (true))
       (block)
       (elsif
-        (false)
+        (condition
+          (false))
         (block))
       (else
         (block)))))
@@ -46,7 +50,8 @@ unless true { }
 (manifest
   (statement
     (unless
-      (true)
+      (condition
+        (true))
       (block))))
 
 ================================================================================
@@ -57,7 +62,8 @@ unless true { } else { }
 (manifest
   (statement
     (unless
-      (true)
+      (condition
+        (true))
       (block)
       (else
         (block)))))
@@ -70,13 +76,14 @@ if (true or false) or 1 { }
 (manifest
   (statement
     (if
-      (binary
+      (condition
         (binary
-          (true)
+          (binary
+            (true)
+            (operator)
+            (false))
           (operator)
-          (false))
-        (operator)
-        (number))
+          (number)))
       (block))))
 
 ================================================================================
@@ -87,16 +94,17 @@ if $var.is_a(Hash) { }
 (manifest
   (statement
     (if
-      (call_method_with_lambda
-        (call_method
-          (named_access
-            (variable
+      (condition
+        (call_method_with_lambda
+          (call_method
+            (named_access
+              (variable
+                (name))
+              (operator)
               (name))
-            (operator)
-            (name))
-          (argument_list
-            (argument
-              (type)))))
+            (argument_list
+              (argument
+                (type))))))
       (block))))
 
 ================================================================================
@@ -115,11 +123,12 @@ $result = if $os == 'RedHat' {
       (name))
     (operator)
     (if
-      (binary
-        (variable
-          (name))
-        (operator)
-        (string))
+      (condition
+        (binary
+          (variable
+            (name))
+          (operator)
+          (string)))
       (block
         (statement
           (number)))
