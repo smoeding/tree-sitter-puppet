@@ -2686,10 +2686,6 @@
         {
           "type": "type",
           "named": true
-        },
-        {
-          "type": "word",
-          "named": true
         }
       ]
     }
@@ -9135,11 +9131,11 @@
   },
   {
     "type": "type",
-    "named": true
+    "named": false
   },
   {
     "type": "type",
-    "named": false
+    "named": true
   },
   {
     "type": "undef",
@@ -9156,10 +9152,6 @@
   {
     "type": "warning",
     "named": false
-  },
-  {
-    "type": "word",
-    "named": true
   },
   {
     "type": "{",

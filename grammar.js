@@ -519,8 +519,8 @@ module.exports = grammar({
 
     classname: $ => choice(
       $.name,
-      $.word,
       $.type,
+      // $.word,   // does not seem to be valid here
     ),
 
     parameter_list: $ => choice(
