@@ -18,7 +18,7 @@
     "type": "access_element",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -383,7 +383,7 @@
     "type": "argument",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -759,7 +759,7 @@
     "type": "array_element",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1105,7 +1105,7 @@
     "type": "attribute",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -1518,7 +1518,7 @@
     "type": "binary",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": true,
         "types": [
@@ -1700,7 +1700,7 @@
           }
         ]
       },
-      "right": {
+      "rhs": {
         "multiple": true,
         "required": true,
         "types": [
@@ -1951,7 +1951,7 @@
     "type": "case",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2297,7 +2297,7 @@
     "type": "case_option",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -2694,7 +2694,7 @@
     "type": "collect_query",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3108,7 +3108,7 @@
     "type": "elsif",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -3454,7 +3454,7 @@
     "type": "function_call",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4036,7 +4036,7 @@
           }
         ]
       },
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4470,7 +4470,7 @@
     "type": "if",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -4891,7 +4891,7 @@
     "type": "named_access",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5329,7 +5329,7 @@
     "type": "regular_parameter",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -5695,7 +5695,7 @@
     "type": "resource_collector",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6041,7 +6041,7 @@
     "type": "resource_reference",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6383,7 +6383,7 @@
     "type": "resource_title",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -6725,7 +6725,7 @@
     "type": "resource_type",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7121,7 +7121,7 @@
     "type": "selector_option",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -7688,7 +7688,7 @@
     "type": "statement",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -8153,7 +8153,7 @@
     "type": "unary",
     "named": true,
     "fields": {
-      "argument": {
+      "arg": {
         "multiple": true,
         "required": true,
         "types": [
@@ -8335,7 +8335,7 @@
           }
         ]
       },
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -8517,6 +8517,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "operator",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -8528,7 +8538,7 @@
     "type": "unless",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": true,
         "required": false,
         "types": [
@@ -8890,10 +8900,6 @@
     }
   },
   {
-    "type": "!",
-    "named": false
-  },
-  {
     "type": "\"",
     "named": false
   },
@@ -8923,10 +8929,6 @@
   },
   {
     "type": ",",
-    "named": false
-  },
-  {
-    "type": "-",
     "named": false
   },
   {
@@ -9131,11 +9133,11 @@
   },
   {
     "type": "type",
-    "named": false
+    "named": true
   },
   {
     "type": "type",
-    "named": true
+    "named": false
   },
   {
     "type": "undef",

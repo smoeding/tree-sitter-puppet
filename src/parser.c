@@ -241,8 +241,8 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_AT] = "virtual",
   [anon_sym_AT_AT] = "exported",
   [anon_sym_COLON] = ":",
-  [anon_sym_BANG] = "!",
-  [anon_sym_DASH] = "-",
+  [anon_sym_BANG] = "operator",
+  [anon_sym_DASH] = "operator",
   [anon_sym_STAR] = "*",
   [anon_sym_in] = "in",
   [anon_sym_EQ_TILDE] = "operator",
@@ -442,8 +442,8 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_AT] = anon_sym_AT,
   [anon_sym_AT_AT] = anon_sym_AT_AT,
   [anon_sym_COLON] = anon_sym_COLON,
-  [anon_sym_BANG] = anon_sym_BANG,
-  [anon_sym_DASH] = anon_sym_DASH,
+  [anon_sym_BANG] = anon_sym_EQ,
+  [anon_sym_DASH] = anon_sym_EQ,
   [anon_sym_STAR] = anon_sym_STAR,
   [anon_sym_in] = anon_sym_in,
   [anon_sym_EQ_TILDE] = anon_sym_EQ,
@@ -696,11 +696,11 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
   [anon_sym_BANG] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_DASH] = {
     .visible = true,
-    .named = false,
+    .named = true,
   },
   [anon_sym_STAR] = {
     .visible = true,
@@ -1421,23 +1421,23 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
 };
 
 enum ts_field_identifiers {
-  field_argument = 1,
+  field_arg = 1,
   field_key = 2,
-  field_left = 3,
+  field_lhs = 3,
   field_name = 4,
   field_pattern = 5,
-  field_right = 6,
+  field_rhs = 6,
   field_value = 7,
 };
 
 static const char * const ts_field_names[] = {
   [0] = NULL,
-  [field_argument] = "argument",
+  [field_arg] = "arg",
   [field_key] = "key",
-  [field_left] = "left",
+  [field_lhs] = "lhs",
   [field_name] = "name",
   [field_pattern] = "pattern",
-  [field_right] = "right",
+  [field_rhs] = "rhs",
   [field_value] = "value",
 };
 
@@ -1464,42 +1464,42 @@ static const TSFieldMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
   [0] =
-    {field_left, 0, .inherited = true},
+    {field_lhs, 0, .inherited = true},
   [1] =
-    {field_argument, 1},
-    {field_left, 1, .inherited = true},
+    {field_arg, 1},
+    {field_lhs, 1, .inherited = true},
   [3] =
-    {field_left, 0},
-    {field_left, 0, .inherited = true},
+    {field_lhs, 0},
+    {field_lhs, 0, .inherited = true},
   [5] =
-    {field_left, 1, .inherited = true},
+    {field_lhs, 1, .inherited = true},
   [6] =
     {field_pattern, 1},
   [7] =
-    {field_left, 2, .inherited = true},
+    {field_lhs, 2, .inherited = true},
   [8] =
-    {field_left, 0, .inherited = true},
-    {field_left, 2, .inherited = true},
+    {field_lhs, 0, .inherited = true},
+    {field_lhs, 2, .inherited = true},
   [10] =
-    {field_left, 0},
-    {field_left, 0, .inherited = true},
-    {field_left, 2, .inherited = true},
-    {field_right, 2},
+    {field_lhs, 0},
+    {field_lhs, 0, .inherited = true},
+    {field_lhs, 2, .inherited = true},
+    {field_rhs, 2},
   [14] =
     {field_key, 0},
-    {field_left, 0, .inherited = true},
-    {field_left, 2, .inherited = true},
+    {field_lhs, 0, .inherited = true},
+    {field_lhs, 2, .inherited = true},
     {field_value, 2},
   [18] =
-    {field_left, 0, .inherited = true},
-    {field_left, 1, .inherited = true},
+    {field_lhs, 0, .inherited = true},
+    {field_lhs, 1, .inherited = true},
   [20] =
-    {field_left, 2, .inherited = true},
+    {field_lhs, 2, .inherited = true},
     {field_name, 0},
     {field_value, 2},
   [23] =
-    {field_left, 0, .inherited = true},
-    {field_left, 2, .inherited = true},
+    {field_lhs, 0, .inherited = true},
+    {field_lhs, 2, .inherited = true},
     {field_name, 0},
     {field_value, 2},
 };
@@ -1508,6 +1508,9 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   [0] = {0},
   [1] = {
     [0] = sym_name,
+  },
+  [3] = {
+    [0] = anon_sym_EQ,
   },
   [4] = {
     [0] = alias_sym_array_element,

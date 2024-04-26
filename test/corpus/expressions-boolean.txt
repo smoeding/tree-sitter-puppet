@@ -70,6 +70,7 @@ expression boolean unary
 (manifest
   (statement
     (unary
+      (operator)
       (true))))
 
 ================================================================================

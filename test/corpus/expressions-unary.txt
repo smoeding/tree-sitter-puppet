@@ -11,6 +11,7 @@ $bar = -$asdf
       (name))
     (operator)
     (unary
+      (operator)
       (variable
         (name))))
   (statement
@@ -18,9 +19,11 @@ $bar = -$asdf
       (name))
     (operator)
     (unary
+      (operator)
       (variable
         (name))))
   (statement
     (unary
+      (operator)
       (variable
         (name)))))
