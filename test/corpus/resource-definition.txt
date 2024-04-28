@@ -89,6 +89,5 @@ class foo (
             (regular_parameter
               (variable
                 (name))
-              (operator)
               (string)))))
         (block))))

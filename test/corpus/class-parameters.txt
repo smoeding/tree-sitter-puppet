@@ -17,7 +17,6 @@ class f (
             (regular_parameter
               (variable
                 (name))
-              (operator)
               (false)))))
       (block))))
 
@@ -74,7 +73,6 @@ class foo(
             (regular_parameter
               (variable
                 (name))
-              (operator)
               (undef)))))
       (block))))
 
@@ -102,7 +100,6 @@ class foo(
             (regular_parameter
               (variable
                 (name))
-              (operator)
               (undef)))))
       (block))))
 

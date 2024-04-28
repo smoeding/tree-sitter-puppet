@@ -121,7 +121,7 @@ module.exports = grammar({
       prec(PREC.LOW, $._relationship),
       prec.right(PREC.EQUALS, seq(
         $._relationship,
-        alias(choice('=', '+=', '-='), $.operator),
+        field('operator', choice('=', '+=', '-=')),
         $._assignment,
       )),
     )),
@@ -154,20 +154,20 @@ module.exports = grammar({
 
     _resource: $ => choice(
       prec(PREC.LOW, $._expression),
-
-      // foo { 'title': }
       $.resource_type,
-
-      // Foo { }
-      prec(PREC.HIGH, seq(
-        alias($._resource, $.resource_reference),
-        '{',
-        optional(alias($._attribute_operations, $.attribute_list)),
-        optional(','),
-        '}',
-      )),
+      $.resource_reference,
     ),
 
+    // Foo { }
+    resource_reference: $ => prec(PREC.HIGH, seq(
+      $._resource,
+      '{',
+      optional(alias($._attribute_operations, $.attribute_list)),
+      optional(','),
+      '}',
+    )),
+
+    // foo { 'title': }
     resource_type: $ => prec(PREC.HIGH, seq(
       optional(choice(alias('@', $.virtual), alias('@@', $.exported))),
       choice($._resource, $._class),
@@ -204,30 +204,30 @@ module.exports = grammar({
     ),
 
     unary: $ => choice(
-      prec.right(PREC.NOT,    seq(alias('!', $.operator), field('arg', $._expression))),
-      prec(      PREC.UMINUS, seq(alias('-', $.operator), field('arg', $._expression))),
-      prec(      PREC.SPLAT,  seq(alias('*', $.operator), field('arg', $._expression))),
+      prec.right(PREC.NOT,    seq(field('operator', '!'), field('arg', $._expression))),
+      prec(      PREC.UMINUS, seq(field('operator', '-'), field('arg', $._expression))),
+      prec(      PREC.SPLAT,  seq(field('operator', '*'), field('arg', $._expression))),
     ),
 
     binary: $ => choice(
-      prec.left(PREC.IN,       seq(field('lhs', $._expression), alias('in',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.MATCH,    seq(field('lhs', $._expression), alias('=~',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.MATCH,    seq(field('lhs', $._expression), alias('!~',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.ADD,      seq(field('lhs', $._expression), alias('+',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.ADD,      seq(field('lhs', $._expression), alias('-',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.MULTIPLY, seq(field('lhs', $._expression), alias('/',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.MULTIPLY, seq(field('lhs', $._expression), alias('*',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.MULTIPLY, seq(field('lhs', $._expression), alias('%',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.SHIFT,    seq(field('lhs', $._expression), alias('<<',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.SHIFT,    seq(field('lhs', $._expression), alias('>>',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.EQUALITY, seq(field('lhs', $._expression), alias('!=',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.EQUALITY, seq(field('lhs', $._expression), alias('==',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), alias('>',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), alias('>=',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), alias('<',   $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), alias('<=',  $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.AND,      seq(field('lhs', $._expression), alias('and', $.operator), field('rhs',    $._expression))),
-      prec.left(PREC.OR,       seq(field('lhs', $._expression), alias('or',  $.operator), field('rhs',    $._expression))),
+      prec.left(PREC.IN,       seq(field('lhs', $._expression), field('operator', 'in'),  field('rhs',    $._expression))),
+      prec.left(PREC.MATCH,    seq(field('lhs', $._expression), field('operator', '=~'),  field('rhs',    $._expression))),
+      prec.left(PREC.MATCH,    seq(field('lhs', $._expression), field('operator', '!~'),  field('rhs',    $._expression))),
+      prec.left(PREC.ADD,      seq(field('lhs', $._expression), field('operator', '+'),   field('rhs',    $._expression))),
+      prec.left(PREC.ADD,      seq(field('lhs', $._expression), field('operator', '-'),   field('rhs',    $._expression))),
+      prec.left(PREC.MULTIPLY, seq(field('lhs', $._expression), field('operator', '/'),   field('rhs',    $._expression))),
+      prec.left(PREC.MULTIPLY, seq(field('lhs', $._expression), field('operator', '*'),   field('rhs',    $._expression))),
+      prec.left(PREC.MULTIPLY, seq(field('lhs', $._expression), field('operator', '%'),   field('rhs',    $._expression))),
+      prec.left(PREC.SHIFT,    seq(field('lhs', $._expression), field('operator', '<<'),  field('rhs',    $._expression))),
+      prec.left(PREC.SHIFT,    seq(field('lhs', $._expression), field('operator', '>>'),  field('rhs',    $._expression))),
+      prec.left(PREC.EQUALITY, seq(field('lhs', $._expression), field('operator', '!='),  field('rhs',    $._expression))),
+      prec.left(PREC.EQUALITY, seq(field('lhs', $._expression), field('operator', '=='),  field('rhs',    $._expression))),
+      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), field('operator', '>'),   field('rhs',    $._expression))),
+      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), field('operator', '>='),  field('rhs',    $._expression))),
+      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), field('operator', '<'),   field('rhs',    $._expression))),
+      prec.left(PREC.COMPARE,  seq(field('lhs', $._expression), field('operator', '<='),  field('rhs',    $._expression))),
+      prec.left(PREC.AND,      seq(field('lhs', $._expression), field('operator', 'and'), field('rhs',    $._expression))),
+      prec.left(PREC.OR,       seq(field('lhs', $._expression), field('operator', 'or'),  field('rhs',    $._expression))),
     ),
 
     _bracketed_expression: $ => seq(
@@ -308,7 +308,7 @@ module.exports = grammar({
 
     named_access: $ => seq(
       $._expression,
-      alias(token.immediate('.'), $.operator),
+      field('operator', token.immediate('.')),
       choice($.name, $.type),
     ),
 
@@ -537,7 +537,7 @@ module.exports = grammar({
     _untyped_parameter: $ => choice($.regular_parameter, $.splat_parameter),
 
     regular_parameter: $ => choice(
-      seq($.variable, alias('=', $.operator), $._expression),
+      seq($.variable, field('operator', '='), $._expression),
       $.variable,
     ),
 
@@ -559,7 +559,7 @@ module.exports = grammar({
 
     type_alias: $ => prec.right(seq(
       $._type_alias_lhs,
-      alias('=', $.operator),
+      field('operator', '='),
       choice(
         seq(
           $.type,

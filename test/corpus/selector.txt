@@ -11,7 +11,6 @@ $rootgroup = $facts ? {
   (statement
     (variable
       (name))
-    (operator)
     (variable
       (name))
     (selector
@@ -41,7 +40,6 @@ $enable_real = $enable ? {
   (statement
     (variable
       (name))
-    (operator)
     (variable
       (name))
     (selector

@@ -31,7 +31,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -52,10 +64,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -123,10 +131,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -189,13 +193,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -203,7 +217,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -215,10 +229,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -287,10 +297,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -396,7 +402,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -417,10 +435,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -488,10 +502,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -554,13 +564,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -568,7 +588,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -580,10 +600,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -652,10 +668,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -772,7 +784,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -793,10 +817,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -864,10 +884,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -930,13 +946,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -956,10 +982,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -1028,10 +1050,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -1118,7 +1136,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -1139,10 +1169,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -1210,10 +1236,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -1276,14 +1298,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       },
@@ -1305,6 +1319,24 @@
           }
         ]
       },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          }
+        ]
+      },
       "value": {
         "multiple": true,
         "required": true,
@@ -1318,7 +1350,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -1339,10 +1383,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -1410,10 +1450,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -1476,14 +1512,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -1531,7 +1559,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -1552,10 +1592,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -1623,10 +1659,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -1689,13 +1721,95 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": true,
+        "types": [
           {
-            "type": "{",
+            "type": "!=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "!~",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": "=~",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": ">>",
+            "named": false
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "in",
+            "named": false
+          },
+          {
+            "type": "or",
             "named": false
           }
         ]
@@ -1713,7 +1827,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -1734,10 +1860,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -1805,10 +1927,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -1871,27 +1989,9 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "operator",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -1964,7 +2064,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -1985,10 +2097,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -2056,10 +2164,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -2122,13 +2226,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -2148,10 +2262,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -2220,10 +2330,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -2310,7 +2416,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -2331,10 +2449,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -2402,10 +2516,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -2468,13 +2578,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -2494,10 +2614,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -2566,10 +2682,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -2707,7 +2819,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -2728,10 +2852,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -2799,10 +2919,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -2865,13 +2981,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -2891,10 +3017,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -2959,10 +3081,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -3059,7 +3177,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -3080,10 +3210,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -3151,10 +3277,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -3217,13 +3339,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -3231,7 +3363,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -3243,10 +3375,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -3311,10 +3439,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -3482,7 +3606,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -3503,10 +3639,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -3574,10 +3706,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -3640,13 +3768,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -3654,7 +3792,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -3670,10 +3808,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -3742,10 +3876,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -3874,7 +4004,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -3899,10 +4041,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -3974,10 +4112,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -4040,14 +4174,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       },
@@ -4064,7 +4190,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -4085,10 +4223,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -4156,10 +4290,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -4222,13 +4352,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -4246,7 +4386,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -4271,10 +4423,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -4346,10 +4494,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -4412,14 +4556,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -4592,7 +4728,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -4613,10 +4761,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -4684,10 +4828,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -4750,13 +4890,27 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": true,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": ".",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -4776,10 +4930,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -4844,10 +4994,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -5030,7 +5176,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -5051,10 +5209,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -5122,10 +5276,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -5188,13 +5338,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -5214,10 +5374,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -5282,10 +5438,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -5396,7 +5548,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -5417,10 +5581,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -5488,10 +5648,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -5554,13 +5710,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -5655,10 +5821,6 @@
           "named": true
         },
         {
-          "type": "operator",
-          "named": true
-        },
-        {
           "type": "plan_definition",
           "named": true
         },
@@ -5742,7 +5904,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -5763,10 +5937,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -5834,10 +6004,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -5900,13 +6066,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -5914,7 +6090,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -5994,10 +6170,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -6084,7 +6256,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -6105,10 +6289,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -6176,10 +6356,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -6242,13 +6418,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -6256,7 +6442,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -6268,10 +6454,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -6336,10 +6518,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -6426,7 +6604,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -6447,10 +6637,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -6518,10 +6704,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -6584,13 +6766,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -6610,10 +6802,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -6682,10 +6870,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -6822,7 +7006,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -6843,10 +7039,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -6914,10 +7106,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -6980,14 +7168,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       },
@@ -7004,7 +7184,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -7025,10 +7217,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -7096,10 +7284,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -7162,13 +7346,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -7186,7 +7380,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -7207,10 +7413,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -7278,10 +7480,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -7344,14 +7542,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       }
@@ -7389,7 +7579,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -7410,10 +7612,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -7481,10 +7679,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -7547,13 +7741,23 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": false,
+        "types": [
           {
-            "type": "{",
+            "type": "+=",
             "named": false
           },
           {
-            "type": "}",
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
@@ -7561,7 +7765,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "access",
@@ -7573,10 +7777,6 @@
         },
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "attribute_list",
           "named": true
         },
         {
@@ -7641,10 +7841,6 @@
         },
         {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -7763,7 +7959,18 @@
   {
     "type": "type_alias",
     "named": true,
-    "fields": {},
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "=",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
@@ -7778,10 +7985,6 @@
         },
         {
           "type": "hash",
-          "named": true
-        },
-        {
-          "type": "operator",
           "named": true
         },
         {
@@ -7854,7 +8057,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -7875,10 +8090,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -7946,10 +8157,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -8012,14 +8219,6 @@
           {
             "type": "variable",
             "named": true
-          },
-          {
-            "type": "{",
-            "named": false
-          },
-          {
-            "type": "}",
-            "named": false
           }
         ]
       },
@@ -8036,7 +8235,19 @@
             "named": false
           },
           {
+            "type": "+=",
+            "named": false
+          },
+          {
             "type": ",",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           },
           {
@@ -8057,10 +8268,6 @@
           },
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "attribute_list",
             "named": true
           },
           {
@@ -8128,10 +8335,6 @@
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
             "type": "plan_definition",
             "named": true
           },
@@ -8194,27 +8397,39 @@
           {
             "type": "variable",
             "named": true
-          },
+          }
+        ]
+      },
+      "operator": {
+        "multiple": true,
+        "required": true,
+        "types": [
           {
-            "type": "{",
+            "type": "!",
             "named": false
           },
           {
-            "type": "}",
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+=",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "-=",
+            "named": false
+          },
+          {
+            "type": "=",
             "named": false
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "operator",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -8261,6 +8476,18 @@
     }
   },
   {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": "!~",
+    "named": false
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -8270,6 +8497,10 @@
   },
   {
     "type": "$",
+    "named": false
+  },
+  {
+    "type": "%",
     "named": false
   },
   {
@@ -8289,7 +8520,23 @@
     "named": false
   },
   {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
     "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "-=",
     "named": false
   },
   {
@@ -8313,11 +8560,23 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
     "type": "<-",
     "named": false
   },
   {
+    "type": "<<",
+    "named": false
+  },
+  {
     "type": "<<|",
+    "named": false
+  },
+  {
+    "type": "<=",
     "named": false
   },
   {
@@ -8329,7 +8588,27 @@
     "named": false
   },
   {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
     "type": "=>",
+    "named": false
+  },
+  {
+    "type": "=~",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
     "named": false
   },
   {
@@ -8457,10 +8736,6 @@
     "named": true
   },
   {
-    "type": "operator",
-    "named": true
-  },
-  {
     "type": "or",
     "named": false
   },
@@ -8494,11 +8769,11 @@
   },
   {
     "type": "type",
-    "named": false
+    "named": true
   },
   {
     "type": "type",
-    "named": true
+    "named": false
   },
   {
     "type": "undef",

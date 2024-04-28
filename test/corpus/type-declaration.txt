@@ -7,7 +7,6 @@ type Ensure = Enum['present', 'absent']
   (statement
     (type_alias
       (type)
-      (operator)
       (type)
       (access
         (access_element
@@ -24,7 +23,6 @@ type Ensure = Enum['present', 'absent',]
   (statement
     (type_alias
       (type)
-      (operator)
       (type)
       (access
         (access_element
@@ -41,7 +39,6 @@ type Compose = Variant[String,Integer]
   (statement
     (type_alias
       (type)
-      (operator)
       (type)
       (access
         (access_element
@@ -58,7 +55,6 @@ type Nested = Optional[Enum['default', 'foo', 'bar']]
   (statement
     (type_alias
       (type)
-    (operator)
     (type)
     (access
       (access_element
@@ -80,7 +76,6 @@ type Foo = Pattern[/\/slash/]
   (statement
     (type_alias
       (type)
-    (operator)
     (type)
     (access
       (access_element

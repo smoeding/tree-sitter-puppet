@@ -10,7 +10,6 @@ $var.each |$x| { }
         (named_access
           (variable
             (name))
-          (operator)
           (name)))
         (lambda
           (parameter_list
@@ -32,7 +31,6 @@ $var.each |Hash $x| { }
         (named_access
           (variable
             (name))
-          (operator)
           (name)))
         (lambda
           (parameter_list
@@ -56,7 +54,6 @@ $var.map |$x,$y| { }
         (named_access
           (variable
             (name))
-          (operator)
           (name)))
         (lambda
           (parameter_list
@@ -82,7 +79,6 @@ $var.reduce(1) |$memo,$value| { }
         (named_access
           (variable
             (name))
-          (operator)
           (name))
         (argument_list
           (argument
@@ -111,7 +107,6 @@ $var.lest || { true }
         (named_access
           (variable
             (name))
-          (operator)
           (name)))
         (lambda
           (parameter_list)

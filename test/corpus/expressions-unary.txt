@@ -9,21 +9,16 @@ $bar = -$asdf
   (statement
     (variable
       (name))
-    (operator)
     (unary
-      (operator)
       (variable
         (name))))
   (statement
     (variable
       (name))
-    (operator)
     (unary
-      (operator)
       (variable
         (name))))
   (statement
     (unary
-      (operator)
       (variable
         (name)))))

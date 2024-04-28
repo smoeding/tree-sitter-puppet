@@ -80,9 +80,7 @@ if (true or false) or 1 { }
         (binary
           (binary
             (true)
-            (operator)
             (false))
-          (operator)
           (number)))
       (block))))
 
@@ -100,7 +98,6 @@ if $var.is_a(Hash) { }
             (named_access
               (variable
                 (name))
-              (operator)
               (name))
             (argument_list
               (argument
@@ -121,13 +118,11 @@ $result = if $os == 'RedHat' {
   (statement
     (variable
       (name))
-    (operator)
     (if
       (condition
         (binary
           (variable
             (name))
-          (operator)
           (string)))
       (block
         (statement
@@ -219,7 +214,6 @@ $result = case $os {
   (statement
     (variable
       (name))
-    (operator)
     (case
       (variable
         (name))

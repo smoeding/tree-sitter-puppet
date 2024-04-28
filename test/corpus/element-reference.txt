@@ -86,7 +86,6 @@ $target.facts['logical_volumes']['size']
         (named_access
           (variable
             (name))
-          (operator)
           (name))))
     (access
       (access_element
@@ -106,7 +105,6 @@ notice( $myhash[key] )
   (statement
     (variable
       (name))
-    (operator)
     (hash
       (hashpair
         key: (name)

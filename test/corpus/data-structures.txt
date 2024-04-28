@@ -7,7 +7,6 @@ $hash = { 1 => 'asdf', 2 => 'foo', 'b' => 123 }
   (statement
     (variable
       (name))
-    (operator)
     (hash
       (hashpair
         (number)
@@ -47,7 +46,6 @@ $hash_of_arrays = {
   (statement
     (variable
       (name))
-    (operator)
     (hash
       (hashpair
         (number)
@@ -91,7 +89,6 @@ $struct = [
   (statement
     (variable
       (name))
-    (operator)
     (array
       (array_element
         (hash

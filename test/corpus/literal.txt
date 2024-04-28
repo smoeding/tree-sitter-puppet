@@ -14,7 +14,6 @@ $units = {
   (statement
     (variable
       (name))
-    (operator)
     (hash
       (hashpair
         (string)
@@ -50,5 +49,4 @@ hexadecimal literals
   (statement
     (binary
       (number)
-      (operator)
       (number))))

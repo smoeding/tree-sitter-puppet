@@ -79,7 +79,6 @@ $foo.join('_')
         (named_access
           (variable
             (name))
-          (operator)
           (name))
         (argument_list
           (argument
@@ -157,10 +156,8 @@ lookup('classes').join('_').include
                   (argument_list
                     (argument
                       (string))))
-                (operator)
                 (name))
               (argument_list
                 (argument
                   (string)))))
-          (operator)
           (name))))))

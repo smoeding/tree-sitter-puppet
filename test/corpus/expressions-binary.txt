@@ -11,15 +11,12 @@ true or false
   (statement
     (binary
       (true)
-      (operator)
       (false)))
   (statement
     (binary
       (number)
-      (operator)
       (number)))
   (statement
     (binary
       (string)
-      (operator)
       (string))))

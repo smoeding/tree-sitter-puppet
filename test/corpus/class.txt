@@ -32,7 +32,7 @@ class foo::config {
        (comment)
        (statement
          (resource_reference
-           (type))
+         (type)
          (attribute_list
            (attribute
              (name)
@@ -47,7 +47,7 @@ class foo::config {
              (name)
              (arrow)
              (variable
-               (name)))))
+               (name))))))
        (statement
           (resource_type
             (name)

@@ -10,7 +10,6 @@ END
   (statement
     (variable
       (name))
-    (operator)
     (heredoc)))
 
 ================================================================================
@@ -37,7 +36,6 @@ $gitconfig = @("GITCONFIG"/L)
   (statement
     (variable
       (name))
-    (operator)
     (heredoc
       (interpolation)
       (interpolation))))
@@ -53,7 +51,6 @@ $gitconfig = @("GITCONFIG"/L)
   (statement
     (variable
       (name))
-    (operator)
     (heredoc
       (interpolation))))
 
@@ -69,7 +66,6 @@ Foo
   (statement
     (variable
       (name))
-    (operator)
     (heredoc)))
 
 ================================================================================
@@ -82,7 +78,6 @@ empty
   (statement
     (variable
       (name))
-    (operator)
     (heredoc)))
 
 ================================================================================
@@ -96,7 +91,6 @@ FOOBAR
   (statement
     (variable
       (name))
-    (operator)
     (heredoc)))
 
 ================================================================================
@@ -110,5 +104,4 @@ FOOBAR
   (statement
     (variable
       (name))
-    (operator)
     (heredoc)))

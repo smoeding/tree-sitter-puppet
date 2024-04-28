@@ -14,13 +14,11 @@ $foo = '#'
   (statement
     (variable
       (name))
-    (operator)
     (variable
       (name)))
   (comment)
   (statement
     (variable
       (name))
-    (operator)
     (string))
   (comment))

@@ -7,7 +7,6 @@ type Foo = Enum[true,default]
   (statement
     (type_alias
       (type)
-      (operator)
       (type)
       (access
         (access_element
@@ -24,7 +23,6 @@ $foo = String(5)
   (statement
     (variable
       (name))
-    (operator)
     (function_call
       (type)
         (argument_list
@@ -41,7 +39,6 @@ type Foo = Struct[{mode => Enum['read', 'write'],
   (statement
     (type_alias
       (type)
-      (operator)
       (type)
       (access
         (access_element
