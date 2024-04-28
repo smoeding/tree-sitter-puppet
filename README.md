@@ -1,7 +1,7 @@
 # Tree-Sitter for Puppet
 
-[![Build Status](https://github.com/smoeding/tree-sitter-puppet/actions/workflows/ci.yaml/badge.svg)](https://github.com/smoeding/tree-sitter-puppet/actions/workflows/ci.yaml)
 [![License](https://img.shields.io/github/license/smoeding/tree-sitter-puppet.svg)](https://raw.githubusercontent.com/smoeding/tree-sitter-puppet/master/LICENSE)
+[![Build Status](https://github.com/smoeding/tree-sitter-puppet/actions/workflows/ci.yaml/badge.svg)](https://github.com/smoeding/tree-sitter-puppet/actions/workflows/ci.yaml)
 
 A Tree-Sitter grammar for the [Puppet](https://www.puppet.com) language.
 
