@@ -165,7 +165,7 @@ enum InterpolationStyle {
  */
 
 static bool scan_interpolation(TSLexer *lexer) {
-  int style = NONE;
+  enum InterpolationStyle style = NONE;
 
   // The interpolation must start with a '$'
   if (lexer->lookahead != U'$') return false;
