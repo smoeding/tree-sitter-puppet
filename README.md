@@ -9,4 +9,4 @@ This grammar and the corresponding scanner have been developed following the str
 
 The grammar has been tested using almost 100000 lines of code in more than 1500 files of real world Puppet code. This includes Puppet modules written by myself and popular modules by Puppetlabs and Vox Pupuli (e.g. stdlib, apache, docker, firewall, nginx, php, postgresql, ...).
 
-This package has been developed to support the [Emacs major mode with tree-sitter support for Puppet code](https://github.com/smoeding/puppet-ts-mode).
+This repository has been created to support my [Emacs major mode with tree-sitter support for Puppet code](https://github.com/smoeding/puppet-ts-mode).
