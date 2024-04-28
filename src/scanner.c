@@ -404,7 +404,7 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
 
 
 /**
- * Our interface used by the tree-sitter parser
+ * The public interface used by the tree-sitter parser
  */
 
 void *tree_sitter_puppet_external_scanner_create() {
