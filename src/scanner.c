@@ -78,7 +78,7 @@ typedef struct ScannerState {
  * name ('a'..'z', '0'..'9', '_').
  */
 
-__attribute__((const)) static inline bool is_variable_name(int32_t c) {
+static inline bool is_variable_name(int32_t c) {
   return ((isalpha(c) && islower(c)) || isdigit(c) || (c == U'_'));
 }
 
