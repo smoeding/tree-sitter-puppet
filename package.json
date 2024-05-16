@@ -1,8 +1,8 @@
 {
   "name": "tree-sitter-puppet",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Puppet grammar for tree-sitter",
-  "repository": "github:tree-sitter/tree-sitter-puppet",
+  "repository": "github:smoeding/tree-sitter-puppet",
   "license": "BSD-2-Clause",
   "main": "bindings/node",
   "types": "bindings/node",
