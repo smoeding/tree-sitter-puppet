@@ -612,16 +612,8 @@ module.exports = grammar({
       '@(',
       $._heredoc_start,
       ')',
-      choice(
-        $._heredoc_end,
-        seq(
-          repeat(choice(
-            $._heredoc_body,
-            $.interpolation,
-          )),
-          $._heredoc_end,
-        ),
-      ),
+      repeat(choice($._heredoc_body, $.interpolation)),
+      $._heredoc_end,
     ),
 
     // The '#' is valid inside a regex and doesn't start a comment here so we
