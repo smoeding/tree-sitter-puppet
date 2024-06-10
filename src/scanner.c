@@ -526,15 +526,15 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
     return true;
   }
 
-  if (valid_symbols[EXPANDABLE_STRING] && scan_expandable_string(lexer)) {
-    return true;
+  if (valid_symbols[EXPANDABLE_STRING]) {
+    return scan_expandable_string(lexer);
   }
 
   if (valid_symbols[FIXED_STRING]) {
     return scan_fixed_string(lexer);
   }
 
-  if (valid_symbols[HEREDOC_START]){
+  if (valid_symbols[HEREDOC_START]) {
     return scan_heredoc_start(lexer, state);
   }
 
