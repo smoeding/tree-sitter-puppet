@@ -9,6 +9,16 @@ string with interpolation
       (interpolation))))
 
 ================================================================================
+string with interpolation at start
+================================================================================
+"${test}/var"
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (string
+      (interpolation))))
+
+================================================================================
 string with multiple interpolations
 ================================================================================
 "/usr/${test}/${var}"
@@ -66,7 +76,8 @@ string with escaped dollar character
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string)))
+    (string
+      (escape_sequence))))
 
 ================================================================================
 single quoted string with content looking like interpolation

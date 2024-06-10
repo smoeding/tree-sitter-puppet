@@ -75,6 +75,7 @@ module.exports = grammar({
     $._heredoc_body,
     $._heredoc_end,
     $.interpolation,
+    $.escape_sequence,
   ],
 
   rules: {
@@ -605,7 +606,7 @@ module.exports = grammar({
 
     string: $ => choice(
       seq("'", repeat($._fixed_string), "'"),
-      seq('"', repeat(choice($._expandable_string, $.interpolation)), '"'),
+      seq('"', repeat(choice($._expandable_string, $.interpolation, $.escape_sequence)), '"'),
     ),
 
     heredoc: $ => seq(

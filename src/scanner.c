@@ -51,6 +51,7 @@ enum TokenType {
   HEREDOC_BODY,
   HEREDOC_END,
   INTERPOLATION,
+  ESCAPE_SEQUENCE,
 };
 
 
@@ -224,6 +225,29 @@ static bool scan_interpolation(TSLexer *lexer) {
 
 
 /**
+ * Scan for an escape sequence.
+ */
+
+static bool scan_escape_sequence(TSLexer *lexer) {
+  // We are done if the end of file is reached
+  if (lexer->eof(lexer)) return false;
+
+  if (lexer->lookahead != U'\\') return false;
+
+  lexer->advance(lexer, false);
+
+  // We are done if the end of file is reached
+  if (lexer->eof(lexer)) return false;
+
+  // The following character belongs to the escape sequence
+  lexer->advance(lexer, false);
+
+  lexer->result_symbol = ESCAPE_SEQUENCE;
+  return true;
+}
+
+
+/**
  * Scan over a single quoted string. Interpolation is not recognized in this
  * type of string.
  */
@@ -264,11 +288,12 @@ static bool scan_expandable_string(TSLexer *lexer) {
       return has_content;
     }
     else if (lexer->lookahead == U'$') {
+      // Maybe start of an interpolation
       return has_content;
     }
     else if (lexer->lookahead == U'\\') {
-      // Consume backslash and the following character
-      lexer->advance(lexer, false);
+      // Maybe start of an escape sequence
+      return has_content;
     }
     lexer->advance(lexer, false);
   }
@@ -486,6 +511,10 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
 
   if (valid_symbols[QMARK] || valid_symbols[SELBRACE]) {
     return scan_selbrace(lexer, state);
+  }
+
+  if (valid_symbols[ESCAPE_SEQUENCE] && scan_escape_sequence(lexer)) {
+    return true;
   }
 
   if (valid_symbols[INTERPOLATION] && scan_interpolation(lexer)) {
