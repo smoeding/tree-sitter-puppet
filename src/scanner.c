@@ -513,6 +513,11 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
     return scan_selbrace(lexer, state);
   }
 
+  // First check for an escape sequence or an interpolation and then for
+  // a string or heredoc.  The start of an escape sequence or interpolation
+  // is easier to spot and only if the lookahead symbol contains something
+  // else it will be a regular string.
+
   if (valid_symbols[ESCAPE_SEQUENCE] && scan_escape_sequence(lexer)) {
     return true;
   }
