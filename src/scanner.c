@@ -406,6 +406,12 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
 
       lexer->advance(lexer, false);
     }
+    else if (lexer->lookahead == U'\\') {
+      // Stop scanning the heredoc and allow the scanner to locate escape
+      // sequences
+      lexer->result_symbol = HEREDOC_BODY;
+      return true;
+    }
     else {
       // Check if the text in the current line matched the heredoc tag.
       // We start if the first alphanumeric character is found. The

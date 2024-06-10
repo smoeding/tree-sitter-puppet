@@ -613,7 +613,7 @@ module.exports = grammar({
       '@(',
       $._heredoc_start,
       ')',
-      repeat(choice($._heredoc_body, $.interpolation)),
+      repeat(choice($._heredoc_body, $.interpolation, $.escape_sequence)),
       $._heredoc_end,
     ),
 

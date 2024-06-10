@@ -38,7 +38,9 @@ $gitconfig = @("GITCONFIG"/L)
       (name))
     (heredoc
       (interpolation)
-      (interpolation))))
+      (interpolation)
+      (escape_sequence)
+      (escape_sequence))))
 
 ================================================================================
 heredoc with short interpolation
