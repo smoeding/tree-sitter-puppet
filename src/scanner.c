@@ -232,6 +232,7 @@ static bool scan_escape_sequence(TSLexer *lexer) {
   // We are done if the end of file is reached
   if (lexer->eof(lexer)) return false;
 
+  // It's only an escape sequence if it starts with a backslash
   if (lexer->lookahead != U'\\') return false;
 
   lexer->advance(lexer, false);
@@ -398,8 +399,7 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
     }
     else if (lexer->lookahead == U'$') {
       if (state->interpolation_allowed) {
-        // Stop scanning the heredoc and allow the scanner to locate
-        // interpolated values
+        // The start of an interpolated value
         lexer->result_symbol = HEREDOC_BODY;
         return true;
       }
@@ -407,15 +407,15 @@ static bool scan_heredoc_body(TSLexer *lexer, ScannerState *state) {
       lexer->advance(lexer, false);
     }
     else if (lexer->lookahead == U'\\') {
-      // Stop scanning the heredoc and allow the scanner to locate escape
-      // sequences
+      // The start of an escape sequences
       lexer->result_symbol = HEREDOC_BODY;
       return true;
     }
     else {
       // Check if the text in the current line matched the heredoc tag.
-      // We start if the first alphanumeric character is found. The
-      // comparison continues with the following characters.
+      // We start if the first alphanumeric character is found to skip
+      // whitespace and symbols like '|' or '-'. The comparison continues
+      // with the following characters.
       if (match_valid && isalnum(lexer->lookahead)) {
         if ((state->heredoc_tag.size > match_index) &&
             (*array_get(&state->heredoc_tag, match_index) == lexer->lookahead)) {
