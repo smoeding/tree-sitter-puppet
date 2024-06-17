@@ -9,13 +9,13 @@ class{'before':} -> class{'after':}
       (name)
       (resource_body
         (resource_title
-          (string))))
+          (single_quoted_string))))
     (chaining_arrow)
     (resource_type
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 chaining arrows resource and reference
@@ -28,12 +28,12 @@ class{'before':} -> Class['after']
       (name)
       (resource_body
         (resource_title
-          (string))))
+          (single_quoted_string))))
     (chaining_arrow)
     (type)
     (access
       (access_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 chaining arrows three resources
@@ -45,17 +45,17 @@ Package['ntp'] -> File['/etc/ntp.conf'] ~> Service['ntpd']
     (type)
     (access
       (access_element
-        (string)))
+        (single_quoted_string)))
     (chaining_arrow)
     (type)
     (access
       (access_element
-        (string)))
+        (single_quoted_string)))
     (chaining_arrow)
     (type)
     (access
       (access_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 chaining arrows with collector
@@ -67,7 +67,7 @@ Package['ntp'] -> Ntp::Node <||>
     (type)
     (access
       (access_element
-        (string)))
+        (single_quoted_string)))
     (chaining_arrow)
     (resource_collector
       (type)

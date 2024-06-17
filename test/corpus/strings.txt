@@ -6,9 +6,9 @@ string with single quotes
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string))
+    (single_quoted_string))
   (statement
-    (string)))
+    (single_quoted_string)))
 
 ================================================================================
 string with double quotes
@@ -17,7 +17,7 @@ string with double quotes
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string)))
+    (double_quoted_string)))
 
 ================================================================================
 string with escape sequence
@@ -26,7 +26,7 @@ string with escape sequence
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (escape_sequence))))
 
 ================================================================================
@@ -36,7 +36,7 @@ string with escape sequence at start
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (escape_sequence))))
 
 ================================================================================
@@ -46,7 +46,7 @@ string with escape sequence at end
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (escape_sequence))))
 
 ================================================================================
@@ -56,7 +56,7 @@ string with multiple escape sequences
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (escape_sequence)
       (escape_sequence))))
 
@@ -67,7 +67,7 @@ string with escape sequence single quote
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string)))
+    (single_quoted_string)))
 
 ================================================================================
 string with single underscore
@@ -76,7 +76,7 @@ string with single underscore
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string)))
+    (single_quoted_string)))
 
 ================================================================================
 string with literal backslash single quote
@@ -85,7 +85,7 @@ string with literal backslash single quote
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string)))
+    (single_quoted_string)))
 
 ================================================================================
 string with escaped newline
@@ -95,5 +95,5 @@ bar"
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (escape_sequence))))

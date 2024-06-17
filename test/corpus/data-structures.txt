@@ -11,13 +11,13 @@ $hash = { 1 => 'asdf', 2 => 'foo', 'b' => 123 }
       (hashpair
         (number)
         (arrow)
-        (string))
+        (single_quoted_string))
       (hashpair
         (number)
         (arrow)
-        (string))
+        (single_quoted_string))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number)))))
 
@@ -30,9 +30,9 @@ data structures array
   (statement
     (array
       (array_element
-        (string))
+        (single_quoted_string))
       (array_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 data structures hash of array
@@ -60,11 +60,11 @@ $hash_of_arrays = {
           (array_element
             (number))))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (hash
           (hashpair
-            (string)
+            (single_quoted_string)
             (arrow)
             (number)))))))
 
@@ -97,21 +97,21 @@ $struct = [
             (arrow)
             (array
               (array_element
-                (string))
+                (single_quoted_string))
               (array_element
-                (string))
+                (single_quoted_string))
               (array_element
-                (string))))))
+                (single_quoted_string))))))
       (array_element
         (hash
           (hashpair
-            (string)
+            (single_quoted_string)
             (arrow)
             (hash
               (hashpair
-                (string)
+                (single_quoted_string)
                 (arrow)
-                (string)))))))))
+                (single_quoted_string)))))))))
 
 ================================================================================
 data structures empty array

@@ -39,9 +39,9 @@ include ['base::linux', 'apache']
         (argument
           (array
             (array_element
-              (string))
+              (single_quoted_string))
             (array_element
-              (string))))))))
+              (single_quoted_string))))))))
 
 ================================================================================
 compositions include from variable

@@ -9,7 +9,7 @@ package {'ntp':}
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 resource usage with arguments
@@ -25,16 +25,16 @@ package { 'ntp':
       (name)
       (resource_body
         (resource_title
-          (string))
+          (single_quoted_string))
         (attribute_list
           (attribute
             (name)
             (arrow)
-            (string))
+            (single_quoted_string))
           (attribute
             (name)
             (arrow)
-            (string)))))))
+            (single_quoted_string)))))))
 
 ================================================================================
 resource usage with element reference
@@ -53,7 +53,7 @@ foo { $_key['name']:
             (name))
           (access
             (access_element
-            (string))))
+            (single_quoted_string))))
         (attribute_list
           (attribute
             (name)
@@ -74,7 +74,7 @@ foo { 'bar':
       (name)
       (resource_body
         (resource_title
-          (string))
+          (single_quoted_string))
         (attribute_list
           (attribute
             (arrow)
@@ -86,7 +86,7 @@ foo { 'bar':
             (type)
             (access
               (access_element
-                (string)))))))))
+                (single_quoted_string)))))))))
 
 ================================================================================
 resource usage with multiple items
@@ -108,7 +108,7 @@ user {
       (name)
       (resource_body
         (resource_title
-          (string))
+          (single_quoted_string))
         (attribute_list
           (attribute
             (name)
@@ -117,10 +117,10 @@ user {
           (attribute
             (name)
             (arrow)
-            (string))))
+            (single_quoted_string))))
       (resource_body
         (resource_title
-          (string))
+          (single_quoted_string))
         (attribute_list
           (attribute
             (name)
@@ -129,7 +129,7 @@ user {
           (attribute
             (name)
             (arrow)
-            (string)))))))
+            (single_quoted_string)))))))
 
 ================================================================================
 resource usage with multiple items and default
@@ -153,7 +153,7 @@ user {
       (name)
       (resource_body
         (resource_title
-          (string))
+          (single_quoted_string))
         (attribute_list
           (attribute
             (name)
@@ -162,10 +162,10 @@ user {
           (attribute
             (name)
             (arrow)
-            (string))))
+            (single_quoted_string))))
       (resource_body
         (resource_title
-          (string))
+          (single_quoted_string))
         (attribute_list
           (attribute
             (name)
@@ -174,7 +174,7 @@ user {
           (attribute
             (name)
             (arrow)
-            (string))))
+            (single_quoted_string))))
       (resource_body
         (resource_title
           (default))
@@ -182,4 +182,4 @@ user {
           (attribute
             (name)
             (arrow)
-            (string)))))))
+            (single_quoted_string)))))))

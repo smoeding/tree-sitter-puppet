@@ -10,7 +10,7 @@ virtual resources
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 exported resources
@@ -24,4 +24,4 @@ exported resources
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))

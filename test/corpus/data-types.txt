@@ -49,9 +49,9 @@ type Foo = Struct[{mode => Enum['read', 'write'],
               (type)
               (access
                 (access_element
-                  (string))
+                  (single_quoted_string))
                 (access_element
-                  (string))))
+                  (single_quoted_string))))
             (hashpair
               (name)
               (arrow)

@@ -11,7 +11,7 @@ node /asdf.*/{}
   (statement
     (node_definition
       (hostname
-        (string))
+        (single_quoted_string))
       (block)))
   (statement
     (node_definition

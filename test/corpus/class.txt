@@ -37,7 +37,7 @@ class foo::config {
            (attribute
              (name)
              (arrow)
-             (string))
+             (single_quoted_string))
            (attribute
              (name)
              (arrow)
@@ -67,7 +67,7 @@ class foo::config {
                     (name)
                     (argument_list
                       (argument
-                        (string)))))))))
+                        (single_quoted_string)))))))))
         (statement
           (resource_type
             (name)
@@ -83,7 +83,7 @@ class foo::config {
                 (attribute
                   (name)
                   (arrow)
-                  (string))
+                  (single_quoted_string))
                 (attribute
                   (name)
                   (arrow)

@@ -18,7 +18,7 @@ class bar {
             (name)
             (resource_body
               (resource_title
-                (string)))))
+                (single_quoted_string)))))
         (comment)
         (statement
           (class_definition

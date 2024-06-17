@@ -20,7 +20,7 @@ resource defaults
       (attribute
         (name)
         (arrow)
-        (string))
+        (single_quoted_string))
       (attribute
         (name)
         (arrow)
@@ -38,11 +38,11 @@ resource defaults
       (attribute
         (name)
         (arrow)
-        (string))
+        (single_quoted_string))
       (attribute
         (name)
         (arrow)
         (type)
         (access
           (access_element
-            (string))))))))
+            (single_quoted_string))))))))

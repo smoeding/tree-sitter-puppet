@@ -17,14 +17,14 @@ $rootgroup = $facts ? {
       (qmark)
       (selbrace)
       (selector_option
-        (string)
-        (string))
+        (single_quoted_string)
+        (single_quoted_string))
       (selector_option
         (regex)
-        (string))
+        (single_quoted_string))
       (selector_option
         (default)
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 selector with data types
@@ -71,4 +71,4 @@ $enable_real = $enable ? {
           (name)
           (argument_list
             (argument
-              (string))))))))
+              (single_quoted_string))))))))

@@ -69,8 +69,8 @@ module.exports = grammar({
   externals: $ => [
     $.qmark,
     $.selbrace,
-    $._fixed_string,
-    $._expandable_string,
+    $._sq_string,
+    $._dq_string,
     $._heredoc_start,
     $._heredoc_body,
     $._heredoc_end,
@@ -602,11 +602,22 @@ module.exports = grammar({
 
     // Literals (dynamic and static)
 
-    _quotedtext: $ => choice($.string, $.heredoc),
+    _quotedtext: $ => choice(
+      $.single_quoted_string,
+      $.double_quoted_string,
+      $.heredoc
+    ),
 
-    string: $ => choice(
-      seq("'", repeat($._fixed_string), "'"),
-      seq('"', repeat(choice($._expandable_string, $.interpolation, $.escape_sequence)), '"'),
+    single_quoted_string: $ => seq(
+      "'",
+      repeat($._sq_string),
+      "'",
+    ),
+
+    double_quoted_string: $ => seq(
+      '"',
+      repeat(choice($._dq_string, $.interpolation, $.escape_sequence)),
+      '"',
     ),
 
     heredoc: $ => seq(

@@ -45,8 +45,8 @@
 enum TokenType {
   QMARK,
   SELBRACE,
-  FIXED_STRING,
-  EXPANDABLE_STRING,
+  SQ_STRING,
+  DQ_STRING,
   HEREDOC_START,
   HEREDOC_BODY,
   HEREDOC_END,
@@ -122,9 +122,9 @@ static bool scan_selbrace(TSLexer *lexer, ScannerState *state) {
 
 
 /**
- * Scan for content of fixed and expandable strings. The function uses the
- * lookahead value as the start token and scans until the same token is found
- * again.
+ * Scan for content of single and double quoted strings. The function uses
+ * the lookahead value as the start token and scans until the same token is
+ * found again.
  */
 
 static bool skip_quoted_string(TSLexer *lexer) {
@@ -253,8 +253,8 @@ static bool scan_escape_sequence(TSLexer *lexer) {
  * type of string.
  */
 
-static bool scan_fixed_string(TSLexer *lexer) {
-  lexer->result_symbol = FIXED_STRING;
+static bool scan_sq_string(TSLexer *lexer) {
+  lexer->result_symbol = SQ_STRING;
 
   for(bool has_content=false;; has_content=true) {
     // We are done if the end of file is reached
@@ -278,8 +278,8 @@ static bool scan_fixed_string(TSLexer *lexer) {
  * content ends and the function scan_interpolation will continue.
  */
 
-static bool scan_expandable_string(TSLexer *lexer) {
-  lexer->result_symbol = EXPANDABLE_STRING;
+static bool scan_dq_string(TSLexer *lexer) {
+  lexer->result_symbol = DQ_STRING;
 
   for(bool has_content=false;; has_content=true) {
     // We are done if the end of file is reached
@@ -532,12 +532,12 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
     return true;
   }
 
-  if (valid_symbols[EXPANDABLE_STRING]) {
-    return scan_expandable_string(lexer);
+  if (valid_symbols[DQ_STRING]) {
+    return scan_dq_string(lexer);
   }
 
-  if (valid_symbols[FIXED_STRING]) {
-    return scan_fixed_string(lexer);
+  if (valid_symbols[SQ_STRING]) {
+    return scan_sq_string(lexer);
   }
 
   if (valid_symbols[HEREDOC_START]) {

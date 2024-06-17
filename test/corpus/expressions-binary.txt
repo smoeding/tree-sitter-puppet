@@ -18,5 +18,5 @@ true or false
       (number)))
   (statement
     (binary
-      (string)
-      (string))))
+      (single_quoted_string)
+      (single_quoted_string))))

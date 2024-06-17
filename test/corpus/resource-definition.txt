@@ -89,5 +89,5 @@ class foo (
             (regular_parameter
               (variable
                 (name))
-              (string)))))
+              (single_quoted_string)))))
         (block))))

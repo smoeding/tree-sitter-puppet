@@ -123,7 +123,7 @@ $result = if $os == 'RedHat' {
         (binary
           (variable
             (name))
-          (string)))
+          (single_quoted_string)))
       (block
         (statement
           (number)))
@@ -153,8 +153,8 @@ case $os {
       (variable
         (name))
     (case_option
-      (string)
-      (string)
+      (single_quoted_string)
+      (single_quoted_string)
       (block
         (statement
           (statement_function
@@ -218,8 +218,8 @@ $result = case $os {
       (variable
         (name))
       (case_option
-        (string)
-        (string)
+        (single_quoted_string)
+        (single_quoted_string)
         (block
           (statement
             (number))))

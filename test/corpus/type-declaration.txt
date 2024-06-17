@@ -10,9 +10,9 @@ type Ensure = Enum['present', 'absent']
       (type)
       (access
         (access_element
-          (string))
+          (single_quoted_string))
         (access_element
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 type declaration enumeration with trailing comma
@@ -26,9 +26,9 @@ type Ensure = Enum['present', 'absent',]
       (type)
       (access
         (access_element
-          (string))
+          (single_quoted_string))
         (access_element
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 type declaration variant
@@ -61,11 +61,11 @@ type Nested = Optional[Enum['default', 'foo', 'bar']]
         (type)
         (access
           (access_element
-            (string))
+            (single_quoted_string))
           (access_element
-            (string))
+            (single_quoted_string))
           (access_element
-            (string))))))))
+            (single_quoted_string))))))))
 
 ================================================================================
 type declaration regex pattern

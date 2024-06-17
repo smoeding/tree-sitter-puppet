@@ -47,7 +47,7 @@ Foo::Bar <<| tag == 'foo' |>>
       (collect_query
         (binary
           (name)
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 resource collectors with arguments

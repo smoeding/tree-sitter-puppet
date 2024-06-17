@@ -20,5 +20,5 @@ $foo = '#'
   (statement
     (variable
       (name))
-    (string))
+    (single_quoted_string))
   (comment))

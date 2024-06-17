@@ -9,7 +9,7 @@ identifier top scope
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 identifier top scope with package
@@ -22,7 +22,7 @@ identifier top scope with package
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 identifier relative with package
@@ -35,7 +35,7 @@ asdf::asdf {'asdf':}
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 identifier relative
@@ -48,4 +48,4 @@ asdf {'asdf':}
       (name)
       (resource_body
         (resource_title
-          (string))))))
+          (single_quoted_string))))))

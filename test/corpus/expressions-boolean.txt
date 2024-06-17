@@ -17,8 +17,8 @@ expression boolean equals
 (manifest
   (statement
    (binary
-     (string)
-     (string))))
+     (single_quoted_string)
+     (single_quoted_string))))
 
 ================================================================================
 expression boolean match
@@ -28,7 +28,7 @@ expression boolean match
 (manifest
   (statement
     (binary
-      (string)
+      (single_quoted_string)
       (regex))))
 
 ================================================================================
@@ -39,12 +39,12 @@ expression boolean in
 (manifest
   (statement
     (binary
-      (string)
+      (single_quoted_string)
     (array
       (array_element
-        (string))
+        (single_quoted_string))
       (array_element
-        (string))))))
+        (single_quoted_string))))))
 
 ================================================================================
 expression boolean numeric

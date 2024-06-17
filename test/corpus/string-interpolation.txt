@@ -5,7 +5,7 @@ string with interpolation
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation))))
 
 ================================================================================
@@ -15,7 +15,7 @@ string with interpolation at start
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation))))
 
 ================================================================================
@@ -25,7 +25,7 @@ string with multiple interpolations
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation)
       (interpolation))))
 
@@ -36,7 +36,7 @@ string with interpolation without braces
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation))))
 
 ================================================================================
@@ -46,7 +46,7 @@ string with interpolation explicit sigil
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation))))
 
 ================================================================================
@@ -56,7 +56,7 @@ string with interpolation hash
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation))))
 
 ================================================================================
@@ -66,7 +66,7 @@ string with interpolation with absolute variable without sigil
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (interpolation))))
 
 ================================================================================
@@ -76,7 +76,7 @@ string with escaped dollar character
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string
+    (double_quoted_string
       (escape_sequence))))
 
 ================================================================================
@@ -86,4 +86,4 @@ single quoted string with content looking like interpolation
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (string)))
+    (single_quoted_string)))

@@ -65,11 +65,11 @@ class foo(
                 (type)
                 (access
                   (access_element
-                    (string))
+                    (single_quoted_string))
                   (access_element
-                    (string))
+                    (single_quoted_string))
                   (access_element
-                    (string)))))
+                    (single_quoted_string)))))
             (regular_parameter
               (variable
                 (name))

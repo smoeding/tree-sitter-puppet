@@ -16,27 +16,27 @@ $units = {
       (name))
     (hash
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number))
       (hashpair
-        (string)
+        (single_quoted_string)
         (arrow)
         (number)))))
 

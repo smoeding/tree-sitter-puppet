@@ -22,7 +22,7 @@ $hash['foo']
       (name))
     (access
       (access_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 element reference array of arrays
@@ -51,13 +51,13 @@ $facts['os']['release']['major']
       (name))
     (access
       (access_element
-        (string)))
+        (single_quoted_string)))
     (access
       (access_element
-        (string)))
+        (single_quoted_string)))
     (access
       (access_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 element reference array slice
@@ -89,10 +89,10 @@ $target.facts['logical_volumes']['size']
           (name))))
     (access
       (access_element
-        (string)))
+        (single_quoted_string)))
     (access
       (access_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 element reference bare words
@@ -109,11 +109,11 @@ notice( $myhash[key] )
       (hashpair
         key: (name)
         (arrow)
-        value: (string))
+        value: (double_quoted_string))
       (hashpair
         key: (name)
         (arrow)
-        value: (string))))
+        value: (double_quoted_string))))
   (statement
     (statement_function
       (name)
@@ -140,7 +140,7 @@ notice( $myhash['foo'][bar][$baz][1] )
             (name))
           (access
             (access_element
-              (string)))
+              (single_quoted_string)))
           (access
             (access_element
               (name)))

@@ -35,7 +35,7 @@ stdlib::ensure($ensure, 'file')
           (variable
             (name)))
         (argument
-          (string))))))
+          (single_quoted_string))))))
 
 ================================================================================
 function call with trailing comma in argument list
@@ -63,7 +63,7 @@ run_task('_catch_errors' => true)
     (argument_list
       (argument
         (hashpair
-          (string)
+          (single_quoted_string)
           (arrow)
           (true)))))))
 
@@ -82,7 +82,7 @@ $foo.join('_')
           (name))
         (argument_list
           (argument
-            (string)))))))
+            (single_quoted_string)))))))
 
 ================================================================================
 function call with lambda
@@ -116,7 +116,7 @@ warning("Module foo not tested against ${operatingsystem}")
       (name)
       (argument_list
         (argument
-          (string
+          (double_quoted_string
             (interpolation)))))))
 
 ================================================================================
@@ -130,7 +130,7 @@ lookup('val', String, undef, [])
       (name)
       (argument_list
         (argument
-          (string))
+          (single_quoted_string))
         (argument
           (type))
         (argument
@@ -155,9 +155,9 @@ lookup('classes').join('_').include
                   (name)
                   (argument_list
                     (argument
-                      (string))))
+                      (single_quoted_string))))
                 (name))
               (argument_list
                 (argument
-                  (string)))))
+                  (single_quoted_string)))))
           (name))))))

@@ -69,7 +69,7 @@ $foo = Test['asdf']
     (type)
     (access
       (access_element
-        (string)))))
+        (single_quoted_string)))))
 
 ================================================================================
 assignment absolute scope
