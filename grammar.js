@@ -75,7 +75,7 @@ module.exports = grammar({
     $._heredoc_body,
     $._heredoc_end,
     $.interpolation,
-    $.escape_sequence,
+    $.dq_escape_sequence,
   ],
 
   rules: {
@@ -616,7 +616,12 @@ module.exports = grammar({
 
     double_quoted_string: $ => seq(
       '"',
-      repeat(choice($._dq_string, $.interpolation, $.escape_sequence)),
+      repeat(
+        choice($._dq_string,
+          $.interpolation,
+          alias($.dq_escape_sequence, $.escape_sequence),
+        ),
+      ),
       '"',
     ),
 
@@ -624,7 +629,13 @@ module.exports = grammar({
       '@(',
       $._heredoc_start,
       ')',
-      repeat(choice($._heredoc_body, $.interpolation, $.escape_sequence)),
+      repeat(
+        choice(
+          $._heredoc_body,
+          $.interpolation,
+          alias($.dq_escape_sequence, $.escape_sequence),
+        ),
+      ),
       $._heredoc_end,
     ),
 

@@ -51,7 +51,7 @@ enum TokenType {
   HEREDOC_BODY,
   HEREDOC_END,
   INTERPOLATION,
-  ESCAPE_SEQUENCE,
+  DQ_ESCAPE_SEQUENCE,
 };
 
 
@@ -225,10 +225,10 @@ static bool scan_interpolation(TSLexer *lexer) {
 
 
 /**
- * Scan for an escape sequence.
+ * Scan for an escape sequence in a double quoted string or heredoc.
  */
 
-static bool scan_escape_sequence(TSLexer *lexer) {
+static bool scan_dq_escape_sequence(TSLexer *lexer) {
   // We are done if the end of file is reached
   if (lexer->eof(lexer)) return false;
 
@@ -243,7 +243,7 @@ static bool scan_escape_sequence(TSLexer *lexer) {
   // The following character belongs to the escape sequence
   lexer->advance(lexer, false);
 
-  lexer->result_symbol = ESCAPE_SEQUENCE;
+  lexer->result_symbol = DQ_ESCAPE_SEQUENCE;
   return true;
 }
 
@@ -524,7 +524,7 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
   // is easier to spot and only if the lookahead symbol contains something
   // else it will be a regular string.
 
-  if (valid_symbols[ESCAPE_SEQUENCE] && scan_escape_sequence(lexer)) {
+  if (valid_symbols[DQ_ESCAPE_SEQUENCE] && scan_dq_escape_sequence(lexer)) {
     return true;
   }
 
