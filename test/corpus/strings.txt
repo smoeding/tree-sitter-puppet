@@ -67,7 +67,8 @@ string with escape sequence single quote
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (single_quoted_string)))
+    (single_quoted_string
+      (escape_sequence))))
 
 ================================================================================
 string with single underscore

@@ -52,6 +52,7 @@ enum TokenType {
   HEREDOC_END,
   INTERPOLATION,
   DQ_ESCAPE_SEQUENCE,
+  SQ_ESCAPE_SEQUENCE,
 };
 
 
@@ -225,6 +226,43 @@ static bool scan_interpolation(TSLexer *lexer) {
 
 
 /**
+ * Scan for an escape sequence in a single quoted string.
+ */
+
+static bool scan_sq_escape_sequence(TSLexer *lexer) {
+  // We are done if the end of file is reached
+  if (lexer->eof(lexer)) return false;
+
+  // It's only an escape sequence if it starts with a backslash
+  if (lexer->lookahead != U'\\') return false;
+
+  lexer->advance(lexer, false);
+
+  // We are done if the end of file is reached
+  if (lexer->eof(lexer)) return false;
+
+  // There are two allowed escape sequences in a single quoted string: the
+  // single backslash and the literal single quotation mark.  We return
+  // a match if we find one of these and otherwise indicate a not-found
+  // condition.  In this case the parser tries to match a normal string
+  // instead.  This should succeed since we already consumed the initial
+  // backslash.  It will be treated as a normal character just like the
+  // documentation states.
+  // https://www.puppet.com/docs/puppet/latest/lang_data_string.html
+
+  if ((lexer->lookahead != U'\\') && (lexer->lookahead != U'\'')) {
+    return false;
+  }
+
+  // The following character belongs to the escape sequence
+  lexer->advance(lexer, false);
+
+  lexer->result_symbol = SQ_ESCAPE_SEQUENCE;
+  return true;
+}
+
+
+/**
  * Scan for an escape sequence in a double quoted string or heredoc.
  */
 
@@ -260,13 +298,10 @@ static bool scan_sq_string(TSLexer *lexer) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
-    if (lexer->lookahead == U'\'') {
+    if ((lexer->lookahead == U'\'') || (lexer->lookahead == U'\\')) {
       return has_content;
     }
-    else if (lexer->lookahead == U'\\') {
-      // Consume backslash and the following character
-      lexer->advance(lexer, false);
-    }
+
     lexer->advance(lexer, false);
   }
 }
@@ -523,6 +558,10 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
   // a string or heredoc.  The start of an escape sequence or interpolation
   // is easier to spot and only if the lookahead symbol contains something
   // else it will be a regular string.
+
+  if (valid_symbols[SQ_ESCAPE_SEQUENCE] && scan_sq_escape_sequence(lexer)) {
+    return true;
+  }
 
   if (valid_symbols[DQ_ESCAPE_SEQUENCE] && scan_dq_escape_sequence(lexer)) {
     return true;

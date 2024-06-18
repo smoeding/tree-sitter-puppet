@@ -76,6 +76,7 @@ module.exports = grammar({
     $._heredoc_end,
     $.interpolation,
     $.dq_escape_sequence,
+    $.sq_escape_sequence,
   ],
 
   rules: {
@@ -610,7 +611,12 @@ module.exports = grammar({
 
     single_quoted_string: $ => seq(
       "'",
-      repeat($._sq_string),
+      repeat(
+        choice(
+          $._sq_string,
+          alias($.sq_escape_sequence, $.escape_sequence,),
+        ),
+      ),
       "'",
     ),
 
