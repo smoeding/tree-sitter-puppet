@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-puppet",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Puppet grammar for tree-sitter",
   "repository": "github:smoeding/tree-sitter-puppet",
   "license": "BSD-2-Clause",
@@ -43,13 +43,5 @@
     "build-wasm": "tree-sitter build --wasm",
     "test": "tree-sitter test",
     "parse": "tree-sitter parse"
-  },
-  "tree-sitter": [
-    {
-      "scope": "source.puppet",
-      "file-types": [
-        "pp"
-      ]
-    }
-  ]
+  }
 }

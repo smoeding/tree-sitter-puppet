@@ -1,0 +1,29 @@
+{
+  "grammars": [
+    {
+      "name": "puppet",
+      "camelcase": "Puppet",
+      "scope": "source.puppet",
+      "path": ".",
+      "file-types": [
+        "pp"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "license": "BSD-2-Clause",
+    "description": "Puppet grammar for tree-sitter",
+    "links": {
+      "repository": "https://github.com/smoeding/tree-sitter-puppet"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}

@@ -4794,6 +4794,7 @@
   {
     "type": "manifest",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -8968,11 +8969,11 @@
   },
   {
     "type": "type",
-    "named": true
+    "named": false
   },
   {
     "type": "type",
-    "named": false
+    "named": true
   },
   {
     "type": "undef",
