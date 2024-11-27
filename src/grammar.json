@@ -1552,7 +1552,7 @@
     },
     "function_call": {
       "type": "PREC_RIGHT",
-      "value": 30,
+      "value": 5,
       "content": {
         "type": "SEQ",
         "members": [
@@ -1561,7 +1561,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_expression"
+                "name": "name"
               },
               {
                 "type": "SYMBOL",
@@ -3651,7 +3651,7 @@
     },
     "type": {
       "type": "PATTERN",
-      "value": "((::){0,1}[A-Z]\\w*)+"
+      "value": "((::)?[A-Z]\\w*)+"
     },
     "name": {
       "type": "PATTERN",
@@ -3659,7 +3659,7 @@
     },
     "word": {
       "type": "PATTERN",
-      "value": "((?:::){0,1}(?:[a-z_](?:[\\w-]*\\w)?))+"
+      "value": "((?:::)?(?:[a-z_](?:[\\w-]*\\w)?))+"
     },
     "_class": {
       "type": "ALIAS",

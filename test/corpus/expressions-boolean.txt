@@ -104,8 +104,18 @@ $y = ((true and 1) and false)
 
 ================================================================================
 boolean parsed as function name
-:error
 ================================================================================
 true and false
 ((true and 1) and false)
 --------------------------------------------------------------------------------
+(manifest
+  (statement
+    (binary
+      (true)
+      (false)))
+  (statement
+    (binary
+      (binary
+        (true)
+        (number))
+      (false))))

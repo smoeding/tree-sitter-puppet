@@ -287,8 +287,8 @@ module.exports = grammar({
 
     // Call Function
 
-    function_call: $ => prec.right(PREC.HIGH, seq(
-      choice($._expression, $.type),
+    function_call: $ => prec.right(PREC.LOW, seq(
+      choice($.name, $.type),
       '(',
       optional(alias($.argument_list_comma, $.argument_list)),
       ')',
@@ -714,9 +714,9 @@ module.exports = grammar({
       'fail',                                      // Failure statements
     ),
 
-    type:     _ => /((::){0,1}[A-Z]\w*)+/,
+    type:     _ => /((::)?[A-Z]\w*)+/,
     name:     _ => /((::)?[a-z]\w*)(::[a-z]\w*)*/,
-    word:     _ => /((?:::){0,1}(?:[a-z_](?:[\w-]*\w)?))+/,
+    word:     _ => /((?:::)?(?:[a-z_](?:[\w-]*\w)?))+/,
 
     // handle the class keyword like a name node
     _class:   $ => alias('class', $.name),
