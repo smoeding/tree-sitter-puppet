@@ -1,6 +1,6 @@
 /**************************************************************************
  *
- * Copyright (c) 2024 Stefan Möding
+ * Copyright (c) 2024, 2025 Stefan Möding
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -503,16 +503,21 @@ unsigned tree_sitter_puppet_external_scanner_serialize(void *payload, char *buff
   // item we also include the bogus pointer to the array contents. The
   // pointer will be reset when the object is deserialized (see below).
   objsiz = sizeof(ScannerState);
+  length += objsiz;
+
   memcpy(buffer, payload, objsiz);
   buffer += objsiz;
-  length += objsiz;
 
   // Serialize the array contents.
   objsiz = state->heredoc_tag.capacity * array_elem_size(&state->heredoc_tag);
   if (objsiz > 0) {
+    length += objsiz;
+
+    // Fail if the scanner state is too large
+    if (length > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) return 0;
+
     memcpy(buffer, state->heredoc_tag.contents, objsiz);
     buffer += objsiz;
-    length += objsiz;
   }
 
   return length;
