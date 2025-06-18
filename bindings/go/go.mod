@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-puppet
+module github.com/smoeding/tree-sitter-puppet/bindings/go
 
 go 1.22
 
