@@ -3213,6 +3213,46 @@
         }
       ]
     },
+    "interpolation": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "${"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expressions"
+            },
+            {
+              "type": "STRING",
+              "value": "}"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_nobrace_interpolation"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_variable_name"
+              },
+              "named": true,
+              "value": "name"
+            }
+          ]
+        }
+      ]
+    },
     "regex": {
       "type": "SEQ",
       "members": [
@@ -3772,7 +3812,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "interpolation"
+      "name": "_nobrace_interpolation"
     },
     {
       "type": "SYMBOL",

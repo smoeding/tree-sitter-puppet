@@ -50,7 +50,7 @@ enum TokenType {
   HEREDOC_START,
   HEREDOC_BODY,
   HEREDOC_END,
-  INTERPOLATION,
+  NOBRACE_INTERPOLATION,
   DQ_ESCAPE_SEQUENCE,
   SQ_ESCAPE_SEQUENCE,
 };
@@ -166,62 +166,20 @@ enum InterpolationStyle {
  * Scan for an interpolation.
  */
 
-static bool scan_interpolation(TSLexer *lexer) {
-  enum InterpolationStyle style = NONE;
-
-  // The interpolation must start with a '$'
-  if (lexer->lookahead != U'$') return false;
-
-  lexer->result_symbol = INTERPOLATION;
-  lexer->advance(lexer, false);
+static bool scan_nobrace_interpolation(TSLexer *lexer) {
+  lexer->result_symbol = NOBRACE_INTERPOLATION;
+  lexer->mark_end(lexer);
 
   for(;;) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
-
-    switch (style) {
-    case NONE:
-      // The style has not been defined yet so this must be the first
-      // character after the '$'.
-      if (lexer->lookahead == U'{') {
-        style = BRACE;
-      }
-      else if (is_variable_name(lexer->lookahead)) {
-        style = VARIABLE;
-      }
-      else {
-        // The '$' is not followed by anything that looks like an
-        // interpolation. The '$' has been already been consumed and
-        // therefore will be treated as whatever the lexer finds next
-        // (presumably a string content or a heredoc).
-        return false;
-      }
-      break;
-
-    case BRACE:
-      if (lexer->lookahead == U'}') {
-        lexer->advance(lexer, false);
-        return true;
-      }
-      else if ((lexer->lookahead == U'\'') || (lexer->lookahead == U'"')) {
-        if (!skip_quoted_string(lexer)) {
-          // Skipping the quoted string failed. This happens if the string is
-          // missing the terminating quote.
-          return false;
-        }
-      }
-      break;
-
-    case VARIABLE:
-      if (!is_variable_name(lexer->lookahead)) {
+    if (!is_variable_name(lexer->lookahead)) {
         // Return if the end of a valid variable name is reached.
         return true;
-      }
-      break;
     }
-
     lexer->advance(lexer, false);
   }
+  return false;
 }
 
 
@@ -310,7 +268,7 @@ static bool scan_sq_string(TSLexer *lexer) {
 /**
  * Scan over a double quoted string. Interpolation is possible in this type
  * of string. If the '$' is detected we return to indicate that the string
- * content ends and the function scan_interpolation will continue.
+ * content ends and the function scan_nobrace_interpolation will continue.
  */
 
 static bool scan_dq_string(TSLexer *lexer) {
@@ -400,7 +358,7 @@ static bool scan_heredoc_start(TSLexer *lexer, ScannerState *state) {
  * Scan a heredoc body. Set result symbol to HEREDOC_END if the tag from the
  * start of the heredoc has been found. Set result symbol to HEREDOC_BODY if
  * the heredoc supports interpolation and a '$' is found. The scanner then
- * uses the scan_interpolation function to continue scanning and returns here
+ * uses the scan_nobrace_interpolation function to continue scanning and returns here
  * later.
  */
 
@@ -572,8 +530,16 @@ bool tree_sitter_puppet_external_scanner_scan(void *payload, TSLexer *lexer, con
     return true;
   }
 
-  if (valid_symbols[INTERPOLATION] && scan_interpolation(lexer)) {
-    return true;
+  // The interpolation must start with a '$'
+  if (lexer->lookahead == U'$') {
+    lexer->mark_end(lexer);
+    lexer->advance(lexer, false);
+    if (lexer->lookahead == U'{') {
+      return false;
+    }
+    if (valid_symbols[NOBRACE_INTERPOLATION] && scan_nobrace_interpolation(lexer)) {
+      return true;
+    }
   }
 
   if (valid_symbols[DQ_STRING]) {

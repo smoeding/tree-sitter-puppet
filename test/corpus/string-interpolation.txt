@@ -3,77 +3,100 @@ string with interpolation
 ================================================================================
 "/usr/${test}/var"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (name)))))
 
 ================================================================================
 string with interpolation at start
 ================================================================================
 "${test}/var"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (name)))))
 
 ================================================================================
 string with multiple interpolations
 ================================================================================
 "/usr/${test}/${var}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation)
-      (interpolation))))
+      (interpolation
+        (name))
+      (interpolation
+        (name)))))
 
 ================================================================================
 string with interpolation without braces
 ================================================================================
 "/usr/$test/var"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (name)))))
 
 ================================================================================
 string with interpolation explicit sigil
 ================================================================================
 "test${$foo}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with interpolation hash
 ================================================================================
 "test${foo['test']['bar']}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (name)
+        (access
+          (access_element
+            (single_quoted_string)))
+        (access
+          (access_element
+            (single_quoted_string)))))))
 
 ================================================================================
 string with interpolation with absolute variable without sigil
 ================================================================================
 "test ${::foo}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (name)))))
 
 ================================================================================
 string with escaped dollar character
 ================================================================================
 "test \$foo"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
@@ -84,6 +107,21 @@ single quoted string with content looking like interpolation
 ================================================================================
 'test ${foo}'
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (single_quoted_string)))
+
+================================================================================
+string with expression interpolation
+================================================================================
+"/usr/${2 + 2}/var"
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (double_quoted_string
+      (interpolation
+        (binary
+          (number)
+          (number))))))
