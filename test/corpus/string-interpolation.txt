@@ -3,77 +3,107 @@ string with interpolation
 ================================================================================
 "/usr/${test}/var"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with interpolation at start
 ================================================================================
 "${test}/var"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with multiple interpolations
 ================================================================================
 "/usr/${test}/${var}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation)
-      (interpolation))))
+      (interpolation
+        (variable
+          (name)))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with interpolation without braces
 ================================================================================
 "/usr/$test/var"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with interpolation explicit sigil
 ================================================================================
 "test${$foo}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with interpolation hash
 ================================================================================
 "test${foo['test']['bar']}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))
+        (access
+          (access_element
+            (single_quoted_string)))
+        (access
+          (access_element
+            (single_quoted_string)))))))
 
 ================================================================================
 string with interpolation with absolute variable without sigil
 ================================================================================
 "test ${::foo}"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
-      (interpolation))))
+      (interpolation
+        (variable
+          (name))))))
 
 ================================================================================
 string with escaped dollar character
 ================================================================================
 "test \$foo"
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (double_quoted_string
@@ -84,6 +114,75 @@ single quoted string with content looking like interpolation
 ================================================================================
 'test ${foo}'
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (single_quoted_string)))
+
+================================================================================
+string with expression interpolation
+================================================================================
+"/usr/${2 + 2}/var"
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (double_quoted_string
+      (interpolation
+        (binary
+          (number)
+          (number))))))
+
+================================================================================
+string with chained method call
+================================================================================
+"test${foo.upcase().lowercase()}"
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (double_quoted_string
+      (interpolation
+        (call_method_with_lambda
+          (call_method
+            (named_access
+              (call_method_with_lambda
+                (call_method
+                  (named_access
+                    (variable
+                      (name))
+                    (name))))
+              (name))))))))
+
+================================================================================
+string with interpolation with decimal variable without sigil
+================================================================================
+"test${0}"
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (double_quoted_string
+      (interpolation
+        (variable
+          (name))))))
+
+================================================================================
+string with bare sigil at end
+================================================================================
+"bare sigil $"
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (double_quoted_string)))
+
+================================================================================
+string with bare sigil and no var name
+================================================================================
+"bare sigil $$"
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (double_quoted_string)))

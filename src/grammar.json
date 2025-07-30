@@ -3041,20 +3041,43 @@
       ]
     },
     "variable": {
-      "type": "SEQ",
+      "type": "CHOICE",
       "members": [
         {
-          "type": "STRING",
-          "value": "$"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "$"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_variable_name"
+              },
+              "named": true,
+              "value": "name"
+            }
+          ]
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_variable_name"
-          },
-          "named": true,
-          "value": "name"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_interpolation_nosigil_variable"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_variable_name"
+              },
+              "named": true,
+              "value": "name"
+            }
+          ]
         }
       ]
     },
@@ -3210,6 +3233,58 @@
         {
           "type": "SYMBOL",
           "name": "_heredoc_end"
+        }
+      ]
+    },
+    "interpolation": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_interpolation_nobrace_variable"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "variable"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_interpolation_brace_variable"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expression"
+            },
+            {
+              "type": "STRING",
+              "value": "}"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_interpolation_expression"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expressions"
+            },
+            {
+              "type": "STRING",
+              "value": "}"
+            }
+          ]
         }
       ]
     },
@@ -3772,7 +3847,19 @@
     },
     {
       "type": "SYMBOL",
-      "name": "interpolation"
+      "name": "_interpolation_nobrace_variable"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_interpolation_brace_variable"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_interpolation_expression"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_interpolation_nosigil_variable"
     },
     {
       "type": "SYMBOL",

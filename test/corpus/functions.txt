@@ -117,7 +117,9 @@ warning("Module foo not tested against ${operatingsystem}")
       (argument_list
         (argument
           (double_quoted_string
-            (interpolation)))))))
+            (interpolation
+              (variable
+                (name)))))))))
 
 ================================================================================
 function call with Type
