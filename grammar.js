@@ -74,7 +74,7 @@ module.exports = grammar({
     $._heredoc_start,
     $._heredoc_body,
     $._heredoc_end,
-    $.interpolation,
+    $._nobrace_interpolation,
     $.dq_escape_sequence,
     $.sq_escape_sequence,
   ],
@@ -643,6 +643,13 @@ module.exports = grammar({
         ),
       ),
       $._heredoc_end,
+    ),
+
+    // Interpolation
+    //
+    interpolation: $ => choice(
+      seq('${', $._expressions, '}'),
+      seq($._nobrace_interpolation, alias($._variable_name, $.name)),
     ),
 
     // The '#' is valid inside a regex and doesn't start a comment here so we

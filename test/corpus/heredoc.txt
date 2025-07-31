@@ -6,6 +6,7 @@ This is the text that gets assigned to $a.
 And this too.
 END
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
@@ -32,13 +33,16 @@ $gitconfig = @("GITCONFIG"/L)
         default = upstream
     | GITCONFIG
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
     (heredoc
-      (interpolation)
-      (interpolation)
+      (interpolation
+        (name))
+      (interpolation
+        (name))
       (escape_sequence)
       (escape_sequence))))
 
@@ -49,12 +53,14 @@ $gitconfig = @("GITCONFIG"/L)
     name = ${displayname}
     | GITCONFIG
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
     (heredoc
-      (interpolation))))
+      (interpolation
+        (name)))))
 
 ================================================================================
 heredoc short
@@ -64,6 +70,7 @@ foobar
 next
 Foo
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
@@ -76,6 +83,7 @@ heredoc empty
 $g = @(empty)
 empty
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
@@ -89,6 +97,7 @@ $g = @(FOOBAR)
 FOOBARDATA
 FOOBAR
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
@@ -102,6 +111,7 @@ $g = @(FOOBAR)
 😀
 FOOBAR
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
