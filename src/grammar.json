@@ -3091,7 +3091,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "heredoc"
+          "name": "heredoc_start"
         }
       ]
     },
@@ -3167,7 +3167,7 @@
         }
       ]
     },
-    "heredoc": {
+    "heredoc_start": {
       "type": "SEQ",
       "members": [
         {
@@ -3181,6 +3181,26 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "heredoc_content": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "SYMBOL",
+          "name": "_heredoc_content"
+        }
+      }
+    },
+    "heredoc_body": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_heredoc_body_start"
         },
         {
           "type": "REPEAT",
@@ -3189,7 +3209,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_heredoc_body"
+                "name": "heredoc_content"
               },
               {
                 "type": "SYMBOL",
@@ -3209,7 +3229,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_heredoc_end"
+          "name": "heredoc_body_end"
         }
       ]
     },
@@ -3723,6 +3743,10 @@
       "name": "comment"
     },
     {
+      "type": "SYMBOL",
+      "name": "heredoc_body"
+    },
+    {
       "type": "PATTERN",
       "value": "\\n"
     },
@@ -3764,11 +3788,15 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_heredoc_body"
+      "name": "_heredoc_body_start"
     },
     {
       "type": "SYMBOL",
-      "name": "_heredoc_end"
+      "name": "_heredoc_content"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "heredoc_body_end"
     },
     {
       "type": "SYMBOL",
