@@ -6,11 +6,15 @@ This is the text that gets assigned to $a.
 And this too.
 END
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with interpolation and escape
@@ -32,15 +36,23 @@ $gitconfig = @("GITCONFIG"/L)
         default = upstream
     | GITCONFIG
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc
-      (interpolation)
-      (interpolation)
-      (escape_sequence)
-      (escape_sequence))))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation)
+    (heredoc_content)
+    (interpolation)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with short interpolation
@@ -49,12 +61,17 @@ $gitconfig = @("GITCONFIG"/L)
     name = ${displayname}
     | GITCONFIG
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc
-      (interpolation))))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation)
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc short
@@ -64,11 +81,15 @@ foobar
 next
 Foo
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc empty
@@ -76,11 +97,14 @@ heredoc empty
 $g = @(empty)
 empty
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with tag prefix in data
@@ -89,11 +113,15 @@ $g = @(FOOBAR)
 FOOBARDATA
 FOOBAR
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with multibyte character in data
@@ -102,8 +130,136 @@ $g = @(FOOBAR)
 😀
 FOOBAR
 --------------------------------------------------------------------------------
+
 (manifest
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc in a function call
+================================================================================
+notice(@(ONE))
+    This is the text for one heredoc
+    | ONE
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (statement_function
+      (name)
+      (argument_list
+        (argument
+          (heredoc_start)))))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+two heredocs in a function call
+================================================================================
+notice(@(FIRST), @(SECOND))
+    This is the text for the first heredoc
+    | FIRST
+    This is the text for the second
+    | SECOND
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (statement_function
+      (name)
+      (argument
+        (heredoc_start))
+      (argument
+        (heredoc_start))))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+two heredocs in a multi-line function call
+================================================================================
+notice(@(FIRST),
+    This is the text for the first heredoc
+    | FIRST
+@(SECOND))
+    This is the text for the second
+    | SECOND
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (statement_function
+      (name)
+      (argument
+        (heredoc_start))
+      (heredoc_body
+        (heredoc_content)
+        (heredoc_body_end))
+      (argument
+        (heredoc_start))))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with tag following interpolation
+================================================================================
+$g = @("EOF")
+TEST${foo}EOF
+EOF
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation)
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with trim operator
+================================================================================
+$g = @("EOF")
+TEST
+-EOF
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with bogus trim operator
+================================================================================
+$g = @("EOF")
+TEST
+|--EOF
+EOF
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))

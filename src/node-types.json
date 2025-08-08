@@ -115,7 +115,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -288,7 +288,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -494,7 +494,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -667,7 +667,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -884,7 +884,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -1057,7 +1057,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -1244,7 +1244,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -1462,7 +1462,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -1675,7 +1675,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -1947,7 +1947,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -2188,7 +2188,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -2361,7 +2361,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -2548,7 +2548,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -2721,7 +2721,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -2959,7 +2959,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -3128,7 +3128,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -3325,7 +3325,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -3494,7 +3494,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -3858,7 +3858,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -4040,7 +4040,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -4248,7 +4248,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -4346,15 +4346,23 @@
     }
   },
   {
-    "type": "heredoc",
+    "type": "heredoc_body",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "heredoc_body_end",
+          "named": true
+        },
+        {
+          "type": "heredoc_content",
           "named": true
         },
         {
@@ -4363,6 +4371,16 @@
         }
       ]
     }
+  },
+  {
+    "type": "heredoc_content",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "heredoc_start",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "hostname",
@@ -4385,7 +4403,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -4595,7 +4613,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -4768,7 +4786,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -5051,7 +5069,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -5220,7 +5238,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -5431,7 +5449,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -5608,7 +5626,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -5795,7 +5813,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -5968,7 +5986,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -6155,7 +6173,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -6324,7 +6342,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -6511,7 +6529,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -6684,7 +6702,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -6921,7 +6939,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -7103,7 +7121,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -7303,7 +7321,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -7521,7 +7539,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -7690,7 +7708,7 @@
           "named": true
         },
         {
-          "type": "heredoc",
+          "type": "heredoc_start",
           "named": true
         },
         {
@@ -7992,7 +8010,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -8174,7 +8192,7 @@
             "named": true
           },
           {
-            "type": "heredoc",
+            "type": "heredoc_start",
             "named": true
           },
           {
@@ -8563,6 +8581,10 @@
     "named": false
   },
   {
+    "type": "heredoc_body_end",
+    "named": true
+  },
+  {
     "type": "if",
     "named": false
   },
@@ -8632,11 +8654,11 @@
   },
   {
     "type": "type",
-    "named": false
+    "named": true
   },
   {
     "type": "type",
-    "named": true
+    "named": false
   },
   {
     "type": "undef",
