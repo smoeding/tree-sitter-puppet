@@ -11,7 +11,10 @@ END
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with interpolation and escape
@@ -38,15 +41,22 @@ $gitconfig = @("GITCONFIG"/L)
   (statement
     (variable
       (name))
-    (heredoc
-      (interpolation
-        (variable
-          (name)))
-      (interpolation
-        (variable
-          (name)))
-      (escape_sequence)
-      (escape_sequence))))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with short interpolation
@@ -60,10 +70,14 @@ $gitconfig = @("GITCONFIG"/L)
   (statement
     (variable
       (name))
-    (heredoc
-      (interpolation
-        (variable
-          (name))))))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc short
@@ -78,7 +92,10 @@ Foo
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc empty
@@ -91,7 +108,9 @@ empty
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with tag prefix in data
@@ -105,7 +124,10 @@ FOOBAR
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
 
 ================================================================================
 heredoc with multibyte character in data
@@ -119,4 +141,416 @@ FOOBAR
   (statement
     (variable
       (name))
-    (heredoc)))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc in a function call
+================================================================================
+notice(@(ONE))
+    This is the text for one heredoc
+    | ONE
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (statement_function
+      (name)
+      (argument_list
+        (argument
+          (heredoc_start)))))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+two heredocs in a function call
+================================================================================
+notice(@(FIRST), @(SECOND))
+    This is the text for the first heredoc
+    | FIRST
+    This is the text for the second
+    | SECOND
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (statement_function
+      (name)
+      (argument
+        (heredoc_start))
+      (argument
+        (heredoc_start))))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+two heredocs in a multi-line function call
+================================================================================
+notice(@(FIRST),
+    This is the text for the first heredoc
+    | FIRST
+@(SECOND))
+    This is the text for the second
+    | SECOND
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (statement_function
+      (name)
+      (argument
+        (heredoc_start))
+      (heredoc_body
+        (heredoc_content)
+        (heredoc_body_end))
+      (argument
+        (heredoc_start))))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with tag following interpolation
+================================================================================
+$g = @("EOF")
+TEST${foo}EOF
+EOF
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with trim operator
+================================================================================
+$g = @("EOF")
+TEST
+-EOF
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with bogus trim operator
+================================================================================
+$g = @("EOF")
+TEST
+|--EOF
+EOF
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with noindent and blank line
+================================================================================
+$foo = @(FOO)
+First line
+
+Last line
+FOO
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with noindent, blank line and indent marker
+================================================================================
+$foo = @(FOO)
+First line
+
+Last line
+|FOO
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with indent and blank line
+================================================================================
+$foo = @(FOO)
+  First line
+  
+  Last line
+  |FOO
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with indent and unindented blank line
+================================================================================
+$foo = @(FOO)
+  First line
+
+  Last line
+  |FOO
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with indent and wrongly indented blank line
+================================================================================
+$foo = @(FOO)
+  First line
+ 
+  Last line
+  |FOO
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with interpolation before content
+================================================================================
+$subname = @("EOT"/L)
+  ${subname_default}
+  | EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with leading spaces and interpolation but no indent stripping
+================================================================================
+$subname = @("EOT")
+  ${baz}X
+  EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with interpolation escaped to a single line
+================================================================================
+$a = @("EOT"/L)
+  ${foo}X\
+  bar\
+  | EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with dollar escape
+================================================================================
+$a = @("EOT"/$)
+  ${foo}X\
+  bar\
+  \$bar\
+  | EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (interpolation
+      (variable
+        (name)))
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc literal, but escapes and interpolation present
+================================================================================
+$a = @(EOT)
+  ${foo}X\
+  bar\
+  \$bar\
+  | EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with all escapes enabled
+================================================================================
+$a = @(EOT/)
+  \\  Backslash
+  \n  New line
+  \r  Carriage return
+  \t  Tab
+  \s  Space
+  \$  Dollar sign
+  \u2615  ☕
+  \u{1fae0}  🫠
+  L  Escape newline \
+  | EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc word with surrounding space
+================================================================================
+$a = @( 	"EOT" 	:json 	/$ 	)
+  {
+    "foo": "\$bar"
+  }
+  | EOT
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_content)
+    (heredoc_body_end)))
+
+================================================================================
+heredoc with bare dollar at end
+================================================================================
+$foo = @("FOO"/L)
+give me some $\
+|FOO
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (heredoc_start))
+  (heredoc_body
+    (heredoc_content)
+    (escape_sequence)
+    (heredoc_body_end)))

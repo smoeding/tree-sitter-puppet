@@ -55,6 +55,7 @@ module.exports = grammar({
 
   extras: $ => [
     $.comment,
+    $.heredoc_body,
     /\n/,
     /\r/,
     /\s/,
@@ -71,13 +72,15 @@ module.exports = grammar({
     $.selbrace,
     $._sq_string,
     $._dq_string,
-    $._heredoc_start,
-    $._heredoc_body,
-    $._heredoc_end,
     $._interpolation_nobrace_variable,
     $._interpolation_brace_variable,
     $._interpolation_expression,
     $._interpolation_nosigil_variable,
+    $._heredoc_start,
+    $._heredoc_body_start,
+    $._heredoc_content,
+    $.heredoc_body_end,
+    $.heredoc_escape_sequence,
     $.dq_escape_sequence,
     $.sq_escape_sequence,
   ],
@@ -612,7 +615,7 @@ module.exports = grammar({
     _quotedtext: $ => choice(
       $.single_quoted_string,
       $.double_quoted_string,
-      $.heredoc
+      $.heredoc_start
     ),
 
     single_quoted_string: $ => seq(
@@ -637,18 +640,24 @@ module.exports = grammar({
       '"',
     ),
 
-    heredoc: $ => seq(
+    heredoc_start: $ => seq(
       '@(',
       $._heredoc_start,
       ')',
-      repeat(
-        choice(
-          $._heredoc_body,
-          $.interpolation,
-          alias($.dq_escape_sequence, $.escape_sequence),
-        ),
-      ),
-      $._heredoc_end,
+    ),
+
+    heredoc_content: $ => prec.right(repeat1(
+      $._heredoc_content,
+    )),
+
+    heredoc_body: $ => seq(
+      $._heredoc_body_start,
+      repeat(choice(
+        $.heredoc_content,
+        $.interpolation,
+        alias($.heredoc_escape_sequence, $.escape_sequence),
+      )),
+      $.heredoc_body_end,
     ),
 
     // Interpolation
