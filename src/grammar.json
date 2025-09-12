@@ -3114,7 +3114,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "heredoc"
+          "name": "heredoc_start"
         }
       ]
     },
@@ -3190,7 +3190,7 @@
         }
       ]
     },
-    "heredoc": {
+    "heredoc_start": {
       "type": "SEQ",
       "members": [
         {
@@ -3204,6 +3204,26 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "heredoc_content": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "SYMBOL",
+          "name": "_heredoc_content"
+        }
+      }
+    },
+    "heredoc_body": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_heredoc_body_start"
         },
         {
           "type": "REPEAT",
@@ -3212,7 +3232,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_heredoc_body"
+                "name": "heredoc_content"
               },
               {
                 "type": "SYMBOL",
@@ -3222,7 +3242,7 @@
                 "type": "ALIAS",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "dq_escape_sequence"
+                  "name": "heredoc_escape_sequence"
                 },
                 "named": true,
                 "value": "escape_sequence"
@@ -3232,7 +3252,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_heredoc_end"
+          "name": "heredoc_body_end"
         }
       ]
     },
@@ -3798,6 +3818,10 @@
       "name": "comment"
     },
     {
+      "type": "SYMBOL",
+      "name": "heredoc_body"
+    },
+    {
       "type": "PATTERN",
       "value": "\\n"
     },
@@ -3835,18 +3859,6 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_heredoc_start"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "_heredoc_body"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "_heredoc_end"
-    },
-    {
-      "type": "SYMBOL",
       "name": "_interpolation_nobrace_variable"
     },
     {
@@ -3860,6 +3872,26 @@
     {
       "type": "SYMBOL",
       "name": "_interpolation_nosigil_variable"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_heredoc_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_heredoc_body_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_heredoc_content"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "heredoc_body_end"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "heredoc_escape_sequence"
     },
     {
       "type": "SYMBOL",
