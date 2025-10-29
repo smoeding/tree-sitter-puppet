@@ -163,3 +163,41 @@ lookup('classes').join('_').include
                 (argument
                   (single_quoted_string)))))
           (name))))))
+
+================================================================================
+function chained with call on the next line
+================================================================================
+$a = [1, 2, 3]
+    .map |$n| {
+        $n * $n
+    }
+--------------------------------------------------------------------------------
+
+(manifest
+  (statement
+    (variable
+      (name))
+    (call_method_with_lambda
+      (call_method
+        (named_access
+          (array
+            (array_element
+              (number))
+            (array_element
+              (number))
+            (array_element
+              (number)))
+          (name)))
+      (lambda
+        (parameter_list
+          (parameter
+            (regular_parameter
+              (variable
+                (name)))))
+        (block
+          (statement
+            (binary
+              (variable
+                (name))
+              (variable
+                (name)))))))))
