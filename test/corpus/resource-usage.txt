@@ -183,3 +183,23 @@ user {
             (name)
             (arrow)
             (single_quoted_string)))))))
+
+================================================================================
+resource with comma after colon
+================================================================================
+notify { 'butter':,
+  message => 'bubbles',
+}
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (resource_type
+      (name)
+      (resource_body
+        (resource_title
+          (single_quoted_string))
+        (attribute_list
+          (attribute
+            (name)
+            (arrow)
+            (single_quoted_string)))))))

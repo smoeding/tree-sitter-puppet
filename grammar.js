@@ -188,6 +188,7 @@ module.exports = grammar({
     resource_body: $ => prec.right(seq(
       $.resource_title,
       ':',
+      optional(','),
       optional(alias($._attribute_operations, $.attribute_list)),
       optional(','),
     )),
