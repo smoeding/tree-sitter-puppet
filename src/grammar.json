@@ -1709,11 +1709,8 @@
           "type": "FIELD",
           "name": "operator",
           "content": {
-            "type": "IMMEDIATE_TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "."
-            }
+            "type": "STRING",
+            "value": "."
           }
         },
         {
