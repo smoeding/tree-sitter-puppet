@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-puppet",
-  "version": "2.2.0",
+  "version": "3.0.1",
   "description": "Puppet grammar for tree-sitter",
   "repository": "github:smoeding/tree-sitter-puppet",
   "license": "BSD-2-Clause",

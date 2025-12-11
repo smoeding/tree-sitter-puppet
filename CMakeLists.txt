@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-puppet
-        VERSION "2.2.0"
+        VERSION "3.0.1"
         DESCRIPTION "Puppet grammar for tree-sitter"
         HOMEPAGE_URL "https://github.com/smoeding/tree-sitter-puppet"
         LANGUAGES C)
