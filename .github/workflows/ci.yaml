@@ -36,9 +36,9 @@ jobs:
         with:
           submodules: true
       - name: Set up tree-sitter
-        uses: tree-sitter/setup-action/cli@v1
+        uses: tree-sitter/setup-action@v2
       - name: Run tests
-        uses: tree-sitter/parser-test-action@v2
+        uses: tree-sitter/parser-test-action@v3
         with:
           generate: false
           test-rust: ${{runner.os == 'Linux'}}
