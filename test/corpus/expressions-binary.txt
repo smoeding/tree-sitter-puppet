@@ -20,3 +20,52 @@ true or false
     (binary
       (single_quoted_string)
       (single_quoted_string))))
+
+================================================================================
+binary expression, left side element reference
+================================================================================
+$asdf['foo'] == 4
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (binary
+    (variable
+      (name))
+    (access
+      (access_element
+        (single_quoted_string)))
+    (number))))
+
+================================================================================
+binary expression, right side element reference
+================================================================================
+4 == $asdf['foo']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (binary
+    (number)
+	(variable
+      (name))
+    (access
+      (access_element
+        (single_quoted_string))))))
+
+================================================================================
+binary expression, both sides element reference
+================================================================================
+$fdsa['bar'] == $asdf['foo']
+--------------------------------------------------------------------------------
+(manifest
+  (statement
+    (binary
+    (variable
+      (name))
+    (access
+      (access_element
+        (single_quoted_string)))
+	(variable
+      (name))
+    (access
+      (access_element
+        (single_quoted_string))))))
