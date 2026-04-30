@@ -128,9 +128,9 @@ module.exports = grammar({
     _assignment: $ => prec.right(choice(
       prec(PREC.LOW, $._relationship),
       prec.right(PREC.EQUALS, seq(
-        $._relationship,
+        field("lhs", $._relationship),
         field('operator', choice('=', '+=', '-=')),
-        $._assignment,
+        field("rhs", $._assignment),
       )),
     )),
 
