@@ -239,13 +239,13 @@ module.exports = grammar({
       prec.left(PREC.OR,       seq(field('lhs', $._expression), field('operator', 'or'),  field('rhs',    $._expression))),
     ),
 
-    _bracketed_expression: $ => seq(
+    _bracketed_expression: $ => prec.left(PREC.HIGH, seq(
       $._expression,
       token.immediate('['),
       alias($._access_elements, $.access),
       optional(','),
       ']',
-    ),
+    )),
 
     _access_elements: $ => choice(
       $.access_element,
