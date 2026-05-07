@@ -103,9 +103,9 @@ notice( $myhash[key] )
 --------------------------------------------------------------------------------
 (manifest
   (statement
-    (variable
+    lhs: (variable
       (name))
-    (hash
+    rhs: (hash
       (hashpair
         key: (name)
         (arrow)

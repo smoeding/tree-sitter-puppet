@@ -217,8 +217,12 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "_relationship"
+                  "type": "FIELD",
+                  "name": "lhs",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_relationship"
+                  }
                 },
                 {
                   "type": "FIELD",
@@ -242,8 +246,12 @@
                   }
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "_assignment"
+                  "type": "FIELD",
+                  "name": "rhs",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_assignment"
+                  }
                 }
               ]
             }
